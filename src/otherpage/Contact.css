@@ -1,15 +1,23 @@
 .contact-container {
-    padding: 40px;
-    background-color: #192342;
-    text-align: center;
-    border-radius: 8px;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-    width: 80%;
-    max-width: 1000px;
-    margin: 0 auto;
-    transition: all 0.3s ease;
-    display: inline-block;
-  }
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 1.2s ease-in-out, transform 1.2s ease-in-out;
+  padding: 40px;
+  background-color: #192342;
+  text-align: center;
+  border-radius: 8px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  width: 80%;
+  max-width: 1000px;
+  margin: 0 auto;
+  display: inline-block;
+}
+
+.contact-container.fade-in {
+  opacity: 1;
+  transform: translateY(0);
+}
+
   
   .contact-container:hover {
     box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);

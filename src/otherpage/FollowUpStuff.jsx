@@ -1,9 +1,19 @@
-import React from 'react';
-import './FollowUpStuff.css';
+import React, { useEffect, useState } from "react";
+import "./FollowUpStuff.css";
 
 function FollowUpStuff() {
+  const [fadeIn, setFadeIn] = useState(false);
+
+  useEffect(() => {
+    const timer = setTimeout(() => {
+      setFadeIn(true);
+    }, 50); 
+
+    return () => clearTimeout(timer); 
+  }, []);
+
   return (
-    <>
+    <div className={`follow-up-container ${fadeIn ? "fade-in" : ""}`}>
       <div className="separator">
         <hr className="line" />
         <span className="separator-text">- - / / - - / / - -</span>
@@ -16,7 +26,7 @@ function FollowUpStuff() {
         <hr className="line" />
       </div>
 
-      <br></br>
+      <br />
 
       <div>
         <p className="follow-up-stuff">
@@ -25,9 +35,9 @@ function FollowUpStuff() {
           </span>
         </p>
       </div>
-      <br></br>
-      <br></br>
-    </>
+      <br />
+      <br />
+    </div>
   );
 }
 
