@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
-import "./Hero.css";
+import "./hero.css";
 
 const Hero = () => {
   const [loading, setLoading] = useState(true); // Manage loading state
