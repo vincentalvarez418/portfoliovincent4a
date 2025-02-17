@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import './SkillsAndServices.css';
 import yoloLogo from '../assets/icons/yolo.png';
 import pythonLogo from '../assets/icons/python.png';
@@ -21,8 +21,18 @@ const skills = [
 ];
 
 function SkillsAndServices() {
+  const [fadeIn, setFadeIn] = useState(false);
+
+  useEffect(() => {
+    const timer = setTimeout(() => {
+      setFadeIn(true);
+    }, 100);
+
+    return () => clearTimeout(timer);
+  }, []);
+
   return (
-    <div className="skills-services-wrapper">
+    <div className={`skills-services-wrapper ${fadeIn ? 'fade-in' : ''}`}>
       <h2>Skills and Services</h2>
       
       <p>

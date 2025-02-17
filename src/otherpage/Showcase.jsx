@@ -1,10 +1,20 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import "./Showcase.css";
 import GraphicDesign from "../assets/showcases/GraphicDesign.png";
 import App1 from "../assets/showcases/app1.png";
 import App2 from "../assets/showcases/app2.png";
 
 function Showcase() {
+  const [fadeIn, setFadeIn] = useState(false);
+
+  useEffect(() => {
+    const timer = setTimeout(() => {
+      setFadeIn(true);
+    }, 50); 
+
+    return () => clearTimeout(timer);
+  }, []);
+
   const projects = [
     {
       title: "Silence of the Owls",
@@ -24,7 +34,7 @@ function Showcase() {
   ];
 
   return (
-    <div className="showcase-container">
+    <div className={`showcase-container ${fadeIn ? "fade-in" : ""}`}>
       <h1 className="showcase-title">Showcase</h1>
       <p className="showcase-subtitle">
         Explore some of my featured projects and creative work.

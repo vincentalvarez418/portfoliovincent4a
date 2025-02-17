@@ -1,17 +1,24 @@
-// src/Contact.jsx
-
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import './Contact.css';
 
 function Contact() {
   const [flippedEmail, setFlippedEmail] = useState(false);
   const [flippedPhone, setFlippedPhone] = useState(false);
+  const [fadeIn, setFadeIn] = useState(false);
+
+  useEffect(() => {
+    const timer = setTimeout(() => {
+      setFadeIn(true);
+    }, 50); 
+
+    return () => clearTimeout(timer);
+  }, []);
 
   const handleFlipEmail = () => setFlippedEmail(!flippedEmail);
   const handleFlipPhone = () => setFlippedPhone(!flippedPhone);
 
   return (
-    <div className="contact-container">
+    <div className={`contact-container ${fadeIn ? 'fade-in' : ''}`}>
       <div className="cards-container">
         <div
           className={`card ${flippedEmail ? 'flipped' : ''}`}
