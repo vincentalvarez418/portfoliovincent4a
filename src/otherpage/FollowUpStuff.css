@@ -1,0 +1,47 @@
+.follow-up-stuff {
+  font-size: 1.2em;
+  color: rgb(110, 110, 110); /* Set text color to black */
+  font-family: 'Merriweather', serif;
+}
+
+.separator {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  margin: 20px 0;
+}
+
+.line {
+  width: 30%;
+  border: 0;
+  border-top: 2px solid #999999; /* Custom line color */
+}
+
+.separator-text {
+  font-size: 1.2em;
+  color: rgb(175, 175, 175);
+  font-family: 'Merriweather', serif;
+  text-align: center;
+  padding: 0 10px;
+}
+
+.bottom-separator {
+  margin-top: 20px;
+}
+
+.bottom-separator .line {
+  width: 100%;
+  border-top: 2px solid #6b4e3d; /* Line below the content */
+}
+.vincent-name {
+  color: white;
+  font-size: 2.5em; 
+  font-weight: 600; 
+  font-family: 'Playfair Display', serif; 
+  text-align: center;
+  letter-spacing: 1px;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2); 
+  margin: 20px 0;
+}
+
