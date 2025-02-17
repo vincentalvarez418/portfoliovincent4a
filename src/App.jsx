@@ -8,7 +8,6 @@ import Contact from "./otherpage/Contact";
 import Showcase from "./otherpage/Showcase";
 import Tour from "./otherpage/Tour";
 
-// Import your icons
 import home from "./assets/generalicons/home.png";
 import aboutme from "./assets/generalicons/aboutme.png";
 import showcase from "./assets/generalicons/showcase.png";

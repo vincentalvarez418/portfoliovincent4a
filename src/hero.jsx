@@ -3,7 +3,7 @@ import { useNavigate } from "react-router-dom";
 import "./hero.css";
 
 const Hero = () => {
-  const [loading, setLoading] = useState(true); // Manage loading state
+  const [loading, setLoading] = useState(true); 
   const navigate = useNavigate();
 
   const handleGetStarted = () => {
@@ -11,25 +11,24 @@ const Hero = () => {
   };
 
   useEffect(() => {
-    // Simulate loading state for 2 seconds
     const timer = setTimeout(() => {
       setLoading(false);
     }, 2000);
 
-    return () => clearTimeout(timer); // Clean up the timer on unmount
+    return () => clearTimeout(timer); 
   }, []);
 
   return (
     <div className="hero-container">
-      {/* Show loading screen until loading is false */}
+      {}
       {loading ? (
         <div className="loading-screen">
-          {/* Example loading animation */}
+          {}
           <div className="loading-spinner"></div>
         </div>
       ) : (
         <>
-          {/* Main content */}
+          {}
           <div className="hero-section"></div>
           <div className="hero-section">
             <div className="hero-content">
