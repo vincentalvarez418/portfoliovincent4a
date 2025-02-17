@@ -34,7 +34,7 @@ function App() {
             <span className="icon">
               <img src={home} alt="Home" />
             </span>
-            <span className="text">Homepage</span>
+            <span className="text">Home</span>
           </Link>
           <Link to="/about" className="custom-button">
             <span className="icon">
@@ -46,13 +46,13 @@ function App() {
             <span className="icon">
               <img src={showcase} alt="Showcase" />
             </span>
-            <span className="text">Showcase</span>
+            <span className="text">My Works</span>
           </Link>
           <Link to="/contact" className="custom-button">
             <span className="icon">
               <img src={contact} alt="Contact" />
             </span>
-            <span className="text">Contact</span>
+            <span className="text">Contact Me</span>
           </Link>
           <Link to="/skills" className="custom-button">
             <span className="icon">
