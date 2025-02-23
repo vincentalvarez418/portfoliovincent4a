@@ -56,14 +56,14 @@ function Navbar() {
             </div>
           </Link>
         </li>
-        <li className="nav-item">
+         {/*<li className="nav-item">
           <Link to="/skills">
             <div className="nav-box">
               <img src={skills} alt="Skills" className="nav-icon" />
               <span className="nav-text">Skills</span>
             </div>
           </Link>
-        </li>
+        </li>*/}
         <li className="nav-item">
           <Link to="/tour">
             <div className="nav-box">
@@ -86,7 +86,7 @@ function App() {
         <Routes>
           <Route path="/" element={<Hero />} />
           <Route path="/about" element={<FollowUpStuff />} />
-          <Route path="/skills" element={<SkillsAndServices />} />
+          {/* <Route path="/skills" element={<SkillsAndServices />} /> */}
           <Route path="/contact" element={<Contact />} />
           <Route path="/showcase" element={<Showcase />} />
           <Route path="/tour" element={<Tour />} />

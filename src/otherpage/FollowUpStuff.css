@@ -1,7 +1,8 @@
 .follow-up-container {
   opacity: 0;
-  transform: translateY(20px); 
+  transform: translateY(20px);
   transition: opacity 1.2s ease-in-out, transform 1.2s ease-in-out;
+  padding: 20px;
 }
 
 .follow-up-container.fade-in {
@@ -9,10 +10,26 @@
   transform: translateY(0);
 }
 
-.follow-up-stuff {
-  font-size: 1.2em;
-  color: rgb(110, 110, 110); 
-  font-family: 'Merriweather', serif;
+.section {
+  background-color: rgba(255, 255, 255, 0.1);
+  border-left: 5px solid #4A90E2;
+  padding: 20px;
+  margin: 20px 0;
+  border-radius: 10px;
+  box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1);
+  color: white;
+}
+
+.section:nth-child(odd) {
+  background-color: rgba(74, 144, 226, 0.1);
+}
+
+.section:nth-child(even) {
+  background-color: rgba(47, 47, 47, 0.1);
+}
+
+.follow-up-container ul {
+  padding-left: 20px;
 }
 
 .separator {
@@ -26,7 +43,7 @@
 .line {
   width: 30%;
   border: 0;
-  border-top: 2px solid #999999; 
+  border-top: 2px solid #999999;
 }
 
 .separator-text {
@@ -43,7 +60,7 @@
 
 .bottom-separator .line {
   width: 100%;
-  border-top: 2px solid #6b4e3d; 
+  border-top: 2px solid #6b4e3d;
 }
 
 .vincent-name {
@@ -55,4 +72,49 @@
   letter-spacing: 1px;
   text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
   margin: 20px 0;
+  padding: 10px 0;
+}
+
+.follow-up-container {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 1.2s ease-in-out, transform 1.2s ease-in-out;
+  padding: 20px;
+}
+
+.section {
+  background-color: white;
+  border: 2px solid #ddd;
+  padding: 20px;
+  margin: 20px 0;
+  border-radius: 10px;
+  box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.1);
+  color: white;
+}
+
+.section h2 {
+  margin-bottom: 10px;
+  color: white;
+}
+
+.section p, .section ul {
+  font-size: 1.1em;
+  color: white;
+}
+
+.section ul {
+  padding-left: 20px;
+  list-style-type: disc;
+}
+
+.vincent-name {
+  color: white;
+  font-size: 2.5em;
+  font-weight: 600;
+  font-family: 'Playfair Display', serif;
+  text-align: center;
+  letter-spacing: 1px;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+  margin: 20px 0;
+  padding: 10px 0;
 }
