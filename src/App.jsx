@@ -1,7 +1,7 @@
-import { BrowserRouter as Router, Routes, Route, Link } from "react-router-dom";
+import { BrowserRouter as Router, Routes, Route, Link, useLocation } from "react-router-dom";
 import "./App.css";
-import ScrollToTop from './misc/ScrollToTop'; 
-import Hero from "./hero";
+import ScrollToTop from "./misc/ScrollToTop";
+import Hero from "./otherpage/hero";
 import FollowUpStuff from "./otherpage/FollowUpStuff";
 import SkillsAndServices from "./otherpage/SkillsAndServices";
 import Contact from "./otherpage/Contact";
@@ -15,11 +15,74 @@ import contact from "./assets/generalicons/contact.png";
 import skills from "./assets/generalicons/skills.png";
 import tour from "./assets/generalicons/tour.png";
 
+
+
+function Navbar() {
+  const location = useLocation();
+  if (location.pathname === "/") return null;
+  
+  return (
+    <nav className="navbar">
+      <ul className="nav-links">
+        <li className="nav-item">
+          <Link to="/">
+            <div className="nav-box">
+              <img src={home} alt="Home" className="nav-icon" />
+              <span className="nav-text">Home</span>
+            </div>
+          </Link>
+        </li>
+        <li className="nav-item">
+          <Link to="/about">
+            <div className="nav-box">
+              <img src={aboutme} alt="About" className="nav-icon" />
+              <span className="nav-text">About Me</span>
+            </div>
+          </Link>
+        </li>
+        <li className="nav-item">
+          <Link to="/showcase">
+            <div className="nav-box">
+              <img src={showcase} alt="Showcase" className="nav-icon" />
+              <span className="nav-text">My Works</span>
+            </div>
+          </Link>
+        </li>
+        <li className="nav-item">
+          <Link to="/contact">
+            <div className="nav-box">
+              <img src={contact} alt="Contact" className="nav-icon" />
+              <span className="nav-text">Contact Me</span>
+            </div>
+          </Link>
+        </li>
+        <li className="nav-item">
+          <Link to="/skills">
+            <div className="nav-box">
+              <img src={skills} alt="Skills" className="nav-icon" />
+              <span className="nav-text">Skills</span>
+            </div>
+          </Link>
+        </li>
+        <li className="nav-item">
+          <Link to="/tour">
+            <div className="nav-box">
+              <img src={tour} alt="Travels" className="nav-icon" />
+              <span className="nav-text">Travels</span>
+            </div>
+          </Link>
+        </li>
+      </ul>
+    </nav>
+  );
+}
+
 function App() {
   return (
     <Router>
       <ScrollToTop />
-      <div>
+      <Navbar />
+      <div className="content">
         <Routes>
           <Route path="/" element={<Hero />} />
           <Route path="/about" element={<FollowUpStuff />} />
@@ -28,45 +91,6 @@ function App() {
           <Route path="/showcase" element={<Showcase />} />
           <Route path="/tour" element={<Tour />} />
         </Routes>
-
-        <div className="button-container">
-          <Link to="/" className="custom-button">
-            <span className="icon">
-              <img src={home} alt="Home" />
-            </span>
-            <span className="text">Home</span>
-          </Link>
-          <Link to="/about" className="custom-button">
-            <span className="icon">
-              <img src={aboutme} alt="About" />
-            </span>
-            <span className="text">About Me</span>
-          </Link>
-          <Link to="/showcase" className="custom-button">
-            <span className="icon">
-              <img src={showcase} alt="Showcase" />
-            </span>
-            <span className="text">My Works</span>
-          </Link>
-          <Link to="/contact" className="custom-button">
-            <span className="icon">
-              <img src={contact} alt="Contact" />
-            </span>
-            <span className="text">Contact Me</span>
-          </Link>
-          <Link to="/skills" className="custom-button">
-            <span className="icon">
-              <img src={skills} alt="Skills" />
-            </span>
-            <span className="text">Skills</span>
-          </Link>
-          <Link to="/tour" className="custom-button">
-            <span className="icon">
-              <img src={tour} alt="Travels" />
-            </span>
-            <span className="text">Travels</span>
-          </Link>
-        </div>
       </div>
     </Router>
   );
