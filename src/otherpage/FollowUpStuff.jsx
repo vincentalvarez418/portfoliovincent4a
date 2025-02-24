@@ -32,7 +32,12 @@ function FollowUpStuff() {
 
   return (
     <div className={`follow-up-container ${fadeIn ? "fade-in" : ""}`}>
-      <h1 className="vincent-name">Hello, meet Vincent</h1>
+      <div className="separator">
+        <hr className="line" />
+        <span className="separator-text">- - / / - - / / - -</span>
+        <hr className="line" />
+      </div>
+      <h1 className="vincent-name">Vincent Alvarez</h1>
       <div className="separator">
         <hr className="line" />
         <span className="separator-text">- - / / - - / / - -</span>

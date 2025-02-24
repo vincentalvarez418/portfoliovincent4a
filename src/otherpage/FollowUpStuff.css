@@ -65,7 +65,7 @@
 
 .vincent-name {
   color: white;
-  font-size: 2.5em;
+  font-size: 6.5em;
   font-weight: 600;
   font-family: 'Playfair Display', serif;
   text-align: center;
@@ -109,15 +109,69 @@
 
 .vincent-name {
   color: white;
-  font-size: 2.5em;
+  font-size: 4.5em;
   font-weight: 600;
   font-family: 'Playfair Display', serif;
   text-align: center;
   letter-spacing: 1px;
-  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+  text-shadow: 
+    0 0 5px #00aaff, 
+    0 0 10px #0077cc, 
+    -2px -2px 5px black, 
+    2px 2px 5px rgba(0, 0, 0, 0.8);
   margin: 20px 0;
   padding: 10px 0;
+  animation: glitch 2.0s infinite alternate;
+  position: relative;
 }
+
+@keyframes glitch {
+  0% {
+    text-shadow: 
+      0 0 5px #00aaff, 
+      0 0 10px #0077cc, 
+      -2px -2px 5px black, 
+      2px 2px 5px rgba(0, 0, 0, 0.8);
+    transform: translate(0);
+  }
+  20% {
+    text-shadow: 
+      2px 2px 5px #00aaff, 
+      -2px -2px 5px black, 
+      3px 3px 8px rgba(0, 0, 0, 0.8);
+    transform: translateX(-2px);
+  }
+  40% {
+    text-shadow: 
+      -2px -2px 5px #00aaff, 
+      2px 2px 5px black, 
+      -3px -3px 8px rgba(0, 0, 0, 0.8);
+    transform: translateX(2px);
+  }
+  60% {
+    text-shadow: 
+      0 0 8px #0077cc, 
+      0 0 12px #00aaff, 
+      3px -3px 8px rgba(0, 0, 0, 0.8);
+    transform: translateY(-2px);
+  }
+  80% {
+    text-shadow: 
+      0 0 5px #00aaff, 
+      -3px 3px 8px black, 
+      0 0 12px rgba(0, 0, 0, 0.8);
+    transform: translateY(2px);
+  }
+  100% {
+    text-shadow: 
+      0 0 5px #00aaff, 
+      0 0 10px #0077cc, 
+      -2px -2px 5px black, 
+      2px 2px 5px rgba(0, 0, 0, 0.8);
+    transform: translate(0);
+  }
+}
+
 
 .skills-grid {
   display: grid;
