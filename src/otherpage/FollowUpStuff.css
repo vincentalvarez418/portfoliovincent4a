@@ -215,3 +215,70 @@
   color: white;
   font-size: 1em; 
 }
+
+.working-on-image {
+  display: flex;
+  justify-content: center;
+  margin-top: 15px;
+}
+
+.working-on-img {
+  width: 80%;
+  max-width: 400px;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+.hobbies-logos {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  margin-top: 15px;
+}
+
+.hobby-logo {
+  width: 120px;
+  height: auto;
+  border-radius: 8px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  transition: transform 0.3s ease-in-out;
+}
+
+.hobby-logo:hover {
+  transform: scale(1.1);
+}
+
+.connect-logo {
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+}
+
+.github-logo {
+  width: 150px;
+  height: auto;
+  border-radius: 8px;
+  transition: transform 0.3s ease-in-out;
+}
+
+.github-logo:hover {
+  transform: scale(1.1);
+}
+
+.career-logos {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  margin-top: 15px;
+}
+
+.career-logo {
+  width: 120px;
+  height: auto;
+  border-radius: 8px;
+  transition: transform 0.3s ease-in-out;
+}
+
+.career-logo:hover {
+  transform: scale(1.1);
+}

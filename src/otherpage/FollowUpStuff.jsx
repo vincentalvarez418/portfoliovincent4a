@@ -8,6 +8,13 @@ import htmlLogo from '../assets/icons/html.png';
 import javaLogo from '../assets/icons/java.png';
 import jsLogo from '../assets/icons/javascript.png';
 import kotlinLogo from '../assets/icons/kotlin.png';
+import workingon from '../assets/aboutme/workingon1.jpg';
+import mediatekLogo from '../assets/aboutme/Mediatek_Logo.png';
+import snapdragonLogo from '../assets/aboutme/Snapdragon_Logo.png';
+import githubAboutMe from '../assets/aboutme/githubaboutme.jpg';
+import armLogo from '../assets/aboutme/arm.png';
+import aiLogo from '../assets/aboutme/AI.png';
+
 
 const skills = [
   { logo: yoloLogo, name: "YOLO", services: ["Object Detection", "Model Training"] },
@@ -81,27 +88,45 @@ function FollowUpStuff() {
         <p>
           Right now, I’m working on several machine learning projects, such as image localization. My focus is on making lightweight models capable of running smoothly on multiple platforms.
         </p>
+        <div className="working-on-image">
+          <img src={workingon} alt="Current Project" className="working-on-img" />
+        </div>
       </div>
 
       <div className="section">
         <h2>🎯 Career Goals 🎯</h2>
         <p>
-          My goal is to work in an IT company focused on machine learning and software development. I’m passionate about building impactful AI-driven applications and continuously growing as a developer.
+          My goal is to work in an IT company focused on machine learning and software development. 
+          I’m passionate about building impactful AI-driven applications and continuously growing as a developer.
         </p>
+        <div className="career-logos">
+          <img src={armLogo} alt="ARM Logo" className="career-logo" />
+          <img src={aiLogo} alt="AI Logo" className="career-logo" />
+        </div>
       </div>
+
 
       <div className="section">
         <h2>📱 Hobbies 📱</h2>
         <p>
           Beyond coding, I enjoy studying mobile hardware, such as smartphone SoCs.
         </p>
+        <div className="hobbies-logos">
+          <img src={mediatekLogo} alt="Mediatek Logo" className="hobby-logo" />
+          <img src={snapdragonLogo} alt="Snapdragon Logo" className="hobby-logo" />
+        </div>
       </div>
 
       <div className="section">
         <h2>📩 Let’s Connect! 📩</h2>
         <p>
-          I’m always open to collaborating on exciting projects. Reach me at my GitHub: <a href="https://github.com/vincentalvarez418">vincentalvarez418</a>.
+          I’m always open to collaborating on exciting projects. Reach me at my GitHub:
         </p>
+        <div className="connect-logo">
+          <a href="https://github.com/vincentalvarez418">
+            <img src={githubAboutMe} alt="GitHub Profile" className="github-logo" />
+          </a>
+        </div>
       </div>
     </div>
   );
