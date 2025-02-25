@@ -37,6 +37,7 @@ function Showcase() {
 
   return (
     <div className={`showcase-container ${fadeIn ? "fade-in" : ""}`}>
+      <br></br>
       <h1 className="showcase-title">My Works</h1>
       <p className="showcase-subtitle">
         Explore some of my featured projects and creative work.
