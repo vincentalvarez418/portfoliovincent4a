@@ -4,36 +4,42 @@
   left: 0;
   width: 100vw;
   height: 100vh;
-  background: url("/src/assets/hero.jpg") no-repeat center center/cover;
-  z-index: 1; 
   display: flex;
   align-items: center;
-  justify-content: space-between; 
+  justify-content: center;
+  background: black;
+  z-index: 1;
+  overflow: hidden;
 }
 
-.hero-container::before {
-  content: "";
+.hero-image {
   position: absolute;
   top: 0;
   left: 0;
   width: 100%;
   height: 100%;
-  background: linear-gradient(to bottom, rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.3));
-  z-index: 1;
+  background: url("/src/assets/hero.jpg") no-repeat center center/cover;
+  transition: opacity 1.5s ease-in-out;
+  z-index: 2;
 }
 
-@keyframes fadeIn {
-  from {
-    opacity: 0;
-  }
-  to {
-    opacity: 1;
-  }
+.hero-image.hidden {
+  opacity: 0;
 }
 
-@keyframes spin {
-  0% { transform: rotate(0deg); }
-  100% { transform: rotate(360deg); }
+canvas {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  transition: opacity 1.5s ease-in-out;
+  z-index: 3;
+}
+
+canvas.visible {
+  opacity: 1;
 }
 
 .hero-section {
@@ -42,7 +48,7 @@
   align-items: center;
   justify-content: center;
   position: relative;
-  z-index: 2;
+  z-index: 4;
   text-align: center;
   padding: 2rem;
 }
@@ -50,7 +56,7 @@
 .hero-content {
   opacity: 0;
   transform: translateY(30px);
-  animation: slideUp 1.2s ease-out 0.5s forwards;
+  animation: slideUp 1.2s ease-out 3.2s forwards;
 }
 
 .hero-title {
@@ -60,7 +66,7 @@
   margin-bottom: 1.5rem;
   text-transform: uppercase;
   letter-spacing: 2px;
-  animation: fadeIn 2s ease-in-out 0.5s forwards;
+  animation: fadeIn 2s ease-in-out 3.5s forwards;
 }
 
 .glitch {
@@ -70,44 +76,17 @@
   animation: glitch 6s infinite linear;
 }
 
-@keyframes glitch {
-  0% {
-    text-shadow: 2px 0 black, -2px 0 white, 0 2px white, 0 -2px black;
-    transform: translateX(0);
-  }
-  20% {
-    text-shadow: 4px 0 black, -4px 0 white, 0 4px white, 0 -4px black;
-    transform: translateX(-5px);
-  }
-  40% {
-    text-shadow: 4px 0 black, -4px 0 white, 0 4px white, 0 -4px black;
-    transform: translateX(5px);
-  }
-  60% {
-    text-shadow: 2px 0 black, -2px 0 white, 0 2px white, 0 -2px black;
-    transform: translateX(0);
-  }
-  80% {
-    text-shadow: 4px 0 black, -4px 0 white, 0 4px white, 0 -4px black;
-    transform: translateX(-5px);
-  }
-  100% {
-    text-shadow: 4px 0 black, -4px 0 white, 0 4px white, 0 -4px black;
-    transform: translateX(5px);
-  }
-}
-
 .hero-subtitle {
   color: #ddd;
   font-size: 1.6rem;
   margin-bottom: 2rem;
   font-weight: 300;
   opacity: 0;
-  animation: fadeIn 1.8s ease-in-out 0.7s forwards;
+  animation: fadeIn 1.8s ease-in-out 3.8s forwards;
 }
 
 .hero-button {
-  background: linear-gradient(45deg, #333, #111); 
+  background: linear-gradient(45deg, #333, #111);
   color: #fff;
   border: none;
   padding: 1rem 2rem;
@@ -118,22 +97,15 @@
   transition: all 0.3s ease;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
   opacity: 0;
-  animation: fadeIn 2s ease-in-out 1s forwards;
+  animation: fadeIn 2s ease-in-out 4s forwards;
+  position: relative;
+  z-index: 5;
 }
 
 .hero-button:hover {
   background: linear-gradient(45deg, #222, #000);
   transform: scale(1.05);
   box-shadow: 0 6px 14px rgba(0, 0, 0, 0.5);
-}
-
-@keyframes fadeIn {
-  from {
-    opacity: 0;
-  }
-  to {
-    opacity: 1;
-  }
 }
 
 @keyframes slideUp {
@@ -146,6 +118,46 @@
     transform: translateY(0);
   }
 }
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+
+
+
+.hero-title-container {
+  text-align: center;
+}
+
+.hero-subtitle { 
+  font-size: 2rem; 
+  font-weight: 600;
+  color: #ddd;
+  margin-bottom: 0.2rem; 
+}
+
+.hero-title { 
+  font-size: 4rem;
+  font-weight: bold;
+  text-transform: uppercase;
+  margin-top: 0;
+}
+
+.hero-tagline {
+  font-size: 1.2rem; 
+  font-weight: normal;
+  color: #ccc;
+  margin-top: 0.8rem;
+  opacity: 0.85;
+}
+
+
 
 @media (max-width: 768px) {
   .hero-container {
