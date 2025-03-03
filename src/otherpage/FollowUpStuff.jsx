@@ -9,11 +9,9 @@ import javaLogo from '../assets/icons/java.png';
 import jsLogo from '../assets/icons/javascript.png';
 import kotlinLogo from '../assets/icons/kotlin.png';
 import workingon from '../assets/aboutme/workingon1.jpg';
-import mediatekLogo from '../assets/aboutme/Mediatek_Logo.png';
-import snapdragonLogo from '../assets/aboutme/Snapdragon_Logo.png';
+import qualcommLogo from '../assets/aboutme/qualcom.png';
 import githubAboutMe from '../assets/aboutme/githubaboutme.jpg';
-import armLogo from '../assets/aboutme/arm.png';
-import aiLogo from '../assets/aboutme/AI.png';
+import machineLearningImg from '../assets/aboutme/machinelearning.jpg';
 
 
 const skills = [
@@ -100,27 +98,25 @@ function FollowUpStuff() {
           I’m passionate about building impactful AI-driven applications and continuously growing as a developer.
         </p>
         <div className="career-logos">
-          <img src={armLogo} alt="ARM Logo" className="career-logo" />
-          <img src={aiLogo} alt="AI Logo" className="career-logo" />
+          <img src={machineLearningImg} alt="Machine Learning" className="career-logo" />
         </div>
       </div>
 
 
       <div className="section">
-        <h2>Hobbies</h2><hr></hr>
+        <h2>HOBBIES</h2><hr></hr>
         <p>
           Beyond coding, I enjoy studying mobile hardware, such as smartphone SoCs.
         </p>
         <div className="hobbies-logos">
-          <img src={mediatekLogo} alt="Mediatek Logo" className="hobby-logo" />
-          <img src={snapdragonLogo} alt="Snapdragon Logo" className="hobby-logo" />
+          <img src={qualcommLogo} alt="Qualcomm Logo" className="hobby-logo" />
         </div>
       </div>
 
       <div className="section">
-        <h2>Let’s Connect!</h2><hr></hr>
+        <h2>LET'S CONNECT!</h2><hr></hr>
         <p>
-          I’m always open to collaborating on exciting projects. Reach me at my GitHub:
+          Reach me at my GitHub:
         </p>
         <div className="connect-logo">
           <a href="https://github.com/vincentalvarez418">

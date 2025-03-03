@@ -130,44 +130,44 @@
 @keyframes glitch {
   0% {
     text-shadow: 
-      0 0 5px #00aaff, 
-      0 0 10px #0077cc, 
+      0 0 5px #3b3b3b, 
+      0 0 10px #353535, 
       -2px -2px 5px black, 
       2px 2px 5px rgba(0, 0, 0, 0.8);
     transform: translate(0);
   }
   20% {
     text-shadow: 
-      2px 2px 5px #00aaff, 
+      2px 2px 5px #272727, 
       -2px -2px 5px black, 
       3px 3px 8px rgba(0, 0, 0, 0.8);
     transform: translateX(-2px);
   }
   40% {
     text-shadow: 
-      -2px -2px 5px #00aaff, 
+      -2px -2px 5px #272727, 
       2px 2px 5px black, 
       -3px -3px 8px rgba(0, 0, 0, 0.8);
     transform: translateX(2px);
   }
   60% {
     text-shadow: 
-      0 0 8px #0077cc, 
-      0 0 12px #00aaff, 
+      0 0 8px #272727, 
+      0 0 12px #272727, 
       3px -3px 8px rgba(0, 0, 0, 0.8);
     transform: translateY(-2px);
   }
   80% {
     text-shadow: 
-      0 0 5px #00aaff, 
+      0 0 5px #272727, 
       -3px 3px 8px black, 
       0 0 12px rgba(0, 0, 0, 0.8);
     transform: translateY(2px);
   }
   100% {
     text-shadow: 
-      0 0 5px #00aaff, 
-      0 0 10px #0077cc, 
+      0 0 5px #272727, 
+      0 0 10px #272727, 
       -2px -2px 5px black, 
       2px 2px 5px rgba(0, 0, 0, 0.8);
     transform: translate(0);
@@ -239,7 +239,7 @@
 }
 
 .hobby-logo {
-  width: 120px;
+  width: 725px;
   height: auto;
   border-radius: 8px;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
@@ -275,7 +275,7 @@
 }
 
 .career-logo {
-  width: 120px;
+  width: 725px;
   height: auto;
   border-radius: 8px;
   transition: transform 0.3s ease-in-out;
