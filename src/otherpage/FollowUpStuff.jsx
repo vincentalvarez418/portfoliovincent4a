@@ -53,21 +53,21 @@ function FollowUpStuff() {
       <br />
 
       <div className="section">
-        <h2>💻 About Me 💻</h2>
+        <h2>About Me</h2><hr></hr>
         <p>
           I am a passionate Freelance Developer specializing in Machine Learning, with a deep interest in solving complex problems using data-driven techniques. Over the years, I’ve honed my skills in various programming languages, including Python, JavaScript, and more.
         </p>
       </div>
 
       <div className="section">
-        <h2>🏆 Competitions & Contests 🏆</h2>
+        <h2>Competitions & Contests</h2><hr></hr>
         <p>
           I love challenging myself and testing my skills. I have participated in several third-party contests where I demonstrated my machine learning expertise. I am currently looking for contests that focus on mobile AI.
         </p>
       </div>
 
       <div className="section">
-        <h2>🛠 Skills & Expertise 🛠</h2>
+        <h2> Skills & Expertise </h2><hr></hr>
         <div className="skills-grid">
           {skills.map((skill, index) => (
             <div key={index} className="skill-card">
@@ -84,7 +84,7 @@ function FollowUpStuff() {
       </div>
 
       <div className="section">
-        <h2>🗃️ Currently Working On 🗃️</h2>
+        <h2>Currently Working On</h2><hr></hr>
         <p>
           Right now, I’m working on several machine learning projects, such as image localization. My focus is on making lightweight models capable of running smoothly on multiple platforms.
         </p>
@@ -94,7 +94,7 @@ function FollowUpStuff() {
       </div>
 
       <div className="section">
-        <h2>🎯 Career Goals 🎯</h2>
+        <h2>Career Goals</h2><hr></hr>
         <p>
           My goal is to work in an IT company focused on machine learning and software development. 
           I’m passionate about building impactful AI-driven applications and continuously growing as a developer.
@@ -107,7 +107,7 @@ function FollowUpStuff() {
 
 
       <div className="section">
-        <h2>📱 Hobbies 📱</h2>
+        <h2>Hobbies</h2><hr></hr>
         <p>
           Beyond coding, I enjoy studying mobile hardware, such as smartphone SoCs.
         </p>
@@ -118,7 +118,7 @@ function FollowUpStuff() {
       </div>
 
       <div className="section">
-        <h2>📩 Let’s Connect! 📩</h2>
+        <h2>Let’s Connect!</h2><hr></hr>
         <p>
           I’m always open to collaborating on exciting projects. Reach me at my GitHub:
         </p>
