@@ -42,10 +42,10 @@ function Contact() {
               <img src={githubIcon} alt="GitHub" className="github-icon" />
             </div>
             <div className="card-back">
-              <a href="https://github.com/vincentalvarez418" target="_blank" rel="noopener noreferrer">
-                github.com/vincentalvarez418
-              </a>
-            </div>
+            <a href="https://github.com/vincentalvarez418" target="_blank" rel="noopener noreferrer">
+              vincentalvarez418
+            </a>
+          </div>
           </div>
         </div>
       </div>
