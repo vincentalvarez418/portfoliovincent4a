@@ -344,87 +344,73 @@ hr {
   align-items: stretch;
 }
 
-@media (max-width: 768px) {
-  .about-competitions-container {
-    grid-template-columns: 1fr; 
-  }
-}
-
-.work-career-container {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  gap: 20px; 
-  align-items: stretch; 
-}
 
 @media (max-width: 768px) {
-  .work-career-container {
-    grid-template-columns: 1fr; 
-  }
-}
-
-.hobbies-connect-container {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr); 
-  gap: 20px;
-  align-items: stretch;
-}
-
-@media (max-width: 768px) {
-  .hobbies-connect-container {
+  .skills-grid {
     grid-template-columns: 1fr;
+    padding: 10px;
+  }
+
+  .skill-card {
+    width: 100%;
+    height: auto;
+    padding: 20px;
+  }
+
+  .skill-card h3 {
+    font-size: 1.2em;
+  }
+
+  .skill-card ul {
+    font-size: 0.9em;
   }
 }
 
-.hover-effect {
-  transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
-}
-
-.hover-effect:hover {
-  transform: scale(1.1); 
-  box-shadow: 0px 4px 15px rgba(255, 255, 255, 0.3); 
-}
-
-.hobbies-connect-container {
-  display: flex;
-  justify-content: space-between;
-  gap: 20px; 
-  align-items: flex-start;
-}
-
-
-.hobbies {
-  flex: 2;
-  min-width: 500px;
-  text-align: center;
-}
-
-.lets-connect {
-  flex: 1;
-  min-width: 250px;
-  text-align: center;
-}
-
-.hover-effect {
-  transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
-}
-
-.hover-effect:hover {
-  transform: scale(1.1);
-  box-shadow: 0px 4px 15px rgba(255, 255, 255, 0.3);
-}
 
 @media (max-width: 768px) {
-  .hobbies-connect-container {
-    flex-direction: column;
-    align-items: center;
+  .section {
+    padding: 15px;
+    margin: 15px 0;
   }
 
-  .hobbies, .lets-connect {
-    flex: 1;
-    min-width: 100%;
+  .section h2 {
+    font-size: 1.5em;
+  }
+
+  .section p, .section ul {
+    font-size: 1em;
+  }
+
+  .separator-text {
+    font-size: 1.5em;
+  }
+
+  .vincent-name {
+    font-size: 3.5em;
+  }
+
+  .working-on-img {
+    max-width: 350px;
+  }
+
+  .hobby-logo, .career-logo {
+    width: 100%;
+  }
+
+  .follow-up-container {
+    padding: 15px;
+  }
+
+  .bottom-separator .line {
+    width: 100%;
+  }
+
+  .separator {
+    gap: 15px;
+  }
+
+  .line {
+    width: 25%;
   }
 }
-
-
 
