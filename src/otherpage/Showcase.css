@@ -1,3 +1,21 @@
+.showcase-title {
+  font-size: 1em; 
+  font-weight: 800;
+  color: white;
+  text-align: center;
+  text-shadow: 0 4px 6px rgba(0, 0, 0, 0.5), 0 0 25px #f39c12, 0 0 5px #f39c12;
+  margin-bottom: 10px;
+  padding: 10px 0;
+  text-transform: uppercase;
+  letter-spacing: 3px;
+  font-family: 'Cinzel', serif;
+}
+
+.showcase-container {
+  background: #1e1e1e; 
+  padding: 20px;
+}
+
 .showcase-grid {
   display: flex;
   flex-direction: column;
@@ -115,11 +133,45 @@
   object-fit: cover;
 }
 
-.showcase-title {
+.line {
+  width: 30%;
+  border: 0;
+  border-top: 3px solid #6b4e3d; 
+  background-color: transparent;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+}
+
+.separator-text {
   font-size: 2em;
-  font-weight: bold;
-  color: white;
+  color: #fff;
+  font-family: 'Cinzel', serif; 
   text-align: center;
-  text-shadow: 2px 2px 5px rgba(255, 255, 255, 0.6); 
-  margin-bottom: 10px;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  position: relative;
+  z-index: 10;
+  padding: 0 10px;
+}
+
+.separator-text::before, .separator-text::after {
+  content: "✧"; 
+  font-size: 1.5em;
+  color: #f1c40f; 
+  position: absolute;
+  left: -25px;
+  right: -25px;
+  top: -10px;
+}
+
+.my-works-name {
+  color: white;
+  font-size: 4em;
+  font-weight: 800;
+  font-family: 'Cinzel', serif;
+  text-align: center;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  text-shadow: 0 4px 6px rgba(0, 0, 0, 0.5), 0 0 25px #f39c12, 0 0 5px #f39c12;
+  margin: 20px 0;
+  padding: 10px 0;
 }

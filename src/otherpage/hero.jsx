@@ -33,7 +33,9 @@ const Hero = () => {
       ctx.fillStyle = "rgba(0, 0, 0, 0.1)";
       ctx.fillRect(0, 0, canvas.width, canvas.height);
 
-      ctx.fillStyle = "#00f";
+      const randomColor = Math.random() > 0.5 ? "#00f" : "#FFD700";
+
+      ctx.fillStyle = randomColor;
       ctx.font = "18px monospace";
 
       for (let i = 0; i < drops.length; i++) {

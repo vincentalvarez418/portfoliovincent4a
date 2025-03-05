@@ -55,3 +55,35 @@
   font-size: 1em;
   color: rgb(110, 110, 110);
 }
+
+.tour-title {
+  color: white;
+  font-size: 3.5em;
+  font-weight: 800;
+  font-family: 'Cinzel', serif;
+  text-align: center;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  text-shadow: 0 4px 6px rgba(0, 0, 0, 0.5), 0 0 25px #f39c12, 0 0 5px #f39c12;
+  margin: 20px 0;
+  padding: 10px 0;
+  position: relative;
+}
+
+.tour-title::before, .tour-title::after {
+  content: "✧";
+  font-size: 1.5em;
+  color: #f1c40f;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.tour-title::before {
+  left: -40px;
+}
+
+.tour-title::after {
+  right: -40px;
+}
+
