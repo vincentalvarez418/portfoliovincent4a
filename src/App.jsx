@@ -3,14 +3,12 @@ import "./App.css";
 import ScrollToTop from "./misc/ScrollToTop";
 import Hero from "./otherpage/hero";
 import FollowUpStuff from "./otherpage/FollowUpStuff";
-import Contact from "./otherpage/Contact";
 import Showcase from "./otherpage/Showcase";
 import Tour from "./otherpage/Tour";
 
 import home from "./assets/generalicons/home.png";
 import aboutme from "./assets/generalicons/aboutme.png";
 import showcase from "./assets/generalicons/showcase.png";
-import contact from "./assets/generalicons/contact.png";
 import tour from "./assets/generalicons/tour.png";
 
 
@@ -47,14 +45,6 @@ function Navbar() {
           </Link>
         </li>
         <li className="nav-item">
-          <Link to="/contact">
-            <div className="nav-box">
-              <img src={contact} alt="Contact" className="nav-icon" />
-              <span className="nav-text">Contact Me</span>
-            </div>
-          </Link>
-        </li>
-        <li className="nav-item">
           <Link to="/tour">
             <div className="nav-box">
               <img src={tour} alt="Travels" className="nav-icon" />
@@ -76,7 +66,6 @@ function App() {
         <Routes>
           <Route path="/" element={<Hero />} />
           <Route path="/about" element={<FollowUpStuff />} />
-          <Route path="/contact" element={<Contact />} />
           <Route path="/showcase" element={<Showcase />} />
           <Route path="/tour" element={<Tour />} />
         </Routes>

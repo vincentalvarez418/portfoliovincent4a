@@ -414,3 +414,53 @@ hr {
   }
 }
 
+
+
+.work-career-container,
+.hobbies-connect-container {
+  display: flex;
+  gap: 20px;
+  align-items: stretch;
+}
+
+.work-career-container .section:first-child {
+  flex: 1;
+  max-width: 25%;
+}
+
+.work-career-container .section:last-child {
+  flex: 3;
+  max-width: 75%;
+}
+
+.hobbies-connect-container .section:first-child {
+  flex: 3;
+  max-width: 75%;
+}
+
+.hobbies-connect-container .section:last-child {
+  flex: 1;
+  max-width: 25%;
+}
+
+.section {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.1);
+}
+
+@media (max-width: 768px) {
+  .work-career-container,
+  .hobbies-connect-container {
+    flex-direction: column;
+  }
+
+  .work-career-container .section,
+  .hobbies-connect-container .section {
+    max-width: 100%;
+  }
+}
+
