@@ -481,6 +481,10 @@ hr {
     text-align: center;
   }
 
+  .about-competitions-container {
+    grid-template-columns: 1fr;
+  }
+
   .working-on-image,
   .connect-logo,
   .career-logos,
