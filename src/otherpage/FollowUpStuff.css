@@ -474,30 +474,32 @@ hr {
 
   .work-career-container .section,
   .hobbies-connect-container .section {
-    width: 100% !important;
-    max-width: 100% !important;
-    margin: 0 auto;  
+    width: auto !important;  
+    max-width: 90% !important; 
+    margin: 20px auto;  
+    padding: 15px 20px; 
+    text-align: center;
   }
 
   .working-on-image,
-  .connect-logo {
-    width: 100% !important;
-    max-width: 100% !important;
+  .connect-logo,
+  .career-logos,
+  .hobbies-logos {
+    width: 100%;
+    max-width: 100%;
     margin: 0 auto;
     display: flex;
     justify-content: center; 
   }
 
   .working-on-img,
-  .github-logo {
-    width: 100% !important;   
-    max-width: 500px !important; 
-    height: auto !important;
+  .github-logo,
+  .career-logo,
+  .hobby-logo {
+    width: 100%;   
+    max-width: 100%;
+    height: auto;
     object-fit: cover;
   }
 }
-
-
-
-
 
