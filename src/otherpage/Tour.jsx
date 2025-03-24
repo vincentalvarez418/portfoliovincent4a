@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import "./Tour.css"; 
+import "./Tour.css";
 
 function Tour() {
   const [fadeIn, setFadeIn] = useState(false);
@@ -17,21 +17,21 @@ function Tour() {
       <p className="tour-description">
         Explore the places I have visited and the experiences I have gathered along the way!
       </p>
-      
+
       <div className="tour-list">
         <div className="tour-item">
-          <h3 className="tour-location">Placeholder</h3>
-          <p className="tour-text">Placeholder.</p>
+          <h3 className="tour-location">PlaceHolder!.</h3>
+          <p className="tour-text">PlaceHolder!.</p>
         </div>
 
         <div className="tour-item">
-          <h3 className="tour-location">Placeholder</h3>
-          <p className="tour-text">Placeholder.</p>
+          <h3 className="tour-location">PlaceHolder!.</h3>
+          <p className="tour-text">PlaceHolder!.</p>
         </div>
 
         <div className="tour-item">
-          <h3 className="tour-location">Placeholder</h3>
-          <p className="tour-text">Placeholder.</p>
+          <h3 className="tour-location">PlaceHolder!.</h3>
+          <p className="tour-text">PlaceHolder!.</p>
         </div>
       </div>
     </div>
