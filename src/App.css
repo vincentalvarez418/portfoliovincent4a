@@ -254,3 +254,40 @@
   color: white;
 }
 
+@media (max-width: 768px) {
+  .nav-links {
+    width: 100%;
+    justify-content: space-around;
+  }
+
+  .nav-icon {
+    width: 30px;
+    height: 30px;
+    padding: 3px;
+  }
+
+  .nav-text {
+    font-size: 0.8em;
+  }
+}
+
+@media (max-width: 480px) {
+  .nav-links {
+    flex-wrap: wrap;
+    gap: 10px;
+  }
+
+  .nav-item {
+    width: 50px;
+  }
+
+  .nav-icon {
+    width: 28px;
+    height: 28px;
+  }
+
+  .nav-text {
+    font-size: 0.7em;
+  }
+}
+
