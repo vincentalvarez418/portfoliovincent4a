@@ -252,6 +252,7 @@
   margin-top: 5px;
   font-size: 0.9em;
   color: white;
+  
 }
 
 @media (max-width: 768px) {
@@ -288,6 +289,7 @@
 
   .nav-text {
     font-size: 0.7em;
+    white-space: nowrap;
   }
 }
 
