@@ -40,7 +40,7 @@ function Navbar() {
           <Link to="/showcase">
             <div className="nav-box">
               <img src={showcase} alt="Showcase" className="nav-icon" />
-              <span className="nav-text">MY WORKS</span>
+              <span className="nav-text">WORKS</span>
             </div>
           </Link>
         </li>
