@@ -24,7 +24,7 @@ function Navbar() {
           <Link to="/">
             <div className="nav-box">
               <img src={home} alt="Home" className="nav-icon" />
-              <span className="nav-text">Home</span>
+              <span className="nav-text">HOME</span>
             </div>
           </Link>
         </li>
@@ -32,7 +32,7 @@ function Navbar() {
           <Link to="/about">
             <div className="nav-box">
               <img src={aboutme} alt="About" className="nav-icon" />
-              <span className="nav-text">About Me</span>
+              <span className="nav-text">ABOUT ME</span>
             </div>
           </Link>
         </li>
@@ -40,7 +40,7 @@ function Navbar() {
           <Link to="/showcase">
             <div className="nav-box">
               <img src={showcase} alt="Showcase" className="nav-icon" />
-              <span className="nav-text">My Works</span>
+              <span className="nav-text">MY WORKS</span>
             </div>
           </Link>
         </li>
@@ -48,7 +48,7 @@ function Navbar() {
           <Link to="/tour">
             <div className="nav-box">
               <img src={tour} alt="Travels" className="nav-icon" />
-              <span className="nav-text">Travels</span>
+              <span className="nav-text">TRAVELS</span>
             </div>
           </Link>
         </li>

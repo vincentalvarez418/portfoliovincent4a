@@ -20,18 +20,18 @@ function Tour() {
 
       <div className="tour-list">
         <div className="tour-item">
-          <h3 className="tour-location">PlaceHolder!.</h3>
-          <p className="tour-text">PlaceHolder!.</p>
+          <h3 className="tour-location">Coming soon!</h3>
+          <p className="tour-text">Coming soon!</p>
         </div>
 
         <div className="tour-item">
-          <h3 className="tour-location">PlaceHolder!.</h3>
-          <p className="tour-text">PlaceHolder!.</p>
+          <h3 className="tour-location">Coming soon!</h3>
+          <p className="tour-text">Coming soon!</p>
         </div>
 
         <div className="tour-item">
-          <h3 className="tour-location">PlaceHolder!.</h3>
-          <p className="tour-text">PlaceHolder!.</p>
+          <h3 className="tour-location">Coming soon!</h3>
+          <p className="tour-text">Coming soon!</p>
         </div>
       </div>
     </div>
