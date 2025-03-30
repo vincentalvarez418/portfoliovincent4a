@@ -5,10 +5,10 @@
 
 @keyframes neonGlow {
   0%, 100% {
-    box-shadow: 0 0 15px #282929, 0 0 30px #282929, inset 0 0 10px #282929;
+    box-shadow: 0 0 15px #de00c4, 0 0 30px #de00c4, inset 0 0 10px #de00c4;
   }
   50% {
-    box-shadow: 0 0 25px #282929, 0 0 50px #282929, inset 0 0 15px #282929;
+    box-shadow: 0 0 25px #de00c4, 0 0 50px #de00c4, inset 0 0 15px #de00c4;
   }
 }
 
@@ -37,8 +37,8 @@
   pointer-events: none;
   background: repeating-linear-gradient(
     to bottom,
-    rgba(45, 45, 45, 0.6) 0%,
-    rgba(0, 119, 255, 0.2) 10%,
+    #de00c4(45, 45, 45, 0.6) 0%,
+    #de00c4(0, 119, 255, 0.2) 10%,
     transparent 15%
   );
   background-size: 100% 300%;
@@ -72,7 +72,7 @@
 
 .glowing-text {
   color: #e1e1e1;
-  text-shadow: 0 0 8px rgba(34, 34, 34, 0.5), 0 0 16px rgba(184, 124, 75, 0.2);
+  text-shadow: 0 0 8px #de00c4(34, 34, 34, 0.5), 0 0 16px #de00c4(184, 124, 75, 0.2);
   font-family: 'Playfair Display', serif;
 }
 
@@ -185,12 +185,12 @@
 
 @keyframes neonGlow {
   0%, 100% {
-    box-shadow: 0 0 10px rgba(41, 41, 41, 0.6), 0 0 20px rgba(45, 45, 45, 0.3);
-    border-bottom: 3px solid rgba(1, 27, 56, 0.8);
+    box-shadow: 0 0 10px #a2008f(41, 41, 41, 0.6), 0 0 20px #920081(45, 45, 45, 0.3);
+    border-bottom: 3px solid #800071(1, 27, 56, 0.8);
   }
   50% {
-    box-shadow: 0 0 20px rgba(56, 56, 56, 0.9), 0 0 40px rgba(0, 23, 48, 0.6);
-    border-bottom: 3px solid rgb(55, 55, 55);
+    box-shadow: 0 0 20px rgba(169, 0, 172, 0.9), 0 0 40px rgba(255, 0, 242, 0.6);
+    border-bottom: 3px solid rgb(189, 0, 180);
   }
 }
 

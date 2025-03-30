@@ -33,7 +33,7 @@ const Hero = () => {
       ctx.fillStyle = "rgba(0, 0, 0, 0.1)";
       ctx.fillRect(0, 0, canvas.width, canvas.height);
 
-      const randomColor = Math.random() > 0.5 ? "#00f" : "#FFD700";
+      const randomColor = Math.random() > 0.5 ? "#cb00ce" : "#FFD700";
 
       ctx.fillStyle = randomColor;
       ctx.font = "18px monospace";
@@ -98,7 +98,7 @@ const Hero = () => {
         <h1 className="hero-title">
           <span className="glitch">DEVELOPER</span>
         </h1>
-        <h5 className="hero-tagline">LEARN. MASTER. CONQUER.</h5>
+        <h5 className="hero-tagline">ADAPT. LEARN. MASTER.</h5>
       </div>
           <button className="hero-button" onClick={handleGetStarted}>
             START
