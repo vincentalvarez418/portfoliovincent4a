@@ -8,7 +8,7 @@
   background-color: #181717;
   background: url('./assets/retro.jpg');
   background-position: center; 
-  background-size: contain;
+  background-size: cover;
   background-attachment: fixed;
   font-synthesis: none;
   text-rendering: optimizeLegibility;

@@ -68,7 +68,7 @@ function FollowUpStuff() {
       </div>
 
       <div className="section">
-        <h2> SKILLS AND EXPERTISE </h2><hr></hr>
+        <h2> SKILLS AND EXPERTISE </h2><hr></hr> <br></br>
         <div className="skills-grid">
           {skills.map((skill, index) => (
             <div key={index} className="skill-card">
