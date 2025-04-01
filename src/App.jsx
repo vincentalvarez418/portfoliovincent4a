@@ -7,7 +7,7 @@ import FollowUpStuff from "./otherpage/FollowUpStuff";
 import Showcase from "./otherpage/Showcase";
 import Tour from "./otherpage/Tour";
 import Certificates from "./otherpage/Certificates";
-import certicon from "./assets/generalicons/certificate.png";
+import certicon from "./assets/generalicons/Certificate.png";
 import home from "./assets/generalicons/home.png";
 import aboutme from "./assets/generalicons/aboutme.png";
 import showcase from "./assets/generalicons/showcase.png";
