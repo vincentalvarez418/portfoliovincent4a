@@ -33,7 +33,7 @@ const Hero = () => {
       ctx.fillStyle = "rgba(0, 0, 0, 0.1)";
       ctx.fillRect(0, 0, canvas.width, canvas.height);
 
-      const randomColor = Math.random() > 0.5 ? "#c10000" : "#FFFFFF";
+      const randomColor = Math.random() > 0.5 ? "#727272" : "#FFFFFF";
 
       ctx.fillStyle = randomColor;
       ctx.font = "18px monospace";

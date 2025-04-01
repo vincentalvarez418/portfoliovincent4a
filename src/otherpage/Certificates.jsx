@@ -84,7 +84,7 @@ function Certificates() {
           >
             <img src={linkedinIcon} alt="LinkedIn" className="linkedin-image" />
           </a>
-          <span className="linkedin-text">More Certificates available on my LinkedIn</span>
+          <span className="linkedin-text">More Certificates on my LinkedIn</span>
         </div>
       </div>
 

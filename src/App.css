@@ -5,6 +5,7 @@
   background: #ffffff;
   padding: 10px 20px;
   box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+  border: 2px solid #353535;
 }
 
 .nav-title {
@@ -42,6 +43,7 @@
 }
 
 .nav-icon {
+  transform: translateY(4px);
   width: 20px;
   height: 20px;
   margin-right: 8px;
@@ -82,6 +84,13 @@
     display: flex;
     align-items: center;
     gap: 8px;
+  }
+
+  .nav-divider {
+    width: 100%;
+    border: none;
+    border-top: 1px solid rgba(255, 255, 255, 0.3); 
+    margin: 10px 0;
   }
   
   .nav-buttons {
@@ -156,7 +165,6 @@
   .modal-content p {
     text-align: center;
   }
-
   
 }
 
@@ -164,6 +172,7 @@
   .menu-toggle {
     display: none; 
   }
+  
   
 }
 

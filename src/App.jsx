@@ -53,6 +53,7 @@ function Navbar() {
             <span className="nav-text">TRAVELS</span>
           </div>
         </Link>
+        <span className="horiline">|</span>
         <Link to="/certificates">
           <div className="nav-box">
             <img src={certicon} alt="Certificates" className="nav-icon" />
@@ -66,41 +67,40 @@ function Navbar() {
       </button>
 
       {menuOpen && (
-        <div className="modal-overlay" onClick={closeModal}>
-          <div className="modal-content" onClick={(e) => e.stopPropagation()}>
-            <Link to="/" onClick={closeModal}>
-              <div className="nav-box">
-                <img src={home} alt="Home" className="nav-icon" />
-                <span className="nav-text">HOME</span>
-              </div>
-            </Link>
-            <Link to="/about" onClick={closeModal}>
-              <div className="nav-box">
-                <img src={aboutme} alt="About Me" className="nav-icon" />
-                <span className="nav-text">ABOUT ME</span>
-              </div>
-            </Link>
-            <Link to="/showcase" onClick={closeModal}>
-              <div className="nav-box">
-                <img src={showcase} alt="Showcase" className="nav-icon" />
-                <span className="nav-text">WORKS</span>
-              </div>
-            </Link>
-            <Link to="/tour" onClick={closeModal}>
-              <div className="nav-box">
-                <img src={tour} alt="Travels" className="nav-icon" />
-                <span className="nav-text">TRAVELS</span>
-              </div>
-            </Link>
-            <Link to="/certificates" onClick={closeModal}>
-              <div className="nav-box">
-                <img src={certicon} alt="Certificates" className="nav-icon" />
-                <span className="nav-text">CERTIFICATIONS</span>
-              </div>
-            </Link>
-          </div>
+  <div className="modal-overlay" onClick={closeModal}>
+    <div className="modal-content" onClick={(e) => e.stopPropagation()}>
+      <Link to="/" onClick={closeModal}>
+        <div className="nav-box">
+          <span className="nav-text">HOME</span>
         </div>
-      )}
+      </Link>
+      <hr className="nav-divider" />
+      <Link to="/about" onClick={closeModal}>
+        <div className="nav-box">
+          <span className="nav-text">ABOUT ME</span>
+        </div>
+      </Link>
+      <hr className="nav-divider" />
+      <Link to="/showcase" onClick={closeModal}>
+        <div className="nav-box">
+          <span className="nav-text">WORKS</span>
+        </div>
+      </Link>
+      <hr className="nav-divider" />
+      <Link to="/tour" onClick={closeModal}>
+        <div className="nav-box">
+          <span className="nav-text">TRAVELS</span>
+        </div>
+      </Link>
+      <hr className="nav-divider" />
+      <Link to="/certificates" onClick={closeModal}>
+        <div className="nav-box">
+          <span className="nav-text">CERTIFICATIONS</span>
+        </div>
+      </Link>
+    </div>
+  </div>
+)}
     </nav>
   );
 }
