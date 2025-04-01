@@ -4,6 +4,7 @@ import yoloLogo from '../assets/icons/yolo.png';
 import pythonLogo from '../assets/icons/python.png';
 import phpLogo from '../assets/icons/php.png';
 import cssLogo from '../assets/icons/css.png';
+import linkedinIcon from "../assets/icons/linkedin2.png";
 import htmlLogo from '../assets/icons/html.png';
 import javaLogo from '../assets/icons/java.png';
 import jsLogo from '../assets/icons/javascript.png';
@@ -39,20 +40,20 @@ function FollowUpStuff() {
 
       <div className="separator">
         <hr className="line" />
-        <span className="separator-text">ㅤ</span>
+        <span className="separator-text"></span>
         <hr className="line" />
       </div>
-      <h1 className="vincent-name">Vincent Alvarez</h1>
+      <h1 className="vincent-name">ABOUT ME</h1>
       <div className="separator">
         <hr className="line" />
-        <span className="separator-text">ㅤ</span>
+        <span className="separator-text"></span>
         <hr className="line" />
       </div>
       <br />
 
       <div className="about-competitions-container">
         <div className="section about-me">
-          <h2>ABOUT ME</h2><hr />
+          <h2>WHO I AM</h2><hr />
           <p>
             I am a passionate Freelance Developer specializing in Machine Learning, with a deep interest in solving complex problems using data-driven techniques. Over the years, I’ve honed my skills in various programming languages, including Python, JavaScript, and more.
           </p>
@@ -92,8 +93,9 @@ function FollowUpStuff() {
         <div className="section working-on">
           <h2>CURRENTLY WORKING ON</h2><hr />
           <p>
-            Right now, I’m working on several machine learning projects, such as image localization. My focus is on making lightweight models capable of running smoothly on multiple platforms.
+              Right now, I’m working on several machine learning projects, including image localization. My focus is on developing lightweight models that run efficiently across different platforms. I'm exploring various techniques like neural networks and data optimization to improve accuracy and performance. These projects allow me to expand my skills in real-time processing and model deployment, while aiming to create practical solutions for mobile and embedded systems.
           </p>
+
           <div className="working-on-image">
             <img 
               src={workingon} 
@@ -140,12 +142,27 @@ function FollowUpStuff() {
         <div className="section lets-connect">
           <h2>LET'S CONNECT!</h2><hr></hr>
           <p>
-            Reach me at my GitHub:
+            You can check out my projects and contributions on my GitHub, where I share open-source work and experiment with various technologies.
           </p>
           <div className="connect-logo">
             <a href="https://github.com/vincentalvarez418">
               <img 
                 src={githubAboutMe} 
+                alt="GitHub Profile" 
+                className="github-logo" 
+                loading="lazy" 
+              />
+            </a>
+          </div>
+          <hr></hr>
+          <br></br>
+          <p>
+            Additionally, let's connect on LinkedIn. It's a great place for professional networking and discussing career opportunities or industry insights.
+          </p>
+          <div className="connect-logo">
+            <a href="https://www.linkedin.com/in/vincent-alvarez-5a4b28359/">
+              <img 
+                src={linkedinIcon} 
                 alt="GitHub Profile" 
                 className="github-logo" 
                 loading="lazy" 

@@ -13,8 +13,8 @@
 .section {
   background-color: rgba(255, 255, 255, 0.1); 
   border-left: 5px solid #ffffff;
-  padding: 20px;
-  margin: 20px 0;
+  padding: 15px;
+  margin: 10px 0;
   border-radius: 10px;
   box-shadow: 2px 2px 10px rgba(255, 255, 255, 0.1);
   color: white;
@@ -43,17 +43,10 @@
 .line {
   width: 30%;
   border: 0;
-  border-top: 1px solid #202020;
+  border-top: 1px solid #8a0000 !important;
   background-color: #2a2a2a;
+  box-shadow: none;
  }
-
-.separator-text {
-  font-size: 1.2em;
-  color: rgb(175, 175, 175);
-  font-family: 'Merriweather', serif;
-  text-align: center;
-  padding: 0 10px;
-}
 
 .bottom-separator {
   margin-top: 20px;
@@ -61,7 +54,7 @@
 
 .bottom-separator .line {
   width: 100%;
-  border-top: 2px solid #c800bb;
+  border-top: 2px solid #8a0000;
 }
 
 .separator {
@@ -75,14 +68,14 @@
 .line {
   width: 30%;
   border: 0;
-  border-top: 3px solid #67014c; 
+  border-top: 3px solid #8a0000; 
   background-color: transparent;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
 }
 
 .separator-text {
   font-size: 2em;
-  color: #fff;
+  color: #dc0000;
   font-family: 'Cinzel', serif; 
   text-align: center;
   letter-spacing: 3px;
@@ -91,30 +84,6 @@
   z-index: 10;
   padding: 0 10px;
 }
-
-.separator-text::before, .separator-text::after {
-  content: "✧"; 
-  font-size: 1.5em;
-  color: #b500a9; 
-  position: absolute;
-  left: -25px;
-  right: -25px;
-  top: -10px;
-}
-
-.vincent-name {
-  color: white;
-  font-size: 6em;
-  font-weight: 800;
-  font-family: 'Oxanium', serif;
-  text-align: center;
-  letter-spacing: 1px;
-  text-transform: uppercase;
-  text-shadow: 0 4px 6px rgba(0, 0, 0, 0.5), 0 0 25px #f39c12, 0 0 5px #f39c12;
-  margin: 20px 0;
-  padding: 10px 0;
-}
-
 
 .follow-up-container {
   opacity: 0;
@@ -125,7 +94,7 @@
 
 .section {
   background-color: white;
-  border: 2px solid #920478;
+  border: 2px solid #8a0000;
   padding: 20px;
   margin: 20px 0;
   border-radius: 10px;
@@ -157,61 +126,14 @@
   text-align: center;
   letter-spacing: 1px;
   text-shadow: 
-    0 0 5px #00aaff, 
-    0 0 10px #0077cc, 
+    0 0 5px #2a2a2a, 
+    0 0 10px #2d2d2d, 
     -2px -2px 5px black, 
     2px 2px 5px rgba(0, 0, 0, 0.8);
   margin: 20px 0;
   padding: 10px 0;
   animation: glitch 2.0s infinite alternate;
   position: relative;
-}
-
-@keyframes glitch {
-  0% {
-    text-shadow: 
-      0 0 5px #3b3b3b, 
-      0 0 10px #353535, 
-      -2px -2px 5px black, 
-      2px 2px 5px rgba(0, 0, 0, 0.8);
-    transform: translate(0);
-  }
-  20% {
-    text-shadow: 
-      2px 2px 5px #272727, 
-      -2px -2px 5px black, 
-      3px 3px 8px rgba(0, 0, 0, 0.8);
-    transform: translateX(-2px);
-  }
-  40% {
-    text-shadow: 
-      -2px -2px 5px #272727, 
-      2px 2px 5px black, 
-      -3px -3px 8px rgba(0, 0, 0, 0.8);
-    transform: translateX(2px);
-  }
-  60% {
-    text-shadow: 
-      0 0 8px #272727, 
-      0 0 12px #272727, 
-      3px -3px 8px rgba(0, 0, 0, 0.8);
-    transform: translateY(-2px);
-  }
-  80% {
-    text-shadow: 
-      0 0 5px #272727, 
-      -3px 3px 8px black, 
-      0 0 12px rgba(0, 0, 0, 0.8);
-    transform: translateY(2px);
-  }
-  100% {
-    text-shadow: 
-      0 0 5px #272727, 
-      0 0 10px #272727, 
-      -2px -2px 5px black, 
-      2px 2px 5px rgba(0, 0, 0, 0.8);
-    transform: translate(0);
-  }
 }
 
 
@@ -227,6 +149,7 @@
     grid-template-columns: repeat(2, 1fr);
   }
 }
+
 
 .skill-card {
   text-align: center;
@@ -308,7 +231,7 @@
 }
 
 .github-logo {
-  width: 100%;
+  width: 250px;
   height: auto;
   border-radius: 8px;
   transition: transform 0.3s ease-in-out;
@@ -348,6 +271,11 @@ hr {
   grid-template-columns: repeat(2, 1fr); 
   gap: 20px; 
   align-items: stretch;
+}
+
+.linkedin-logo.small-linkedin {
+  width: 80%; 
+  height: auto;
 }
 
 

@@ -3,7 +3,7 @@
   font-weight: 800;
   color: white;
   text-align: center;
-  text-shadow: 0 4px 6px rgba(0, 0, 0, 0.5), 0 0 25px #f39c12, 0 0 5px #f39c12;
+  text-shadow: 0 4px 6px rgba(0, 0, 0, 0.5), 0 0 25px #8a0000, 0 0 5px #8a0000;
   margin-bottom: 10px;
   padding: 10px 0;
   text-transform: uppercase;
@@ -12,8 +12,14 @@
 }
 
 .showcase-container {
+  width: 100vw; 
+  max-width: 100%; 
   background: rgba(30, 30, 30, 0.115);
-  padding: 20px;
+  padding: 40px 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
 }
 
 .showcase-grid {
@@ -35,7 +41,7 @@
 .project-title-container {
   width: 100%;
   max-width: 800px;
-  background: rgba(162, 0, 159, 0.447);
+  background: rgba(118, 4, 0, 0.447);
   padding: 10px;
   border-top-left-radius: 10px;
   border-top-right-radius: 10px;
@@ -136,7 +142,7 @@
 .line {
   width: 30%;
   border: 0;
-  border-top: 3px solid #bc00ad; 
+  border-top: 3px solid #8a0000; 
   background-color: transparent;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
 }
@@ -153,16 +159,6 @@
   padding: 0 10px;
 }
 
-.separator-text::before, .separator-text::after {
-  content: "✧"; 
-  font-size: 1.5em;
-  color: #f1c40f; 
-  position: absolute;
-  left: -25px;
-  right: -25px;
-  top: -10px;
-}
-
 .my-works-name {
   color: white;
   font-size: 4em;
@@ -171,7 +167,7 @@
   text-align: center;
   letter-spacing: 1px;
   text-transform: uppercase;
-  text-shadow: 0 4px 6px rgba(0, 0, 0, 0.5), 0 0 25px #9b009b, 0 0 5px #c5cc00;
+  text-shadow: 0 4px 6px rgba(0, 0, 0, 0.5), 0 0 25px #8a0000, 0 0 5px #2a2a2a;
   margin: 20px 0;
   padding: 10px 0;
 }
@@ -179,28 +175,28 @@
 @media (max-width: 768px) {
   .showcase-grid {
     flex-direction: column;
-    align-items: flex-start;
+    align-items: center; 
     gap: 15px;
   }
 
-  .project-wrapper, .event-wrapper {
+  .aquasnap-image {
+    width: 160px !important;
+    height: auto !important;
+    margin-bottom: 10px !important;
+  }
+
+  .project-wrapper {
     width: 100%;
     padding: 10px;
   }
 
-  .project-card, .event-card {
+  .project-card {
     width: 100%;
     max-width: 100%;
     padding: 15px;
   }
 
-  .project-image, .event-image {
-    width: 100%;
-    height: auto;
-    margin-bottom: 10px;
-  }
-
-  .aquasnap-image, .gdsc-image, .other-project-image {
+  .project-image, .aquasnap-image, .gdsc-image, .other-project-image {
     width: 100%;
     height: auto;
     margin-bottom: 10px;
@@ -225,4 +221,3 @@
     padding: 12px;
   }
 }
-

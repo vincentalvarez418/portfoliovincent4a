@@ -37,57 +37,55 @@ function Showcase() {
 
   return (
     <div className={`showcase-container ${fadeIn ? "fade-in" : ""}`}>
-  <br></br>
-  <div className="separator">
-  <hr className="line" />
-  <span className="separator-text">ㅤ</span>
-  <hr className="line" />
-    </div>
-    <h1 className="my-works-name">My Works</h1>
+    <br></br>
     <div className="separator">
-      <hr className="line" />
-      <span className="separator-text">ㅤ</span>
-      <hr className="line" />
-    </div>
-      <div className="showcase-grid">
-    {projects.map((project, index) => (
-      <div key={index} className="project-wrapper">
-        <div className="project-title-container">
-          <h3 className="project-title">{project.title}</h3>
-        </div>
-        <div className="project-card">
-          <div className="project-content">
-            {project.title === "Aquasnap: Fish Identification App" ? (
-              <div className="aquasnap-container">
-                {project.images.map((img, i) => (
-                  <img key={i} src={img} alt={`${project.title} - ${i + 1}`} className="aquasnap-image" />
-                ))}
-              </div>
-            ) : project.title === "Gdsc Event Portal" ? (
-              <div className="gdsc-container">
-                {project.images.map((img, i) => (
-                  <img key={i} src={img} alt={`${project.title} - ${i + 1}`} className="gdsc-image" />
-                ))}
-              </div>
-            ) : (
-              <div className="other-projects-container">
-                {Array.isArray(project.images) ? (
-                  project.images.map((img, i) => (
-                    <img key={i} src={img} alt={`${project.title} - ${i + 1}`} className="other-project-image" />
-                  ))
-                ) : (
-                  <img src={project.image} alt={project.title} className="other-project-image" />
-                )}
-              </div>
-            )}
-            <p className="project-description">{project.description}</p>
+    <hr className="line" />
+    <hr className="line" />
+      </div>
+      <h1 className="my-works-name">My Works</h1>
+      <div className="separator">
+        <hr className="line" />
+        <hr className="line" />
+      </div>
+        <div className="showcase-grid">
+      {projects.map((project, index) => (
+        <div key={index} className="project-wrapper">
+          <div className="project-title-container">
+            <h3 className="project-title">{project.title}</h3>
+          </div>
+          <div className="project-card">
+            <div className="project-content">
+              {project.title === "Aquasnap: Fish Identification App" ? (
+                <div className="aquasnap-container">
+                  {project.images.map((img, i) => (
+                    <img key={i} src={img} alt={`${project.title} - ${i + 1}`} className="aquasnap-image" />
+                  ))}
+                </div>
+              ) : project.title === "Gdsc Event Portal" ? (
+                <div className="gdsc-container">
+                  {project.images.map((img, i) => (
+                    <img key={i} src={img} alt={`${project.title} - ${i + 1}`} className="gdsc-image" />
+                  ))}
+                </div>
+              ) : (
+                <div className="other-projects-container">
+                  {Array.isArray(project.images) ? (
+                    project.images.map((img, i) => (
+                      <img key={i} src={img} alt={`${project.title} - ${i + 1}`} className="other-project-image" />
+                    ))
+                  ) : (
+                    <img src={project.image} alt={project.title} className="other-project-image" />
+                  )}
+                </div>
+              )}
+              <p className="project-description">{project.description}</p>
+            </div>
           </div>
         </div>
-      </div>
-    ))}
+      ))}
+    </div>
   </div>
-</div>
-  );
-}
+    );
+  }
 
 export default Showcase;
