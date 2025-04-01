@@ -29,7 +29,7 @@
 
 .tour-title-container {
   width: 100%;
-  background: rgba(137, 2, 0, 0.447);
+  background: rgba(65, 65, 65, 0.447);
   padding: 10px;
   border-top-left-radius: 10px;
   border-top-right-radius: 10px;
@@ -88,7 +88,7 @@
 .line {
   width: 30%;
   border: 0;
-  border-top: 3px solid #8a0000;
+  border-top: 3px solid #3b3b3b;
   background-color: transparent;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
 }
@@ -118,7 +118,7 @@
   text-align: center;
   letter-spacing: 1px;
   text-transform: uppercase;
-  text-shadow: 0 4px 6px rgba(0, 0, 0, 0.5), 0 0 25px #8a0000, 0 0 5px #2d2d2d;
+  text-shadow: 0 4px 6px rgba(0, 0, 0, 0.5), 0 0 25px #353535, 0 0 5px #2d2d2d;
   margin: 20px 0;
   padding: 10px 0;
 }

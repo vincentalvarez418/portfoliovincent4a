@@ -43,7 +43,7 @@
 .line {
   width: 30%;
   border: 0;
-  border-top: 1px solid #8a0000 !important;
+  border-top: 1px solid #8a000000 !important;
   background-color: #2a2a2a;
   box-shadow: none;
  }
@@ -54,7 +54,7 @@
 
 .bottom-separator .line {
   width: 100%;
-  border-top: 2px solid #8a0000;
+  border-top: 2px solid #8a000000;
 }
 
 .separator {
@@ -68,14 +68,14 @@
 .line {
   width: 30%;
   border: 0;
-  border-top: 3px solid #8a0000; 
+  border-top: 3px solid #8a000000; 
   background-color: transparent;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
 }
 
 .separator-text {
   font-size: 2em;
-  color: #dc0000;
+  color: #dc000000;
   font-family: 'Cinzel', serif; 
   text-align: center;
   letter-spacing: 3px;
@@ -94,7 +94,7 @@
 
 .section {
   background-color: white;
-  border: 2px solid #8a0000;
+  border: 2px solid #ffffff31;
   padding: 20px;
   margin: 20px 0;
   border-radius: 10px;
@@ -280,6 +280,12 @@ hr {
 
 
 @media (max-width: 768px) {
+
+  .github-logo, .linkedin-logo {
+    width: 50%;
+    height: auto;
+  }
+  
   .skills-grid {
     grid-template-columns: 1fr;
     padding: 10px;
@@ -428,8 +434,8 @@ hr {
   .github-logo,
   .career-logo,
   .hobby-logo {
-    width: 100%;   
-    max-width: 100%;
+    width: 50%;   
+    max-width: 50%;
     height: auto;
     object-fit: cover;
   }

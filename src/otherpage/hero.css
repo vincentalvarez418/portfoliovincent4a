@@ -70,7 +70,7 @@ canvas.visible {
 }
 
 .hero-title .glitch {
-  color: #c10000; 
+  color: #727272; 
   animation: glitch 6s infinite linear;
 }
 
@@ -85,7 +85,7 @@ canvas.visible {
 
 .hero-button {
   background: linear-gradient(45deg, #333, #111);
-  color: #ff0000;
+  color: #ffffff;
   border: none;
   padding: 1rem 2rem;
   font-size: 1.2rem;
@@ -151,7 +151,7 @@ canvas.visible {
 .hero-tagline {
   font-size: 1.2rem; 
   font-weight: normal;
-  color: #ff7575;
+  color: #f8f8f8;
   margin-top: 0.8rem;
   opacity: 0.85;
 }
