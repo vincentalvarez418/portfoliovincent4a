@@ -119,6 +119,10 @@
     z-index: 1000;
   }
 
+  .modal-content .nav-text {
+    color: #333; 
+  }
+
   .modal-content {
     position: relative;
     background: #fff;
@@ -165,12 +169,30 @@
   .modal-content p {
     text-align: center;
   }
+
+  .modal-overlay .nav-divider {
+    width: 100%;
+    border: none;
+    border-top: 1px solid #ccc;
+    margin: 10px 0;
+  }
   
 }
 
 @media (min-width: 769px) {
   .menu-toggle {
     display: none; 
+  }
+
+  .modal-content .nav-text {
+    color: #333; 
+  }
+
+  .modal-overlay .nav-divider {
+    width: 100%;
+    border: none;
+    border-top: 1px solid #ccc;
+    margin: 10px 0;
   }
   
   
