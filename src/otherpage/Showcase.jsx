@@ -5,7 +5,7 @@ import App1 from "../assets/showcases/app1.png";
 import App2 from "../assets/showcases/app2.png";
 import gdsc1 from "../assets/showcases/Gdsc.png";
 import gdsc2 from "../assets/showcases/Gdsc2.png";
-
+import pokemonSpinel from "../assets/showcases/PokemonSpinel.png"; 
 function Showcase() {
   const [fadeIn, setFadeIn] = useState(false);
 
@@ -33,59 +33,68 @@ function Showcase() {
       images: [gdsc1, gdsc2],
       description: "GDSC Event Management system for the WMSU GDSC Branch, featuring Events and Exclusive Dynamic Certificates.",
     },
+    {
+      title: "Pokemon Spinel", 
+      image: pokemonSpinel, 
+      description: "A fan-made Pokemon game inspired by the original series, featuring unique mechanics and an engaging story.",
+    },
   ];
 
   return (
     <div className={`showcase-container ${fadeIn ? "fade-in" : ""}`}>
-    <br></br>
-    <div className="separator">
-    <hr className="line" />
-    <hr className="line" />
+      <br></br>
+      <div className="separator">
+        <hr className="line" />
+        <hr className="line" />
       </div>
       <h1 className="my-works-name">My Works</h1>
       <div className="separator">
         <hr className="line" />
         <hr className="line" />
       </div>
-        <div className="showcase-grid">
-      {projects.map((project, index) => (
-        <div key={index} className="project-wrapper">
-          <div className="project-title-container">
-            <h3 className="project-title">{project.title}</h3>
-          </div>
-          <div className="project-card">
-            <div className="project-content">
-              {project.title === "Aquasnap: Fish Identification App" ? (
-                <div className="aquasnap-container">
-                  {project.images.map((img, i) => (
-                    <img key={i} src={img} alt={`${project.title} - ${i + 1}`} className="aquasnap-image" />
-                  ))}
-                </div>
-              ) : project.title === "Gdsc Event Portal" ? (
-                <div className="gdsc-container">
-                  {project.images.map((img, i) => (
-                    <img key={i} src={img} alt={`${project.title} - ${i + 1}`} className="gdsc-image" />
-                  ))}
-                </div>
-              ) : (
-                <div className="other-projects-container">
-                  {Array.isArray(project.images) ? (
-                    project.images.map((img, i) => (
-                      <img key={i} src={img} alt={`${project.title} - ${i + 1}`} className="other-project-image" />
-                    ))
-                  ) : (
-                    <img src={project.image} alt={project.title} className="other-project-image" />
-                  )}
-                </div>
-              )}
-              <p className="project-description">{project.description}</p>
+      <div className="showcase-grid">
+        {projects.map((project, index) => (
+          <div key={index} className="project-wrapper">
+            <div className="project-title-container">
+              <h3 className="project-title">{project.title}</h3>
+            </div>
+            <div className="project-card">
+              <div className="project-content">
+                {project.title === "Aquasnap: Fish Identification App" ? (
+                  <div className="aquasnap-container">
+                    {project.images.map((img, i) => (
+                      <img key={i} src={img} alt={`${project.title} - ${i + 1}`} className="aquasnap-image" />
+                    ))}
+                  </div>
+                ) : project.title === "Gdsc Event Portal" ? (
+                  <div className="gdsc-container">
+                    {project.images.map((img, i) => (
+                      <img key={i} src={img} alt={`${project.title} - ${i + 1}`} className="gdsc-image" />
+                    ))}
+                  </div>
+                ) : project.title === "Pokemon Spinel" ? (
+                  <div className="pokemon-container">
+                    <img src={project.image} alt={project.title} className="pokemon-image" />
+                  </div>
+                ) : (
+                  <div className="other-projects-container">
+                    {Array.isArray(project.images) ? (
+                      project.images.map((img, i) => (
+                        <img key={i} src={img} alt={`${project.title} - ${i + 1}`} className="other-project-image" />
+                      ))
+                    ) : (
+                      <img src={project.image} alt={project.title} className="other-project-image" />
+                    )}
+                  </div>
+                )}
+                <p className="project-description">{project.description}</p>
+              </div>
             </div>
           </div>
-        </div>
-      ))}
+        ))}
+      </div>
     </div>
-  </div>
-    );
-  }
+  );
+}
 
 export default Showcase;
