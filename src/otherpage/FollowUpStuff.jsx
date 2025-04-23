@@ -4,7 +4,7 @@ import yoloLogo from '../assets/icons/yolo.png';
 import pythonLogo from '../assets/icons/python.png';
 import phpLogo from '../assets/icons/php.png';
 import cssLogo from '../assets/icons/css.png';
-import linkedinIcon from "../assets/icons/linkedin2.png";
+import linkedinIcon from "../assets/aboutme/linkedin2.png";
 import htmlLogo from '../assets/icons/html.png';
 import javaLogo from '../assets/icons/java.png';
 import jsLogo from '../assets/icons/javascript.png';
@@ -12,7 +12,7 @@ import kotlinLogo from '../assets/icons/kotlin.png';
 import workingon from '../assets/aboutme/workingon1.jpg';
 import qualcommLogo from '../assets/aboutme/qualcom.png';
 import githubAboutMe from '../assets/aboutme/githubaboutme.jpg';
-import machineLearningImg from '../assets/aboutme/machinelearning.jpg';
+import machineLearningImg from '../assets/aboutme/machinelearning.png';
 
 const skills = [
   { logo: yoloLogo, name: "YOLO", services: ["Object Detection", "Model Training"] },
@@ -140,10 +140,7 @@ function FollowUpStuff() {
         </div>
 
         <div className="section lets-connect">
-          <h2>LET'S CONNECT!</h2><hr></hr>
-          <p>
-            You can check out my projects and contributions on my GitHub, where I share open-source work and experiment with various technologies.
-          </p>
+          <h2>LET'S CONNECT!</h2><hr />
           <div className="connect-logo">
             <a href="https://github.com/vincentalvarez418">
               <img 
@@ -154,22 +151,19 @@ function FollowUpStuff() {
               />
             </a>
           </div>
-          <hr></hr>
-          <br></br>
-          <p>
-            Additionally, let's connect on LinkedIn. It's a great place for professional networking and discussing career opportunities or industry insights.
-          </p>
+          <br /><br /><br /><br />
           <div className="connect-logo">
             <a href="https://www.linkedin.com/in/vincent-alvarez-5a4b28359/">
               <img 
                 src={linkedinIcon} 
-                alt="GitHub Profile" 
+                alt="LinkedIn Profile" 
                 className="github-logo" 
                 loading="lazy" 
               />
             </a>
           </div>
         </div>
+
       </div>
     </div>
   );
