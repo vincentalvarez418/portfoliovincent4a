@@ -5,14 +5,18 @@ import App1 from "../assets/showcases/app1.png";
 import App2 from "../assets/showcases/app2.png";
 import gdsc1 from "../assets/showcases/Gdsc.png";
 import gdsc2 from "../assets/showcases/Gdsc2.png";
-import pokemonSpinel from "../assets/showcases/PokemonSpinel.png"; 
+import pokemonSpinel from "../assets/showcases/PokemonSpinel.png";
+import calculatorImg from "../assets/showcases/calculator.png"; // Add the calculator image
+import githubIcon from "../assets/showcases/github.png"; // Add the GitHub icon
+import hostlinkIcon from "../assets/showcases/hostlink.png"; // Add the Host link icon
+
 function Showcase() {
   const [fadeIn, setFadeIn] = useState(false);
 
   useEffect(() => {
     const timer = setTimeout(() => {
       setFadeIn(true);
-    }, 50); 
+    }, 50);
 
     return () => clearTimeout(timer);
   }, []);
@@ -37,12 +41,25 @@ function Showcase() {
       title: "Pokemon Spinel", 
       image: pokemonSpinel, 
       description: "A fan-made Pokemon game inspired by the original series, featuring unique mechanics and an engaging story.",
+      links: {
+        host: "https://pokemonsgen1.netlify.app/",
+        repo: "https://github.com/vincentalvarez418/pokemon-gba",
+      }
     },
+    {
+      title: "Calculator",
+      image: calculatorImg,
+      description: "A simple calculator built using HTML, CSS, and JavaScript.",
+      links: {
+        host: "https://tulabingalvarezcalculator.netlify.app/",
+        repo: "https://github.com/vincentalvarez418/calculator",
+      }
+    }
   ];
 
   return (
     <div className={`showcase-container ${fadeIn ? "fade-in" : ""}`}>
-      <br></br>
+      <br />
       <div className="separator">
         <hr className="line" />
         <hr className="line" />
@@ -76,6 +93,10 @@ function Showcase() {
                   <div className="pokemon-container">
                     <img src={project.image} alt={project.title} className="pokemon-image" />
                   </div>
+                ) : project.title === "Calculator" ? (
+                  <div className="calculator-container">
+                    <img src={project.image} alt={project.title} className="calculator-image" />
+                  </div>
                 ) : (
                   <div className="other-projects-container">
                     {Array.isArray(project.images) ? (
@@ -88,6 +109,18 @@ function Showcase() {
                   </div>
                 )}
                 <p className="project-description">{project.description}</p>
+                {project.links && (
+                  <div className="project-links">
+                    <a href={project.links.host} target="_blank" rel="noopener noreferrer" className="project-link">
+                      <img src={hostlinkIcon} alt="Host Link" className="link-icon" />
+                      View Project
+                    </a>
+                    <a href={project.links.repo} target="_blank" rel="noopener noreferrer" className="project-link">
+                      <img src={githubIcon} alt="GitHub Repository" className="link-icon" />
+                      View Repository
+                    </a>
+                  </div>
+                )}
               </div>
             </div>
           </div>

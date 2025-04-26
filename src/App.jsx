@@ -12,6 +12,17 @@ import home from "./assets/generalicons/home.png";
 import aboutme from "./assets/generalicons/aboutme.png";
 import showcase from "./assets/generalicons/showcase.png";
 import tour from "./assets/generalicons/tour.png";
+import experienceIcon from "./assets/generalicons/experience.png";
+import contactIcon from "./assets/generalicons/contact.png";
+import Experience from "./otherpage/Experience";
+import Footer from "./otherpage/Footer";
+import Contact from "./otherpage/Contact";
+import Day1 from "../src/daypages/day1";
+import Day2 from "../src/daypages/day2";
+import Day3 from "../src/daypages/day3";
+import Day4 from "../src/daypages/day4";
+import Day5 from "../src/daypages/day5";
+import Day6 from "../src/daypages/day6";
 
 function Navbar() {
   const location = useLocation();
@@ -43,14 +54,14 @@ function Navbar() {
         <Link to="/showcase">
           <div className="nav-box">
             <img src={showcase} alt="Showcase" className="nav-icon" />
-            <span className="nav-text">WORKS</span>
+            <span className="nav-text">PROJECTS</span>
           </div>
         </Link>
         <span className="horiline">|</span>
         <Link to="/tour">
           <div className="nav-box">
             <img src={tour} alt="Travels" className="nav-icon" />
-            <span className="nav-text">TRAVELS</span>
+            <span className="nav-text">TOUR</span>
           </div>
         </Link>
         <span className="horiline">|</span>
@@ -58,6 +69,20 @@ function Navbar() {
           <div className="nav-box">
             <img src={certicon} alt="Certificates" className="nav-icon" />
             <span className="nav-text">CERTIFICATES</span>
+          </div>
+        </Link>
+        <span className="horiline">|</span>
+        <Link to="/experience">
+          <div className="nav-box">
+            <img src={experienceIcon} alt="Experience" className="nav-icon" />
+            <span className="nav-text">EXPERIENCE</span>
+          </div>
+        </Link>
+        <span className="horiline">|</span>
+        <Link to="/contact">
+          <div className="nav-box">
+            <img src={contactIcon} alt="Contact" className="nav-icon" />
+            <span className="nav-text">CONTACT</span>
           </div>
         </Link>
       </div>
@@ -83,19 +108,31 @@ function Navbar() {
             <hr className="nav-divider" />
             <Link to="/showcase" onClick={closeModal}>
               <div className="nav-box">
-                <span className="nav-text">WORKS</span>
+                <span className="nav-text">PROJECTS</span>
               </div>
             </Link>
             <hr className="nav-divider" />
             <Link to="/tour" onClick={closeModal}>
               <div className="nav-box">
-                <span className="nav-text">TRAVELS</span>
+                <span className="nav-text">TOUR</span>
               </div>
             </Link>
             <hr className="nav-divider" />
             <Link to="/certificates" onClick={closeModal}>
               <div className="nav-box">
                 <span className="nav-text">CERTIFICATIONS</span>
+              </div>
+            </Link>
+            <hr className="nav-divider" />
+            <Link to="/experience" onClick={closeModal}>
+              <div className="nav-box">
+                <span className="nav-text">EXPERIENCE</span>
+              </div>
+            </Link>
+            <hr className="nav-divider" />
+            <Link to="/contact" onClick={closeModal}>
+              <div className="nav-box">
+                <span className="nav-text">CONTACT</span>
               </div>
             </Link>
           </div>
@@ -117,7 +154,17 @@ function App() {
           <Route path="/showcase" element={<Showcase />} />
           <Route path="/tour" element={<Tour />} />
           <Route path="/certificates" element={<Certificates />} />
+          <Route path="/experience" element={<Experience />} />
+          <Route path="/contact" element={<Contact />} />
+
+          <Route path="/day1" element={<Day1 />} />
+          <Route path="/day2" element={<Day2 />} />
+          <Route path="/day3" element={<Day3 />} />
+          <Route path="/day4" element={<Day4 />} />
+          <Route path="/day5" element={<Day5 />} />
+          <Route path="/day6" element={<Day6 />} />
         </Routes>
+        <Footer />
       </div>
     </Router>
   );

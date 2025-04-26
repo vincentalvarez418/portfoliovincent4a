@@ -17,6 +17,7 @@
   background: rgba(30, 30, 30, 0.115);
   padding: 40px 0;
   display: flex;
+  margin-top: -55px; 
   flex-direction: column;
   align-items: center;
   justify-content: center;
@@ -105,7 +106,7 @@
 }
 
 .aquasnap-image {
-  width: 180px;
+  width: 250px;
   height: auto;
   border-radius: 5px;
   object-fit: cover;
@@ -172,6 +173,45 @@
   padding: 10px 0;
 }
 
+.project-links {
+  display: flex;
+  justify-content: center;  
+  gap: 15px;
+  flex-wrap: wrap;
+}
+
+.pokemon-image {
+  width: 400px;
+  max-width: 100%;
+  height: auto;
+  border-radius: 5px;
+  object-fit: cover;
+}
+
+.calculator-image {
+  width: 400px;
+  max-width: 100%;
+  height: auto;
+  border-radius: 5px;
+  object-fit: cover;
+}
+
+
+.project-link {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  text-decoration: none;
+  color: #007bff;
+  font-size: 16px;
+}
+
+.link-icon {
+  width: 20px;
+  height: 20px;
+  object-fit: contain;
+}
+
 @media (max-width: 768px) {
   .showcase-grid {
     flex-direction: column;
@@ -179,11 +219,18 @@
     gap: 15px;
   }
 
-  .aquasnap-image {
-    width: 160px !important;
-    height: auto !important;
-    margin-bottom: 10px !important;
-  }
+  .aquasnap-image,
+  .project-image,
+  .gdsc-image,
+  .other-project-image,
+  .pokemon-image,
+  .calculator-image {
+  width: 100% !important;    
+  max-width: 100% !important; 
+  height: auto !important;  
+  margin-bottom: 10px !important;
+}
+
 
   .project-wrapper {
     width: 100%;
@@ -194,12 +241,6 @@
     width: 100%;
     max-width: 100%;
     padding: 15px;
-  }
-
-  .project-image, .aquasnap-image, .gdsc-image, .other-project-image {
-    width: 100%;
-    height: auto;
-    margin-bottom: 10px;
   }
 
   .separator-text {
@@ -221,3 +262,4 @@
     padding: 12px;
   }
 }
+
