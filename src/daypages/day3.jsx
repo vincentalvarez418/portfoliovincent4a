@@ -3,6 +3,7 @@ import { LazyLoadImage } from "react-lazy-load-image-component";
 import day31 from "../assets/dayimages/3-1.jpg";
 import day32 from "../assets/dayimages/3-2.jpg";
 import day33 from "../assets/dayimages/3-3.jpg";
+import { Link } from "react-router-dom";
 import day34 from "../assets/dayimages/3-4.jpg";
 import day35 from "../assets/dayimages/3-5.jpg";
 import day36 from "../assets/dayimages/3-6.jpg";
@@ -113,6 +114,13 @@ const Day3 = () => {
           </div>
         </div>
       </div>
+
+      <div className="text-center">
+                <Link to="/tour">
+                  <button className="return-button">RETURN</button>
+                </Link>
+              </div>
+              
     </div>
   );
 };
