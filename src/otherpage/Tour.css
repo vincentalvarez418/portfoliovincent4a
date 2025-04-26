@@ -1,27 +1,27 @@
 .tour-container {
   width: 100vw;
   max-width: 100%;
-  background: transparent; 
+  background: transparent;
   padding: 40px 0;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  margin-top: 80px; 
+  margin-top: 5px;
 }
 
-
 .tour-grid {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 20px;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+  gap: 30px;
   padding: 20px;
+  width: 100%;
+  max-width: 1100px;
+  gap: 85px;
 }
 
 .tour-card-wrapper {
-  width: 90%;
-  max-width: 800px;
+  width: 100%;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -44,16 +44,16 @@
 
 .tour-card {
   width: 100%;
-  max-width: 800px;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+  height: 100%;
   background: rgba(42, 42, 42, 0.477);
   padding: 20px;
   border-radius: 10px;
   box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3);
   transition: transform 0.3s ease;
   text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 }
 
 .tour-card:hover {
@@ -78,11 +78,27 @@
 }
 
 .tour-image {
-  width: 450px;
-  height: auto;
+  width: 100%;
+  height: 250px;
   border-radius: 5px;
-  object-fit: cover;
+  object-fit: cover; 
+  object-position: center; 
   margin-bottom: 15px;
+  opacity: 0;
+  animation: fadeInShift 1s forwards;
+  display: block;
+}
+
+
+@keyframes fadeInShift {
+  0% {
+    opacity: 0;
+    transform: translateX(-20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
 }
 
 .line {
@@ -136,11 +152,6 @@
     margin-bottom: 10px !important;
   }
 
-  .tour-card-wrapper {
-    width: 100%;
-    padding: 10px;
-  }
-
   .tour-card {
     width: 100%;
     max-width: 100%;
@@ -163,4 +174,19 @@
   .my-tours-name {
     font-size: 2.5em;
   }
+}
+
+.visit-button {
+  background-color: #343434;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  cursor: pointer;
+  font-size: 16px;
+  border-radius: 5px;
+  margin-top: 10px;
+}
+
+.visit-button:hover {
+  background-color: rgb(45, 45, 45);
 }
