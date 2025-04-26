@@ -316,9 +316,18 @@ hr {
   }
 
   .section h2 {
-    font-size: 1em;
+    font-size: 1.5em;
   }
 
+  @media (max-width: 768px) {
+    .section p:first-of-type {
+      font-size: 1em;
+      line-height: 1.6;
+      letter-spacing: 0.3px;
+    }
+  }
+
+  
   .section p, .section ul {
     font-size: .8em;
   }
@@ -369,6 +378,11 @@ hr {
   display: flex;
   gap: 20px;
   align-items: stretch;
+}
+
+.modal-text {
+  font-weight: bold;
+  color: black;
 }
 
 .work-career-container .section:first-child {

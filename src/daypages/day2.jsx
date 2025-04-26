@@ -7,6 +7,7 @@ import day24 from "../assets/dayimages/2-4.jpg";
 import day25 from "../assets/dayimages/2-5.jpg";
 import day26 from "../assets/dayimages/2-6.jpg";
 import day27 from "../assets/dayimages/2-7.jpg";
+import { Link } from "react-router-dom";
 import day28 from "../assets/dayimages/2-8.jpg";
 import "./day.css";
 
@@ -129,6 +130,12 @@ const Day2 = () => {
           </div>
         </div>
       </div>
+
+      <div className="text-center">
+                <Link to="/tour">
+                  <button className="return-button">RETURN</button>
+                </Link>
+              </div>
     </div>
   );
 };

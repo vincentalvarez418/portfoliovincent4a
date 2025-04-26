@@ -92,52 +92,53 @@ function Navbar() {
       </button>
 
       {menuOpen && (
-        <div className="modal-overlay" onClick={closeModal}>
-          <div className="modal-content" onClick={(e) => e.stopPropagation()}>
-            <Link to="/" onClick={closeModal}>
-              <div className="nav-box">
-                <span className="nav-text">HOME</span>
-              </div>
-            </Link>
-            <hr className="nav-divider" />
-            <Link to="/about" onClick={closeModal}>
-              <div className="nav-box">
-                <span className="nav-text">ABOUT ME</span>
-              </div>
-            </Link>
-            <hr className="nav-divider" />
-            <Link to="/showcase" onClick={closeModal}>
-              <div className="nav-box">
-                <span className="nav-text">PROJECTS</span>
-              </div>
-            </Link>
-            <hr className="nav-divider" />
-            <Link to="/tour" onClick={closeModal}>
-              <div className="nav-box">
-                <span className="nav-text">TOUR</span>
-              </div>
-            </Link>
-            <hr className="nav-divider" />
-            <Link to="/certificates" onClick={closeModal}>
-              <div className="nav-box">
-                <span className="nav-text">CERTIFICATIONS</span>
-              </div>
-            </Link>
-            <hr className="nav-divider" />
-            <Link to="/experience" onClick={closeModal}>
-              <div className="nav-box">
-                <span className="nav-text">EXPERIENCE</span>
-              </div>
-            </Link>
-            <hr className="nav-divider" />
-            <Link to="/contact" onClick={closeModal}>
-              <div className="nav-box">
-                <span className="nav-text">CONTACT</span>
-              </div>
-            </Link>
-          </div>
+  <div className="modal-overlay" onClick={closeModal}>
+    <div className="modal-content" onClick={(e) => e.stopPropagation()}>
+      <Link to="/" onClick={closeModal}>
+        <div className="nav-box">
+          <span className="modal-text">HOME</span>
         </div>
+      </Link>
+      <hr className="nav-divider" />
+      <Link to="/about" onClick={closeModal}>
+        <div className="nav-box">
+          <span className="modal-text">ABOUT ME</span>
+        </div>
+      </Link>
+      <hr className="nav-divider" />
+      <Link to="/showcase" onClick={closeModal}>
+        <div className="nav-box">
+          <span className="modal-text">PROJECTS</span>
+        </div>
+      </Link>
+      <hr className="nav-divider" />
+      <Link to="/tour" onClick={closeModal}>
+        <div className="nav-box">
+          <span className="modal-text">TOUR</span>
+        </div>
+      </Link>
+      <hr className="nav-divider" />
+      <Link to="/certificates" onClick={closeModal}>
+        <div className="nav-box">
+          <span className="modal-text">CERTIFICATIONS</span>
+        </div>
+      </Link>
+      <hr className="nav-divider" />
+      <Link to="/experience" onClick={closeModal}>
+        <div className="nav-box">
+          <span className="modal-text">EXPERIENCE</span>
+        </div>
+      </Link>
+      <hr className="nav-divider" />
+      <Link to="/contact" onClick={closeModal}>
+        <div className="nav-box">
+          <span className="modal-text">CONTACT</span>
+        </div>
+      </Link>
+    </div>
+  </div>
 )}
+
     </nav>
   );
 }
