@@ -7,11 +7,13 @@ const Hero = () => {
   const [showImage, setShowImage] = useState(true);
 
   const handleGetStarted = () => {
-  setShowImage(false);
-  document.querySelector('.hero-container').classList.add('fade');
-  setTimeout(() => {
-    navigate("/about", { state: { fromHero: true } });
-  }, 0); 
+    setShowImage(false);
+    document.querySelector('.hero-container').classList.add('fade');
+    document.body.classList.add('hero-active');
+    setTimeout(() => {
+      navigate("/about", { state: { fromHero: true } });
+      document.body.classList.remove('hero-active');
+    }, 0);
 };
 
 

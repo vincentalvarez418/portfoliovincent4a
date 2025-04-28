@@ -6,9 +6,7 @@
   color-scheme: light dark;
   color: rgba(255, 255, 255, 0.87);
   background-color: #181717;
-  background: url('./assets/alter.jpg');
-  background-position: center; 
-  background-size: cover;
+  background: url('./assets/alter.png') center center / cover no-repeat;
   background-attachment: fixed;
   font-synthesis: none;
   text-rendering: optimizeLegibility;
@@ -21,17 +19,16 @@
 }
 
 body {
-  overflow: scroll; 
+  overflow: scroll;
 }
 
 body::-webkit-scrollbar {
-  display: none; 
+  display: none;
 }
 
 html {
   scroll-behavior: smooth;
 }
-
 
 a {
   font-weight: 500;
@@ -75,6 +72,13 @@ button:hover {
 button:focus,
 button:focus-visible {
   outline: 4px auto -webkit-focus-ring-color;
+}
+
+@media (max-width: 768px) {
+  :root {
+    background: url('./assets/alter_mobile.png') center center / cover no-repeat;
+    background-size: cover;
+  }
 }
 
 @media (prefers-color-scheme: light) {
