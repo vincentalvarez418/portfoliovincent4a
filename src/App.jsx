@@ -24,6 +24,8 @@ import Day4 from "../src/daypages/day4";
 import Day5 from "../src/daypages/day5";
 import Day6 from "../src/daypages/day6";
 
+
+
 function Navbar() {
   const location = useLocation();
   const [menuOpen, setMenuOpen] = useState(false);

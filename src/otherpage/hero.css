@@ -12,6 +12,9 @@
   overflow: hidden;
 }
 
+body.hero-active {
+  overflow: hidden;
+}
 
 .hero-image {
   position: absolute;
