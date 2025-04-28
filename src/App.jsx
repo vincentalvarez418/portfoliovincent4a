@@ -88,7 +88,7 @@ function Navbar() {
       </div>
 
       <button className="menu-toggle" onClick={() => setMenuOpen(true)}>
-        ☰
+        {"</>"}
       </button>
 
       {menuOpen && (

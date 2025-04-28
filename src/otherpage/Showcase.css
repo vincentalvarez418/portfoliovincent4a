@@ -11,10 +11,11 @@
   font-family: 'Oxanium', serif;
 }
 
+
 .showcase-container {
   width: 100vw; 
   max-width: 100%; 
-  background: rgba(30, 30, 30, 0.115);
+  background: transparent;
   padding: 40px 0;
   display: flex;
   margin-top: -55px; 
