@@ -12,6 +12,7 @@
   overflow: hidden;
 }
 
+
 .hero-image {
   position: absolute;
   top: 0;
@@ -25,21 +26,6 @@
 
 .hero-image.hidden {
   opacity: 0;
-}
-
-canvas {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  opacity: 0;
-  transition: opacity 1.5s ease-in-out;
-  z-index: 3;
-}
-
-canvas.visible {
-  opacity: 1;
 }
 
 .hero-section {
@@ -56,55 +42,125 @@ canvas.visible {
 .hero-content {
   opacity: 0;
   transform: translateY(30px);
-  animation: slideUp 1.2s ease-out 3.2s forwards;
+  animation: slideUp 1.2s ease-out forwards;
+}
+
+.hero-title-container {
+  text-align: center;
 }
 
 .hero-title {
   color: #fff;
   font-size: 4rem;
   font-weight: bold;
-  margin-bottom: 1.5rem;
   text-transform: uppercase;
   letter-spacing: 2px;
-  animation: fadeIn 2s ease-in-out 3.5s forwards;
+  animation: fadeIn 2s ease-in-out forwards;
 }
 
 .hero-title .glitch {
-  color: #727272; 
+  color: #e1e1e1;
   animation: glitch 6s infinite linear;
 }
 
 .hero-subtitle {
   color: #ffffff;
-  font-size: 1.6rem;
-  margin-bottom: 2rem;
+  font-size: 1.3rem;
   font-weight: 300;
   opacity: 0;
-  animation: fadeIn 1.8s ease-in-out 3.8s forwards;
+  animation: fadeIn 1.8s ease-in-out forwards;
+}
+
+.hero-tagline {
+  font-family: 'Courier New', monospace;
+  font-size: 1.3rem;
+  font-weight: 300;
+  color: #ffffff;
+  text-align: center;
 }
 
 .hero-button {
-  background: linear-gradient(45deg, #333, #111);
-  color: #ffffff;
-  border: none;
-  padding: 1rem 2rem;
+  background: transparent;
+  color: #fff;
+  border: 2px solid #7f7f7f;
+  padding: 0.8rem 2rem;
   font-size: 1.2rem;
-  font-weight: bold;
+  font-weight: 300;
   cursor: pointer;
   border-radius: 8px;
   transition: all 0.3s ease;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
   opacity: 0;
-  animation: fadeIn 2s ease-in-out 4s forwards;
+  animation: fadeIn 2s ease-in-out forwards;
   position: relative;
   z-index: 5;
 }
 
 .hero-button:hover {
-  background: linear-gradient(45deg, #222, #000);
+  background: rgba(255, 255, 255, 0.1);
   transform: scale(1.05);
-  box-shadow: 0 6px 14px rgba(0, 0, 0, 0.5);
+  border-color: #7f7f7f;
+  color: #fff;
 }
+
+.hero-button:focus {
+  outline: none;
+}
+
+.hero-button:active {
+  transform: scale(0.95);
+  background: rgba(255, 255, 255, 0.15);
+  box-shadow: 0 0 30px rgba(255, 255, 255, 0.3);
+  animation: buttonPress 0.4s ease-out forwards;
+}
+
+@keyframes buttonPress {
+  0% {
+    transform: scale(1);
+    opacity: 1;
+  }
+  100% {
+    transform: scale(0.95);
+    opacity: 0.7;
+  }
+}
+
+@keyframes fadeAway {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+    visibility: hidden;
+    z-index: -1; 
+  }
+}
+
+.hero-container.fade {
+  animation: fadeAway 1.5s ease forwards;
+}
+
+.hero-image {
+  transition: opacity 1.5s ease-in-out;
+  z-index: 2;
+}
+
+.hero-image.hidden {
+  opacity: 0;
+  visibility: hidden; 
+}
+
+.hero-section {
+  visibility: visible;
+  transition: visibility 1.5s ease-in-out;
+}
+
+.hero-section.hidden {
+  visibility: hidden;
+}
+
+
+
+
 
 @keyframes slideUp {
   from {
@@ -127,42 +183,26 @@ canvas.visible {
 }
 
 
-
-
-.hero-title-container {
-  text-align: center;
-}
-
-.hero-subtitle { 
-  font-size: 2rem; 
-  font-weight: 600;
-  color: #ffffff;
-  margin-bottom: 0.2rem; 
-  color: #f8f8f8;
-}
-
-.hero-title { 
-  font-size: 4rem;
-  font-weight: bold;
-  text-transform: uppercase;
-  margin-top: 0;
-}
-
-.hero-tagline {
-  font-size: 1.2rem; 
+.angle-brackets {
+  font-size: 1.5rem;
+  color: #e1e1e1;
+  margin: 0 15px; 
   font-weight: normal;
-  color: #f8f8f8;
-  margin-top: 0.8rem;
-  opacity: 0.85;
 }
-
-
 
 @media (max-width: 768px) {
   .hero-container {
     flex-direction: column;
   }
 
+  .hero-tagline {
+    font-family: 'Courier New', monospace;
+    font-size: 1.1rem;
+    font-weight: 300;
+    color: #ffffff;
+    text-align: center;
+  }
+  
   .hero-title {
     font-size: 2.8rem;
   }
@@ -171,8 +211,21 @@ canvas.visible {
     font-size: 1.4rem;
   }
 
+  
+
   .hero-button {
     font-size: 1rem;
     padding: 0.8rem 1.6rem;
+  }
+
+  .angle-brackets {
+    font-size: 1.1rem;
+    color: #888;
+    margin: 0 10px;
+    font-weight: normal;
+  }
+
+  .angle-brackets span {
+    display: inline-block;
   }
 }

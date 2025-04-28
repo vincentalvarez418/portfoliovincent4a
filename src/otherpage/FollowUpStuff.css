@@ -134,7 +134,10 @@
   padding: 10px 0;
   animation: glitch 2.0s infinite alternate;
   position: relative;
+  font-weight: bold;
+  top: 25px; 
 }
+
 
 
 .skills-grid {

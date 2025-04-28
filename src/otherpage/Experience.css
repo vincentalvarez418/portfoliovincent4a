@@ -63,6 +63,13 @@
     font-size: 1.4em;
 }
 
+.experience-text-black {
+    color: black;
+    margin: 0;
+    font-weight: bold;
+    font-size: 1.4em;
+}
+
 .experience-duration-content {
     position: relative;
 }
@@ -96,6 +103,7 @@
     justify-content: center;
     width: 100%;
 }
+
 
 .experience-card {
     width: 100%;
@@ -131,9 +139,14 @@
 }
 
 .experience-item input[type="checkbox"]:checked + label::before {
-    content: "✅";
+    content: "✔";
     margin-right: 10px;
+    color: rgb(255, 255, 255);
+    font-size: 1.7em;
+    font-weight: bold;
 }
+
+
 
 .experience-item label::before {
     content: "⬜";
@@ -161,18 +174,18 @@
 .experience-role,
 .experience-duration {
     font-size: 1em;
-    color: rgb(249, 249, 249);
+    color: rgb(0, 0, 0);
     padding: 10px 20px;
     border-radius: 30px;
     background-color: rgba(255, 255, 255, 0.2);
 }
 
 .experience-role {
-    background-color: #4caf50;
+    background-color: #ffffff;
 }
 
 .experience-duration {
-    background-color: #aa1a07;
+    background-color: #252525;
 }
 
 .experience-content-horizontal {
@@ -213,14 +226,27 @@
 }
 
 @media (max-width: 768px) {
+
+    .description-text {
+        font-size: 1em !important;
+        text-align: left !important;
+    }
+
+    .experience-text-black {
+        font-size: 1em !important;
+    }
+
     .experience-containercustom {
         margin-top: 50px !important;
         padding: 10px 0;
     }
 
     .experience-description-text {
-        margin-left: 20px;
-        max-width: 100%;
+        margin-left: 0 !important; 
+        margin-right: 0 !important; 
+        padding: 15px;
+        width: 90% !important;
+        max-width: 100% !important;
     }
 
     .experience-info {
@@ -238,8 +264,14 @@
         margin-left: 0;
         margin-top: 30px;
         width: 100%;
-        display: none; 
+        font-size: 0.7em; 
+        text-align: center; 
+        background-color: rgba(0, 0, 0, 0.1);
+        padding: 15px; 
+        border-radius: 10px; 
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); 
     }
+    
 
     .experience-item {
         justify-content: center;
@@ -259,6 +291,22 @@
     .experience-image-section {
         flex: 1 1 100%;
         margin-bottom: 20px;
+    }
+
+    .experience-text {
+        font-size: 1em !important;
+    }
+
+    * {
+        box-sizing: border-box !important;
+    }
+    
+    .experience-containercustom, 
+    .experience-content-horizontal, 
+    .experience-image-section, 
+    .experience-text-section {
+        max-width: 100% !important;
+        overflow-x: hidden !important;
     }
 
     .experience-text-section {

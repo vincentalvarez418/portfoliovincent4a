@@ -36,134 +36,138 @@ function FollowUpStuff() {
   }, []);
 
   return (
-    <div className={`follow-up-container ${fadeIn ? "fade-in" : ""}`}>
+    <div>
+      <div className="separator">
+        <hr className="line" />
+        <span className="separator-text"></span>
+        <hr className="line" />
+      </div>
+
+      <h1 className="vincent-name">ABOUT ME</h1>
 
       <div className="separator">
         <hr className="line" />
         <span className="separator-text"></span>
         <hr className="line" />
       </div>
-      <h1 className="vincent-name">ABOUT ME</h1>
-      <div className="separator">
-        <hr className="line" />
-        <span className="separator-text"></span>
-        <hr className="line" />
-      </div>
+
       <br />
 
-      <div className="about-competitions-container">
-        <div className="section about-me">
-          <h2>WHO I AM</h2><hr />
-          <p>
-            I am a passionate Freelance Developer specializing in Machine Learning, with a deep interest in solving complex problems using data-driven techniques. Over the years, I’ve honed my skills in various programming languages, including Python, JavaScript, and more.
-          </p>
+      <div className={`follow-up-container ${fadeIn ? "fade-in" : ""}`}>
+        <div className="about-competitions-container">
+          <div className="section about-me">
+            <h2>WHO I AM</h2><hr />
+            <p>
+              Hi, I'm Vincent, a passionate Freelance Developer specializing in Machine Learning, with a deep interest in solving complex problems using data-driven techniques. Over the years, I’ve honed my skills in various programming languages, including Python, JavaScript, and more.
+            </p>
+          </div>
+
+          <div className="section competitions">
+            <h2>COMPETITIONS & CONTESTS</h2><hr />
+            <p>
+              I love challenging myself and testing my skills. I have participated in several third-party contests where I demonstrated my machine learning expertise. I am currently looking for contests that focus on mobile AI.
+            </p>
+          </div>
         </div>
 
-        <div className="section competitions">
-          <h2>COMPETITIONS & CONTESTS</h2><hr />
-          <p>
-            I love challenging myself and testing my skills. I have participated in several third-party contests where I demonstrated my machine learning expertise. I am currently looking for contests that focus on mobile AI.
-          </p>
+        <div className="section">
+          <h2>SKILLS AND EXPERTISE</h2><hr />
+          <br />
+          <div className="skills-grid">
+            {skills.map((skill, index) => (
+              <div key={index} className="skill-card">
+                <img 
+                  src={skill.logo} 
+                  alt={`${skill.name} Logo`} 
+                  className="skill-logo"
+                  loading="lazy" 
+                />
+                <h3>{skill.name}</h3>
+                <ul>
+                  {skill.services.map((service, i) => (
+                    <li key={i}>{service}</li>
+                  ))}
+                </ul>
+              </div>
+            ))}
+          </div>
         </div>
-      </div>
 
-      <div className="section">
-        <h2> SKILLS AND EXPERTISE </h2><hr></hr> <br></br>
-        <div className="skills-grid">
-          {skills.map((skill, index) => (
-            <div key={index} className="skill-card">
-              <img 
-                src={skill.logo} 
-                alt={`${skill.name} Logo`} 
-                className="skill-logo"
-                loading="lazy" 
-              />
-              <h3>{skill.name}</h3>
-              <ul>
-                {skill.services.map((service, i) => (
-                  <li key={i}>{service}</li>
-                ))}
-              </ul>
-            </div>
-          ))}
-        </div>
-      </div>
-
-      <div className="work-career-container">
-        <div className="section working-on">
-          <h2>CURRENTLY WORKING ON</h2><hr />
-          <p>
+        <div className="work-career-container">
+          <div className="section working-on">
+            <h2>CURRENTLY WORKING ON</h2><hr />
+            <p>
               Right now, I’m working on several machine learning projects, including image localization. My focus is on developing lightweight models that run efficiently across different platforms. I'm exploring various techniques like neural networks and data optimization to improve accuracy and performance. These projects allow me to expand my skills in real-time processing and model deployment, while aiming to create practical solutions for mobile and embedded systems.
-          </p>
+            </p>
 
-          <div className="working-on-image">
-            <img 
-              src={workingon} 
-              alt="Current Project" 
-              className="working-on-img" 
-              loading="lazy" 
-            />
-          </div>
-        </div>
-
-        <div className="section career-goals">
-          <h2>CAREER GOALS</h2><hr />
-          <p>
-            My goal is to work in an IT company focused on machine learning and software development. 
-            I’m passionate about building impactful AI-driven applications and continuously growing as a developer.
-          </p>
-          <div className="career-logos">
-            <img 
-              src={machineLearningImg} 
-              alt="Machine Learning" 
-              className="career-logo" 
-              loading="lazy" 
-            />
-          </div>
-        </div>
-      </div>
-
-      <div className="hobbies-connect-container">
-        <div className="section hobbies">
-          <h2>HOBBIES</h2><hr></hr>
-          <p>
-            Beyond coding, I enjoy studying mobile hardware, such as smartphone SoCs.
-          </p>
-          <div className="hobbies-logos">
-            <img 
-              src={qualcommLogo} 
-              alt="Qualcomm Logo" 
-              className="hobby-logo" 
-              loading="lazy" 
-            />
-          </div>
-        </div>
-
-        <div className="section lets-connect">
-          <h2>LET'S CONNECT!</h2><hr />
-          <div className="connect-logo">
-            <a href="https://github.com/vincentalvarez418">
+            <div className="working-on-image">
               <img 
-                src={githubAboutMe} 
-                alt="GitHub Profile" 
-                className="github-logo" 
+                src={workingon} 
+                alt="Current Project" 
+                className="working-on-img" 
                 loading="lazy" 
               />
-            </a>
+            </div>
           </div>
-          <br /><br /><br /><br />
-          <div className="connect-logo">
-            <a href="https://www.linkedin.com/in/vincent-alvarez-5a4b28359/">
+
+          <div className="section career-goals">
+            <h2>CAREER GOALS</h2><hr />
+            <p>
+              My goal is to work in an IT company focused on machine learning and software development. 
+              I’m passionate about building impactful AI-driven applications and continuously growing as a developer.
+            </p>
+            <div className="career-logos">
               <img 
-                src={linkedinIcon} 
-                alt="LinkedIn Profile" 
-                className="github-logo" 
+                src={machineLearningImg} 
+                alt="Machine Learning" 
+                className="career-logo" 
                 loading="lazy" 
               />
-            </a>
+            </div>
           </div>
         </div>
 
+        <div className="hobbies-connect-container">
+          <div className="section hobbies">
+            <h2>HOBBIES</h2><hr />
+            <p>
+              Beyond coding, I enjoy studying mobile hardware, such as smartphone SoCs.
+            </p>
+            <div className="hobbies-logos">
+              <img 
+                src={qualcommLogo} 
+                alt="Qualcomm Logo" 
+                className="hobby-logo" 
+                loading="lazy" 
+              />
+            </div>
+          </div>
+
+          <div className="section lets-connect">
+            <h2>LET'S CONNECT!</h2><hr />
+            <div className="connect-logo">
+              <a href="https://github.com/vincentalvarez418">
+                <img 
+                  src={githubAboutMe} 
+                  alt="GitHub Profile" 
+                  className="github-logo" 
+                  loading="lazy" 
+                />
+              </a>
+            </div>
+            <br /><br /><br /><br />
+            <div className="connect-logo">
+              <a href="https://www.linkedin.com/in/vincent-alvarez-5a4b28359/">
+                <img 
+                  src={linkedinIcon} 
+                  alt="LinkedIn Profile" 
+                  className="github-logo" 
+                  loading="lazy" 
+                />
+              </a>
+            </div>
+          </div>
+        </div>
       </div>
     </div>
   );
