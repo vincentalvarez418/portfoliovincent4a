@@ -74,7 +74,7 @@
 .hero-tagline {
   font-family: 'Courier New', monospace;
   font-size: 1.3rem;
-  font-weight: 300;
+  font-weight: bold;
   color: #ffffff;
   text-align: center;
 }
@@ -198,7 +198,7 @@
   .hero-tagline {
     font-family: 'Courier New', monospace;
     font-size: 1.1rem;
-    font-weight: 300;
+    font-weight: bold;
     color: #ffffff;
     text-align: center;
   }
