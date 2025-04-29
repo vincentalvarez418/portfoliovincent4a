@@ -128,6 +128,14 @@ function Tour() {
                         src={imageSets[index][currentImageIndexes[index]]}
                         alt={`tour-${index}`}
                         className="tour-image"
+                        loading="lazy" // Enable lazy loading
+                        style={{
+                          filter: "blur(10px)",
+                          transition: "filter 0.3s ease-out",
+                        }}
+                        onLoad={(e) => {
+                          e.target.style.filter = "none"; // Remove blur once the image has loaded
+                        }}
                       />
                     )}
                   </div>
