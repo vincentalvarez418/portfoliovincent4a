@@ -50,6 +50,55 @@
   animation-delay: 0.1s;
 }
 
+.more-links-block {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 40px;
+}
+
+.more-links-title {
+  font-size: 1.1rem;
+  font-weight: bold;
+  margin-bottom: 5px;
+  text-align: center;
+}
+
+.more-links-divider {
+  width: 200px;
+  border: none;
+  border-top: 2px solid #ccc;
+  margin: 0 0 15px 0;
+}
+
+.more-links-inline {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 25px;
+  flex-wrap: wrap;
+}
+
+.link-combo {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  text-decoration: none;
+  color: inherit;
+  font-weight: 500;
+}
+
+.link-icon {
+  width: 20px;
+  height: 20px;
+  vertical-align: middle;
+}
+
+.pipe-separator {
+  font-weight: bold;
+  color: #666;
+}
+
 
 .certificates-card-wrapper {
   width: calc(20% - 20px);
