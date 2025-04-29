@@ -68,6 +68,9 @@ function Certificates() {
                     src={certificate.image}
                     alt={`Certificate ${index + 1}`}
                     className="certificates-image"
+                    loading="lazy" 
+                    style={{ filter: "blur(10px)", transition: "filter 0.3s ease" }} 
+                    onLoad={(e) => e.target.style.filter = 'blur(0)'} 
                   />
                 </div>
               </div>
