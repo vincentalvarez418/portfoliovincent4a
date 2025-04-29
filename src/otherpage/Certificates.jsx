@@ -1,6 +1,7 @@
 import React, { useState, useEffect, useCallback } from "react";
 import "./Certificates.css";
 import linkedinIcon from "../assets/icons/linkedin.png";
+import driveIcon from "../assets/icons/drive.png";
 
 import CopilotImage from "../assets/certificates/Copilot.jpg";
 import GoogleBertImage from "../assets/certificates/GoogleBert.jpg";
@@ -26,10 +27,9 @@ function Certificates() {
   ];
 
   const openModal = (image) => {
-  setModalImage(image);
-  setIsModalOpen(true);
-};
-
+    setModalImage(image);
+    setIsModalOpen(true);
+  };
 
   const closeModal = () => {
     setIsModalOpen(false);
@@ -67,9 +67,9 @@ function Certificates() {
                     src={certificate.image}
                     alt={`Certificate ${index + 1}`}
                     className="certificates-image"
-                    loading="lazy" 
-                    style={{ filter: "blur(10px)", transition: "filter 0.3s ease" }} 
-                    onLoad={(e) => e.target.style.filter = 'blur(0)'} 
+                    loading="lazy"
+                    style={{ filter: "blur(10px)", transition: "filter 0.3s ease" }}
+                    onLoad={(e) => (e.target.style.filter = "blur(0)")}
                   />
                 </div>
               </div>
@@ -77,18 +77,34 @@ function Certificates() {
           </div>
         ))}
       </div>
-      <div className="linkedin-section">
-        <div className="linkedin-container">
+
+      <div className="more-links-block">
+        <div className="more-links-inline">
           <a
-            href="https://www.linkedin.com/in/vincent-alvarez-5a4b28359/recent-activity/all/"
+            href="https://drive.google.com/drive/folders/1BxVUOZ5HVtjya0-nTrPpbi3hhSGehLot?usp=sharing"
             target="_blank"
             rel="noopener noreferrer"
+            className="link-combo"
           >
-            <img src={linkedinIcon} alt="LinkedIn" className="linkedin-image" />
+            <span>All Certificates</span>
+            <img src={driveIcon} alt="Drive" className="link-icon" />
           </a>
-          <span className="linkedin-text">More Certificates on my LinkedIn</span>
+          <span className="pipe-separator">|</span>
+          <a
+            href="https://www.linkedin.com/in/vincent-anthony-alvarez-5a4b28359/"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="link-combo"
+          >
+            <img src={linkedinIcon} alt="LinkedIn" className="link-icon" />
+            <span>My LinkedIn</span>
+          </a>
         </div>
       </div>
+
+
+
+
 
       {isModalOpen && (
         <div className="modal open" onClick={closeModal}>
