@@ -2,19 +2,24 @@ import React, { useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
 import "./Tour.css";
 import FadeInWrapper from './FadeInWrapper';
-
-const loadImagesForDay = async (day) => {
-  const images = [];
-  for (let i = 1; i <= 8; i++) {
-    try {
-      const image = await import(`../assets/dayimagespromo/${day}-${i}.jpg`);
-      images.push(image.default);
-    } catch (error) {
-      console.error(`Image for day ${day}-${i} not found, skipping.`);
-    }
-  }
-  return images;
-};
+import day1Image1 from "../assets/dayimagespromo/1-1.jpg";
+import day1Image2 from "../assets/dayimagespromo/1-2.jpg";
+import day1Image3 from "../assets/dayimagespromo/1-3.jpg";
+import day2Image1 from "../assets/dayimagespromo/2-1.jpg";
+import day2Image2 from "../assets/dayimagespromo/2-2.jpg";
+import day2Image3 from "../assets/dayimagespromo/2-3.jpg";
+import day3Image1 from "../assets/dayimagespromo/3-1.jpg";
+import day3Image2 from "../assets/dayimagespromo/3-2.jpg";
+import day3Image3 from "../assets/dayimagespromo/3-3.jpg";
+import day4Image1 from "../assets/dayimagespromo/4-1.jpg";
+import day4Image2 from "../assets/dayimagespromo/4-2.jpg";
+import day4Image3 from "../assets/dayimagespromo/4-3.jpg";
+import day5Image1 from "../assets/dayimagespromo/5-1.jpg";
+import day5Image2 from "../assets/dayimagespromo/5-2.jpg";
+import day5Image3 from "../assets/dayimagespromo/5-3.jpg";
+import day6Image1 from "../assets/dayimagespromo/6-1.jpg";
+import day6Image2 from "../assets/dayimagespromo/6-2.jpg";
+import day6Image3 from "../assets/dayimagespromo/6-3.jpg";
 
 function Tour() {
   const [fadeIn, setFadeIn] = useState(false);
@@ -28,12 +33,14 @@ function Tour() {
   const navigate = useNavigate();
 
   useEffect(() => {
-    const loadImages = async () => {
-      const images = await Promise.all([1, 2, 3, 4, 5, 6].map(loadImagesForDay));
-      setImageSets(images);
-    };
-
-    loadImages();
+    setImageSets([
+      [day1Image1, day1Image2, day1Image3],
+      [day2Image1, day2Image2, day2Image3],
+      [day3Image1, day3Image2, day3Image3],
+      [day4Image1, day4Image2, day4Image3],
+      [day5Image1, day5Image2, day5Image3],
+      [day6Image1, day6Image2, day6Image3],
+    ]);
     const timer = setTimeout(() => {
       setFadeIn(true);
     }, 50);
@@ -128,13 +135,13 @@ function Tour() {
                         src={imageSets[index][currentImageIndexes[index]]}
                         alt={`tour-${index}`}
                         className="tour-image"
-                        loading="lazy" // Enable lazy loading
+                        loading="lazy"
                         style={{
                           filter: "blur(10px)",
                           transition: "filter 0.3s ease-out",
                         }}
                         onLoad={(e) => {
-                          e.target.style.filter = "none"; // Remove blur once the image has loaded
+                          e.target.style.filter = "none";
                         }}
                       />
                     )}
