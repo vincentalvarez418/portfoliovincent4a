@@ -1,5 +1,5 @@
 import { BrowserRouter as Router, Routes, Route, Link, useLocation } from "react-router-dom";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import "./App.css";
 import ScrollToTop from "./misc/ScrollToTop";
 import Hero from "./otherpage/hero";
@@ -24,6 +24,64 @@ import Day4 from "../src/daypages/day4";
 import Day5 from "../src/daypages/day5";
 import Day6 from "../src/daypages/day6";
 
+function AnimatedTitle() {
+  const fullText = "Vincent Alvarez";
+  const initialText = "Vincent Alva";
+  const [text, setText] = useState("");
+  const [stage, setStage] = useState(0);
+  const [showCursor, setShowCursor] = useState(true);
+
+  useEffect(() => {
+    const cursorBlink = setInterval(() => {
+      setShowCursor(prev => !prev);
+    }, 500);
+    return () => clearInterval(cursorBlink);
+  }, []);
+
+  useEffect(() => {
+    let timeout;
+
+    if (stage === 0) {
+      let i = 0;
+      const typeInitial = () => {
+        if (i <= initialText.length) {
+          setText(initialText.slice(0, i));
+          i++;
+          timeout = setTimeout(typeInitial, 100);
+        } else {
+          setStage(1);
+        }
+      };
+      typeInitial();
+    } else if (stage === 1) {
+      timeout = setTimeout(() => setStage(2), 4000);
+    } else if (stage === 2) {
+      let i = initialText.length;
+      const typeRemaining = () => {
+        if (i <= fullText.length) {
+          setText(fullText.slice(0, i));
+          i++;
+          timeout = setTimeout(typeRemaining, 100);
+        }
+      };
+      typeRemaining();
+    }
+
+    return () => clearTimeout(timeout);
+  }, [stage]);
+
+  const isTypingDone = text === fullText;
+
+  return (
+    <>
+      {text}
+      {!isTypingDone && (
+        <span className="blinking-cursor">{showCursor ? "|" : " "}</span>
+      )}
+    </>
+  );
+}
+
 
 
 function Navbar() {
@@ -36,7 +94,10 @@ function Navbar() {
 
   return (
     <nav className="navbar">
-      <span className="nav-title">Vincent Alvarez</span>
+      <span className="nav-title">
+        <AnimatedTitle />
+      </span>
+
 
       <div className="nav-buttons">
         <Link to="/">
