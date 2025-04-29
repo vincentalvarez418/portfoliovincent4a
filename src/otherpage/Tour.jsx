@@ -41,6 +41,25 @@ function Tour() {
       [day5Image1, day5Image2, day5Image3],
       [day6Image1, day6Image2, day6Image3],
     ]);
+
+    const preloadImages = () => {
+      const allImages = [
+        day1Image1, day1Image2, day1Image3,
+        day2Image1, day2Image2, day2Image3,
+        day3Image1, day3Image2, day3Image3,
+        day4Image1, day4Image2, day4Image3,
+        day5Image1, day5Image2, day5Image3,
+        day6Image1, day6Image2, day6Image3
+      ];
+
+      allImages.forEach(src => {
+        const img = new Image();
+        img.src = src;
+      });
+    };
+
+    preloadImages();
+
     const timer = setTimeout(() => {
       setFadeIn(true);
     }, 50);

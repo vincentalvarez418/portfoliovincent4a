@@ -81,6 +81,7 @@ function FollowUpStuff() {
                   alt={`${skill.name} Logo`} 
                   className="skill-logo"
                   loading="lazy" 
+                  preload="true"
                 />
                 <h3>{skill.name}</h3>
                 <ul>
@@ -106,6 +107,7 @@ function FollowUpStuff() {
                 alt="Current Project" 
                 className="working-on-img" 
                 loading="lazy" 
+                preload="true"
               />
             </div>
           </div>
@@ -122,6 +124,7 @@ function FollowUpStuff() {
                 alt="Machine Learning" 
                 className="career-logo" 
                 loading="lazy" 
+                preload="true"
               />
             </div>
           </div>
@@ -139,6 +142,7 @@ function FollowUpStuff() {
                 alt="Qualcomm Logo" 
                 className="hobby-logo" 
                 loading="lazy" 
+                preload="true"
               />
             </div>
           </div>
@@ -151,7 +155,8 @@ function FollowUpStuff() {
                   src={githubAboutMe} 
                   alt="GitHub Profile" 
                   className="github-logo" 
-                  loading="lazy" 
+                  loading="lazy"
+                  preload="true" 
                 />
               </a>
             </div>
@@ -163,6 +168,7 @@ function FollowUpStuff() {
                   alt="LinkedIn Profile" 
                   className="github-logo" 
                   loading="lazy" 
+                  preload="true"
                 />
               </a>
             </div>

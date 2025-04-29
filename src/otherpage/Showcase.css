@@ -24,6 +24,16 @@
   justify-content: center;
 }
 
+.blurred {
+  filter: blur(10px);
+  transition: filter 0.3s ease;
+}
+
+img {
+  transition: filter 0.3s ease;
+}
+
+
 .showcase-grid {
   display: flex;
   flex-direction: column;
