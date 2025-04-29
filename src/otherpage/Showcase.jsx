@@ -12,6 +12,8 @@ import hostlinkIcon from "../assets/showcases/hostlink.png";
 import FadeInWrapper from './FadeInWrapper';
 
 function Showcase() {
+  const [loading, setLoading] = useState(true);
+
   const projects = [
     {
       title: "Silence of the Owls",
@@ -48,6 +50,10 @@ function Showcase() {
     }
   ];
 
+  const handleImageLoad = () => {
+    setLoading(false);
+  };
+
   return (
     <div className="showcase-container">
       <br />
@@ -72,12 +78,25 @@ function Showcase() {
                   {project.images ? (
                     <div className={`${project.title.includes("Aquasnap") ? "aquasnap-container" : "gdsc-container"}`}>
                       {project.images.map((img, i) => (
-                        <img key={i} src={img} alt={`${project.title} - ${i + 1}`} className={`${project.title.includes("Aquasnap") ? "aquasnap-image" : "gdsc-image"}`} />
+                        <img
+                          key={i}
+                          src={img}
+                          alt={`${project.title} - ${i + 1}`}
+                          className={`${
+                            project.title.includes("Aquasnap") ? "aquasnap-image" : "gdsc-image"
+                          } ${loading ? "blurred" : ""}`}
+                          onLoad={handleImageLoad}
+                        />
                       ))}
                     </div>
                   ) : (
                     <div className={`${project.title === "Pokemon Spinel" ? "pokemon-container" : project.title === "Calculator" ? "calculator-container" : "other-projects-container"}`}>
-                      <img src={project.image} alt={project.title} className={`${project.title === "Pokemon Spinel" ? "pokemon-image" : project.title === "Calculator" ? "calculator-image" : "other-project-image"}`} />
+                      <img
+                        src={project.image}
+                        alt={project.title}
+                        className={`${project.title === "Pokemon Spinel" ? "pokemon-image" : project.title === "Calculator" ? "calculator-image" : "other-project-image"} ${loading ? "blurred" : ""}`}
+                        onLoad={handleImageLoad}
+                      />
                     </div>
                   )}
                   <p className="project-description">{project.description}</p>
