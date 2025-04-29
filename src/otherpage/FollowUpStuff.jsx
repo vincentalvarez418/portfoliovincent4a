@@ -7,6 +7,7 @@ import cssLogo from '../assets/icons/css.png';
 import linkedinIcon from "../assets/aboutme/linkedin2.png";
 import htmlLogo from '../assets/icons/html.png';
 import javaLogo from '../assets/icons/java.png';
+import workingon2 from '../assets/aboutme/workingon2.jpg';
 import jsLogo from '../assets/icons/javascript.png';
 import kotlinLogo from '../assets/icons/kotlin.png';
 import workingon from '../assets/aboutme/workingon1.jpg';
@@ -98,17 +99,26 @@ function FollowUpStuff() {
           <div className="section working-on">
             <h2>CURRENTLY WORKING ON</h2><hr />
             <p>
-              Right now, I’m working on several machine learning projects, including image localization. My focus is on developing lightweight models that run efficiently across different platforms. I'm exploring various techniques like neural networks and data optimization to improve accuracy and performance. These projects allow me to expand my skills in real-time processing and model deployment, while aiming to create practical solutions for mobile and embedded systems.
+            I'm working on machine learning projects, including image localization, focused on developing lightweight models for mobile and embedded systems.
             </p>
 
             <div className="working-on-image">
-              <img 
-                src={workingon} 
-                alt="Current Project" 
-                className="working-on-img" 
-                loading="lazy" 
-                preload="true"
-              />
+            <img 
+              src={workingon} 
+              alt="Current Project" 
+              className="working-on-img" 
+              loading="lazy" 
+              preload="true" 
+            />
+
+            <img 
+              src={workingon2} 
+              alt="Current Project 2" 
+              className="working-on-img children" 
+              loading="lazy" 
+              preload="true" 
+            />
+
             </div>
           </div>
 
