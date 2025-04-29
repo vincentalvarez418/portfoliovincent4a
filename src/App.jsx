@@ -87,6 +87,22 @@ function AnimatedTitle() {
 function Navbar() {
   const location = useLocation();
   const [menuOpen, setMenuOpen] = useState(false);
+  const [isMobile, setIsMobile] = useState(window.innerWidth <= 1330);
+
+  useEffect(() => {
+    const handleResize = () => {
+      const isCurrentlyMobile = window.innerWidth <= 1330;
+      setIsMobile(isCurrentlyMobile);
+      
+      if (!isCurrentlyMobile) {
+        setMenuOpen(false);
+      }
+    };
+
+    window.addEventListener("resize", handleResize);
+
+    return () => window.removeEventListener("resize", handleResize);
+  }, []);
 
   if (location.pathname === "/") return null;  
 
@@ -150,9 +166,11 @@ function Navbar() {
         </Link>
       </div>
 
-      <button className="menu-toggle" onClick={() => setMenuOpen(true)}>
-        {"</>"}
-      </button>
+      {isMobile && (
+        <button className="menu-toggle" onClick={() => setMenuOpen(true)}>
+          {"</>"}
+        </button>
+      )}
 
       {menuOpen && (
   <div className="modal-overlay" onClick={closeModal}>

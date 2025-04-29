@@ -26,11 +26,10 @@ function Certificates() {
   ];
 
   const openModal = (image) => {
-    if (!isMobile) {
-      setModalImage(image);
-      setIsModalOpen(true);
-    }
-  };
+  setModalImage(image);
+  setIsModalOpen(true);
+};
+
 
   const closeModal = () => {
     setIsModalOpen(false);
