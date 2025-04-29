@@ -6,7 +6,7 @@
   color-scheme: light dark;
   color: rgba(255, 255, 255, 0.87);
   background-color: #181717;
-  background: url('./assets/alter.png') center center / cover no-repeat;
+  background: url('./assets/alter.jpg') center center / cover no-repeat;
   background-attachment: fixed;
   font-synthesis: none;
   text-rendering: optimizeLegibility;
@@ -76,7 +76,7 @@ button:focus-visible {
 
 @media (max-width: 768px) {
   :root {
-    background: url('./assets/alter_mobile.png') center center / cover no-repeat;
+    background: url('./assets/alter_mobile.jpg') center center / cover no-repeat;
     background-size: cover;
   }
 }

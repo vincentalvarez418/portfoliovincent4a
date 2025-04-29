@@ -32,31 +32,32 @@ function Experience() {
             </div>
 
             <div className="experience-list">
-              <div className="experience-item">
-                <input type="checkbox" id="item1" defaultChecked disabled />
-                <label htmlFor="item1">
-                  To stay ahead in industry trends and emerging technologies.
-                </label>
-              </div>
-              <div className="experience-item">
-                <input type="checkbox" id="item2" defaultChecked disabled />
-                <label htmlFor="item2">
-                  To offer sustainable technologies and solutions.
-                </label>
-              </div>
-              <div className="experience-item">
-                <input type="checkbox" id="item3" defaultChecked disabled />
-                <label htmlFor="item3">
-                  To develop accessible technology solutions for all.
-                </label>
-              </div>
-              <div className="experience-item">
-                <input type="checkbox" id="item4" defaultChecked disabled />
-                <label htmlFor="item4">
-                  To foster a culture of continuous learning.
-                </label>
-              </div>
-            </div>
+  <div className="experience-item">
+    <input type="checkbox" id="item1" defaultChecked disabled />
+    <label htmlFor="item1">
+      Stay ahead in trends and emerging tech fields.
+    </label>
+  </div>
+  <div className="experience-item">
+    <input type="checkbox" id="item2" defaultChecked disabled />
+    <label htmlFor="item2">
+      Provide sustainable tech and smart solutions.
+    </label>
+  </div>
+  <div className="experience-item">
+    <input type="checkbox" id="item3" defaultChecked disabled />
+    <label htmlFor="item3">
+      Build accessible tools for every user’s needs.
+    </label>
+  </div>
+  <div className="experience-item">
+    <input type="checkbox" id="item4" defaultChecked disabled />
+    <label htmlFor="item4">
+      Encourage a culture of constant learning always.
+    </label>
+  </div>
+</div>
+
 
             <div className="experience-details">
               <div className="experience-info">
