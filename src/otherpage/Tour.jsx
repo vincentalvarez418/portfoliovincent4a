@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from "react";
+import { CalendarDays } from 'lucide-react';
 import { useNavigate } from "react-router-dom";
 import "./Tour.css";
 import FadeInWrapper from './FadeInWrapper';
@@ -20,15 +21,26 @@ import day5Image3 from "../assets/dayimagespromo/5-3.jpg";
 import day6Image1 from "../assets/dayimagespromo/6-1.jpg";
 import day6Image2 from "../assets/dayimagespromo/6-2.jpg";
 import day6Image3 from "../assets/dayimagespromo/6-3.jpg";
+import day7Image1 from "../assets/dayimagespromo/7-1.jpg";
+import day7Image2 from "../assets/dayimagespromo/7-2.jpg";
+import day7Image3 from "../assets/dayimagespromo/7-3.jpg";
+
+import bg from "../assets/dayimagespromo/BG.jpg";
 
 function Tour() {
   const [fadeIn, setFadeIn] = useState(false);
   const [imageSets, setImageSets] = useState([]);
-  const [currentImageIndexes, setCurrentImageIndexes] = useState(Array(6).fill(0));
+  const [currentImageIndexes, setCurrentImageIndexes] = useState(Array(7).fill(0));
   const [startTouch, setStartTouch] = useState(null);
   const [activeIndex, setActiveIndex] = useState(null);
   const [isDragging, setIsDragging] = useState(false);
   const [draggingClass, setDraggingClass] = useState("");
+
+  const [zoomed, setZoomed] = useState(false);
+
+  const toggleZoom = () => {
+    setZoomed(!zoomed);
+  };
 
   const navigate = useNavigate();
 
@@ -40,6 +52,7 @@ function Tour() {
       [day4Image1, day4Image2, day4Image3],
       [day5Image1, day5Image2, day5Image3],
       [day6Image1, day6Image2, day6Image3],
+      [day7Image1, day7Image2, day7Image3],
     ]);
 
     const preloadImages = () => {
@@ -116,7 +129,19 @@ function Tour() {
     { title: "Robotic Solutions: Hytec PH", description: "Tech innovation hub.", day: "4" },
     { title: "Speed of Manila: LRT", description: "Urban transit experience.", day: "5" },
     { title: "Strawberry City: Baguio", description: "Highland strawberries and pine.", day: "6" },
+    { title: "Free Day: Baguio", description: "Relax and Explore before heading home.", day: "7" },
   ];
+
+  const getDateString = (dayOffset) => {
+    const baseDate = new Date(2025, 3, 7); 
+    baseDate.setDate(baseDate.getDate() + dayOffset);
+    return baseDate.toLocaleDateString('en-US', {
+      month: 'long',
+      day: 'numeric',
+      year: 'numeric'
+    });
+  };
+  
 
   const handleCardClick = (day) => {
     navigate(`/day${day}`);
@@ -125,6 +150,14 @@ function Tour() {
   return (
     <div className={`tour-container ${fadeIn ? "fade-in" : ""}`}>
       <h1 className="my-tours-name">TOUR</h1>
+
+      <img
+      src={bg}
+      alt="Background"
+      className={`bg-image ${zoomed ? "zoomed" : ""}`}
+      onClick={toggleZoom}
+    />
+
       <div className="separator">
         <hr className="line" />
         <hr className="line" />
@@ -166,6 +199,15 @@ function Tour() {
                     )}
                   </div>
                   <p className="tour-description">{tour.description}</p>
+                  <p
+                    className="tour-date text-sm text-gray-700 dark:text-gray-300"
+                    style={{ display: 'inline-flex', alignItems: 'center', gap: '0.5rem' }}
+                  >
+                    <CalendarDays size={18} className="text-gray-600 dark:text-gray-300" />
+                    {getDateString(index)}
+                  </p>
+
+
                   <button
                     className="visit-button"
                     onClick={() => handleCardClick(tour.day)}

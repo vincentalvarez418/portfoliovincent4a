@@ -222,3 +222,31 @@
 .visit-button:hover {
   background-color: rgb(45, 45, 45);
 }
+
+.bg-image {
+  width: 60%;
+  height: auto;
+  object-fit: cover;
+  display: block;
+  border-radius: 20px;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3);
+  cursor: pointer;
+  transition: transform 0.3s ease;
+}
+
+.bg-image.zoomed {
+  transform: scale(1.25);
+  z-index: 9999;
+}
+
+@media (max-width: 768px) {
+  .bg-image {
+    width: 90%;
+    border-radius: 15px;
+  }
+
+  .bg-image.zoomed {
+    transform: scale(1.1);
+  }
+}
+
