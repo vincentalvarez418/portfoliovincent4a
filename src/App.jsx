@@ -23,6 +23,7 @@ import Day3 from "../src/daypages/day3";
 import Day4 from "../src/daypages/day4";
 import Day5 from "../src/daypages/day5";
 import Day6 from "../src/daypages/day6";
+import Day7 from "../src/daypages/day7";
 
 function AnimatedTitle() {
   const [text, setText] = useState("");
@@ -238,6 +239,7 @@ function App() {
           <Route path="/day4" element={<Day4 />} />
           <Route path="/day5" element={<Day5 />} />
           <Route path="/day6" element={<Day6 />} />
+          <Route path="/day7" element={<Day7 />} />
         </Routes>
         <Footer />
       </div>
