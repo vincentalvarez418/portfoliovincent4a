@@ -263,8 +263,13 @@ img {
 }
 
 @media (max-width: 768px) {
+  .gdsc-container,
+  .gdsc-image {
+    display: none;
+  }
+}
 
-  
+@media (max-width: 768px) {
 
   .aquasnap-image-container {
     flex-direction: column;
@@ -285,6 +290,7 @@ img {
 
   .aquasnap-image,
   .project-image,
+  .gdsc-image,
   .other-project-image,
   .pokemon-image,
   .calculator-image {

@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import "./Showcase.css";
 import App1 from "../assets/showcases/app1.jpg";
 import App2 from "../assets/showcases/app2.jpg";
@@ -12,12 +12,14 @@ import FadeInWrapper from './FadeInWrapper';
 function Showcase() {
   const [loading, setLoading] = useState(true);
   const [modalImage, setModalImage] = useState(null);
+  const [zoomed, setZoomed] = useState(false);
+  const [isMobile, setIsMobile] = useState(window.innerWidth <= 768);
 
   const projects = [
     {
       title: "Aquasnap: Fish Identification",
       image: App1,
-      description: "Gallery of Aquasnap:, Showing the description of a local fish.",
+      description: "Gallery of Aquasnap: Showing the description of a local fish.",
     },
     {
       title: "Aquasnap: Fish Identification",
@@ -53,13 +55,20 @@ function Showcase() {
     setLoading(false);
   };
 
-  const openModal = (image) => {
-    setModalImage(image);
+  const toggleZoom = () => {
+    setZoomed(!zoomed);
   };
 
-  const closeModal = () => {
-    setModalImage(null);
-  };
+  useEffect(() => {
+    const handleResize = () => {
+      setIsMobile(window.innerWidth <= 768);
+    };
+
+    window.addEventListener("resize", handleResize);
+    return () => {
+      window.removeEventListener("resize", handleResize);
+    };
+  }, []);
 
   return (
     <div className="showcase-container">
@@ -74,7 +83,6 @@ function Showcase() {
         <hr className="line" />
       </div>
       <div className="showcase-grid">
-
         <div className="project-row">
           {projects.map((project, index) => {
             if (["Aquasnap: Fish Identification", "Aquasnap: Fish Identification"].includes(project.title)) {
@@ -99,7 +107,8 @@ function Showcase() {
           })}
         </div>
 
-        {projects.map((project, index) => {
+        {/* Conditionally render GDSC section based on isMobile state */}
+        {!isMobile && projects.map((project, index) => {
           if (project.title === "Gdsc Event Portal") {
             return (
               <FadeInWrapper key={index}>
@@ -110,7 +119,13 @@ function Showcase() {
                   <div className="project-card">
                     <div className="project-content">
                       <div className="gdsc-container">
-                        <img src={project.images[0]} alt={project.title} className={`gdsc-image ${loading ? "blurred" : ""}`} onLoad={handleImageLoad} />
+                        <img
+                          src={project.images[0]}
+                          alt={project.title}
+                          className={`gdsc-image ${loading ? "blurred" : ""} ${zoomed ? "zoomed" : ""}`}
+                          onLoad={handleImageLoad}
+                          onClick={toggleZoom} // Toggle zoom on click, but only on mobile
+                        />
                       </div>
                       <p className="project-description">{project.description}</p>
                     </div>
