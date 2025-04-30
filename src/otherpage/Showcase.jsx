@@ -20,11 +20,17 @@ function Showcase() {
       title: "Aquasnap: Fish Identification",
       image: App1,
       description: "Gallery of Aquasnap: Showing the description of a local fish.",
+      links: {
+        repo: "https://github.com/vincentalvarez418/aquasnap"
+      }
     },
     {
       title: "Aquasnap: Fish Identification",
       image: App2,
       description: "Main feature of Aquasnap: Identification of local fish species.",
+      links: {
+        repo: "https://docs.ultralytics.com/"
+      }
     },
     {
       title: "Gdsc Event Portal",
@@ -46,7 +52,7 @@ function Showcase() {
       description: "A simple calculator built using HTML, CSS, and JavaScript.",
       links: {
         host: "https://tulabingalvarezcalculator.netlify.app/",
-        repo: "https://github.com/vincentalvarez418/calculator",
+        docs: "https://docs.ultralytics.com/",
       }
     }
   ];
@@ -98,6 +104,35 @@ function Showcase() {
                           <img src={project.image} alt={project.title} className="calculator-image" onLoad={handleImageLoad} />
                         </div>
                         <p className="project-description">{project.description}</p>
+                        {project.links && (
+                          <div className="project-links">
+                            {project.links.host && (
+                              <a href={project.links.host} target="_blank" rel="noopener noreferrer" className="project-link">
+                                <img src={hostlinkIcon} alt="Host Link" className="link-icon" />
+                                View Project
+                              </a>
+                            )}
+                            {project.links.repo && (
+                              <a href={project.links.repo} target="_blank" rel="noopener noreferrer" className="project-link">
+                                <img
+                                  src={
+                                    project.links.repo.includes("ultralytics.com") ? hostlinkIcon : githubIcon
+                                  }
+                                  alt={project.links.repo.includes("ultralytics.com") ? "Documentation" : "GitHub Repository"}
+                                  className="link-icon"
+                                />
+                                {project.links.repo.includes("ultralytics.com") ? "View YOLO Docs" : "View Repository"}
+                              </a>
+                            )}
+                            {project.links.docs && (
+                              <a href={project.links.docs} target="_blank" rel="noopener noreferrer" className="project-link">
+                                <img src={hostlinkIcon} alt="Documentation" className="link-icon" />
+                                View YOLO Docs
+                              </a>
+                            )}
+                          </div>
+                        )}
+
                       </div>
                     </div>
                   </div>
@@ -107,7 +142,6 @@ function Showcase() {
           })}
         </div>
 
-        {/* Conditionally render GDSC section based on isMobile state */}
         {!isMobile && projects.map((project, index) => {
           if (project.title === "Gdsc Event Portal") {
             return (
@@ -124,7 +158,7 @@ function Showcase() {
                           alt={project.title}
                           className={`gdsc-image ${loading ? "blurred" : ""} ${zoomed ? "zoomed" : ""}`}
                           onLoad={handleImageLoad}
-                          onClick={toggleZoom} // Toggle zoom on click, but only on mobile
+                          onClick={toggleZoom}
                         />
                       </div>
                       <p className="project-description">{project.description}</p>
