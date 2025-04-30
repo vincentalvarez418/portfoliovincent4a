@@ -25,60 +25,53 @@ import Day5 from "../src/daypages/day5";
 import Day6 from "../src/daypages/day6";
 
 function AnimatedTitle() {
-  const fullText = "Vincent Alvarez";
-  const initialText = "Vincent Alva";
   const [text, setText] = useState("");
-  const [stage, setStage] = useState(0);
+  const [isMobile, setIsMobile] = useState(window.innerWidth <= 1330);
   const [showCursor, setShowCursor] = useState(true);
 
+  const baseText = "Vincent Alvarez | ";
+  const suffix = isMobile ? " Lite View" : "Wide View";
+
   useEffect(() => {
-    const cursorBlink = setInterval(() => {
-      setShowCursor(prev => !prev);
-    }, 500);
-    return () => clearInterval(cursorBlink);
+    const handleResize = () => {
+      setIsMobile(window.innerWidth <= 1330);
+    };
+    window.addEventListener("resize", handleResize);
+    return () => window.removeEventListener("resize", handleResize);
   }, []);
 
   useEffect(() => {
-    let timeout;
-
-    if (stage === 0) {
-      let i = 0;
-      const typeInitial = () => {
-        if (i <= initialText.length) {
-          setText(initialText.slice(0, i));
-          i++;
-          timeout = setTimeout(typeInitial, 100);
-        } else {
-          setStage(1);
-        }
-      };
-      typeInitial();
-    } else if (stage === 1) {
-      timeout = setTimeout(() => setStage(2), 4000);
-    } else if (stage === 2) {
-      let i = initialText.length;
-      const typeRemaining = () => {
-        if (i <= fullText.length) {
-          setText(fullText.slice(0, i));
-          i++;
-          timeout = setTimeout(typeRemaining, 100);
-        }
-      };
-      typeRemaining();
-    }
-
-    return () => clearTimeout(timeout);
-  }, [stage]);
-
-  const isTypingDone = text === fullText;
+    let i = 0;
+    const typeBase = () => {
+      if (i <= baseText.length) {
+        setText(baseText.slice(0, i));
+        i++;
+        setTimeout(typeBase, 60);
+      } else {
+        
+        setTimeout(() => {
+          let j = 0;
+          const typeSuffix = () => {
+            if (j <= suffix.length) {
+              setText(baseText + suffix.slice(0, j));
+              j++;
+              setTimeout(typeSuffix, 60);
+            } else {
+              setShowCursor(false); 
+            }
+          };
+          typeSuffix();
+        }, 2000);
+      }
+    };
+    typeBase();
+  }, [isMobile]);
 
   return (
-    <>
+    <span>
       {text}
-      {!isTypingDone && (
-        <span className="blinking-cursor">{showCursor ? "|" : " "}</span>
-      )}
-    </>
+      {showCursor && <span className="animate-pulse">|</span>}
+    </span>
   );
 }
 

@@ -43,11 +43,25 @@ img {
 }
 
 .project-wrapper {
-  width: 90%;
+  width: 100%;
   max-width: 800px;
   display: flex;
   flex-direction: column;
   align-items: center;
+}
+
+.project-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 50px;
+  justify-content: center;
+  width: 100%;
+  max-width: 850px;
+}
+
+.half-width {
+  flex: 1 1 45%;
+  max-width: 400px;
 }
 
 .project-title-container {
@@ -91,6 +105,7 @@ img {
   width: 100%;
 }
 
+
 .project-description {
   font-size: 1em;
   color: #bbb;
@@ -108,34 +123,58 @@ img {
   object-fit: cover;
   margin-bottom: 15px;
 }
-
 .aquasnap-container {
   display: flex;
   justify-content: center;
-  gap: 15px;
+  align-items: center;
+  gap: 30px;
   flex-wrap: wrap;
+  width: 100%;
+  max-width: 1600px !important;
+  min-height: 600px !important;
+  padding: 30px;
+  margin: 0 auto;
+}
+
+.aquasnap-image-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 30px;
+  width: 100%;
+  max-width: 1500px !important;
+  min-height: 550px !important;
+  padding: 30px;
+  margin: 0 auto;
 }
 
 .aquasnap-image {
-  width: 250px;
+  width: 80%;
+  max-width: 400px !important;
   height: auto;
-  border-radius: 5px;
   object-fit: cover;
+  border-radius: 5px;
 }
+
 
 .gdsc-container {
   display: flex;
-  flex-direction: column; 
+  justify-content: center;
   align-items: center;
-  gap: 15px;
+  width: 100%;
+  max-width: 800px;
+  margin: 0 auto;
 }
 
+
 .gdsc-image {
-  width: 750px; 
-  height: auto;
-  border-radius: 5px;
+  width: 100%;
+  max-width: 750px;
+  height: 400px;
   object-fit: cover;
+  border-radius: 5px;
 }
+
 
 .other-projects-container {
   display: flex;
@@ -192,16 +231,16 @@ img {
 }
 
 .pokemon-image {
-  width: 400px;
-  max-width: 100%;
+  width: 100%;
+  max-width: 400px;
   height: auto;
   border-radius: 5px;
   object-fit: cover;
 }
 
 .calculator-image {
-  width: 400px;
-  max-width: 100%;
+  width: 100%;
+  max-width: 400px;
   height: auto;
   border-radius: 5px;
   object-fit: cover;
@@ -224,6 +263,25 @@ img {
 }
 
 @media (max-width: 768px) {
+  .gdsc-container,
+  .gdsc-image {
+    display: none;
+  }
+}
+
+@media (max-width: 768px) {
+
+  .aquasnap-image-container {
+    flex-direction: column;
+    gap: 10px; 
+    align-items: center;
+  }
+
+  .aquasnap-image {
+    width: 120%; 
+    max-width: 400px;
+  }
+
   .showcase-grid {
     flex-direction: column;
     align-items: center; 
