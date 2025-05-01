@@ -73,15 +73,14 @@
 
 
 @media (max-width: 1330px) {
-
   .navbar {
     padding: 10px 15px;
   }
 
   .nav-title {
-    flex-grow: 0; 
+    flex-grow: 0;
     text-align: left;
-    white-space: nowrap; 
+    white-space: nowrap;
   }
 
   .modal-logo-name {
@@ -99,13 +98,14 @@
   .nav-divider {
     width: 100%;
     border: none;
-    border-top: 1px solid rgba(255, 255, 255, 0.3); 
+    border-top: 1px solid rgba(255, 255, 255, 0.3);
     margin: 10px 0;
   }
 
   .nav-buttons {
-    display: none;
+    display: none; 
   }
+
 
   .menu-toggle {
     display: block;
@@ -116,9 +116,8 @@
     cursor: pointer;
   }
 
-
   .modal-content .nav-text {
-    color: #333; 
+    color: #333;
   }
 
   .modal-overlay {
@@ -127,15 +126,15 @@
     left: 0;
     width: 100%;
     height: 100%;
-    background: rgba(0, 0, 0, 0.7); 
+    background: rgba(0, 0, 0, 0.7);
     display: flex;
     justify-content: center;
     align-items: center;
     z-index: 1000;
     opacity: 1;
-    visibility: visible;  
+    visibility: visible;
   }
-  
+
   .modal-content {
     position: relative;
     background: #fff;
@@ -148,9 +147,8 @@
     width: 80%;
     max-width: 300px;
     box-sizing: border-box;
-    z-index: 100221; 
+    z-index: 100221;
   }
-  
 
   .modal-close {
     position: absolute;
@@ -168,11 +166,128 @@
   .nav-button {
     padding: 8px 12px;
     font-size: 14px;
-    width: 100%; 
+    width: 100%;
     display: flex;
     justify-content: flex-start;
     gap: 8px;
-    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1); 
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+  }
+
+  .nav-title,
+  .modal-content h2 {
+    text-align: center;
+  }
+
+  .modal-content p {
+    text-align: center;
+  }
+
+  .modal-overlay .nav-divider {
+    width: 100%;
+    border: none;
+    border-top: 1px solid #ccc;
+    margin: 10px 0;
+  }
+}
+
+@media (min-width: 1042px) {
+  .navbar {
+    padding: 10px 15px;
+  }
+
+  .nav-title {
+    flex-grow: 0;
+    text-align: left;
+    white-space: nowrap;
+  }
+
+  .modal-logo-name {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+  }
+
+  
+
+  .nav-box {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+  }
+
+  .nav-divider {
+    width: 100%;
+    border: none;
+    border-top: 1px solid rgba(255, 255, 255, 0.3);
+    margin: 10px 0;
+  }
+
+  .nav-buttons {
+    display: flex;  
+    gap: 20px;
+    justify-content: flex-end;
+  }
+
+
+  .menu-toggle {
+    display: none;
+  }
+
+  .modal-content .nav-text {
+    color: #333;
+  }
+
+  .modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.7);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+    opacity: 1;
+    visibility: visible;
+  }
+
+  .modal-content {
+    position: relative;
+    background: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 15px;
+    width: 80%;
+    max-width: 300px;
+    box-sizing: border-box;
+    z-index: 100221;
+  }
+
+  .modal-close {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    background: #ddd;
+    border: none;
+    font-size: 20px;
+    color: #333;
+    padding: 8px 12px;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+
+  .nav-button {
+    padding: 8px 12px;
+    font-size: 14px;
+    width: 100%;
+    display: flex;
+    justify-content: flex-start;
+    gap: 8px;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
   }
 
   .nav-title,
@@ -247,3 +362,50 @@
 }
 
 
+
+@media (min-width: 769px) and (max-width: 1024px) {
+  
+  .navbar {
+    padding: 15px 20px;
+  }
+
+  .nav-title {
+    font-size: 24px;
+    text-align: left;
+    white-space: nowrap; 
+  }
+
+  .nav-buttons {
+    display: flex;
+    gap: 15px;
+    justify-content: flex-end;
+    margin-top: -5px
+  }
+
+  .menu-toggle {
+    display: none;
+  }
+
+  .nav-button {
+    padding: 10px 14px;
+    font-size: 15px;
+  }
+
+  .horiline {
+    font-size: 18px;
+  }
+
+  .modal-content .nav-text {
+    color: #333; 
+  }
+
+  .nav-icon {
+    width: 22px;
+    height: 22px;
+  }
+
+  .nav-title {
+    font-size: 22px; 
+  }
+
+}
