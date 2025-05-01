@@ -30,6 +30,8 @@ function Experience() {
                 organizations to thrive in the digital era.
               </p>
             </div>
+            
+            <hr className="experience-divider mobile-only" />
 
             <div className="experience-list">
   <div className="experience-item">

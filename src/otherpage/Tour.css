@@ -252,3 +252,9 @@
   }
 }
 
+@media (min-width: 769px) and (max-width: 1024px) {
+  .content {
+    padding-bottom: 150px !important; 
+    padding-top: 50px !important;
+  }
+}
