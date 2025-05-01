@@ -31,13 +31,14 @@ function AnimatedTitle() {
   const [showCursor, setShowCursor] = useState(true);
 
   const baseText = "Vincent Alvarez | ";
+  
 
   useEffect(() => {
     const handleResize = () => {
       if (window.innerWidth <= 768) {
         setViewType("Mobile"); 
       } else if (window.innerWidth >= 769 && window.innerWidth <= 1024) {
-        setViewType("Tablet"); 
+        setViewType("Tab"); 
       } else {
         setViewType("PC"); 
       }
@@ -94,7 +95,7 @@ function Navbar() {
       if (window.innerWidth <= 768) {
         setViewType("Mobile");
       } else if (window.innerWidth >= 769 && window.innerWidth <= 1024) {
-        setViewType("Tablet"); 
+        setViewType("Tab"); 
       } else {
         setViewType("PC"); 
       }
@@ -105,6 +106,7 @@ function Navbar() {
 
     return () => window.removeEventListener("resize", handleResize);
   }, []);
+  
 
   useEffect(() => {
     if (viewType === "Mobile") {

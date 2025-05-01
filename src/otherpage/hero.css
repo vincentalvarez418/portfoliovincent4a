@@ -232,3 +232,61 @@ body.hero-active {
     display: inline-block;
   }
 }
+
+.fade-in-text {
+  opacity: 0;
+  animation: fadeInText 1.5s ease-in-out forwards;
+}
+
+.cursor {
+  font-weight: bold;
+  font-size: 1.2rem;
+  color: white;
+  animation: blink 0.8s infinite;
+}
+
+@keyframes fadeInText {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes blink {
+  0% { opacity: 1; }
+  50% { opacity: 0; }
+  100% { opacity: 1; }
+}
+
+.hero-button {
+  opacity: 0;
+  transition: opacity 1s ease-in-out;
+}
+
+.hero-button.fade-in {
+  opacity: 1;
+}
+
+@keyframes fadeLoop {
+  0% { opacity: 0; visibility: hidden; }
+  25% { opacity: 1; visibility: visible; }
+  50% { opacity: 1; visibility: visible; }
+  75% { opacity: 0; visibility: hidden; }
+  100% { opacity: 0; visibility: hidden; }
+}
+
+.angle-brackets {
+  opacity: 0;
+  visibility: hidden;
+  animation: fadeLoop 4s infinite ease-in-out;
+}
+
+body.hero-active .navbar,
+body.hero-active footer {
+  display: none !important;
+}
+
