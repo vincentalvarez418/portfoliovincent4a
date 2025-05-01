@@ -25,13 +25,13 @@ function Tour() {
   }, []);
 
   const tours = [
-    { title: "Introduction: Manila", description: "Explore the heart of the Philippines.", day: "1", image: day1Image },
-    { title: "City of Bays: Subic Bay", description: "Coastal escape with beaches.", day: "2", image: day2Image },
-    { title: "Time Vault: National Museum", description: "Philippine history and heritage.", day: "3", image: day3Image },
-    { title: "Robotic Solutions: Hytec PH", description: "Tech innovation hub.", day: "4", image: day4Image },
-    { title: "Speed of Manila: LRT", description: "Urban transit experience.", day: "5", image: day5Image },
-    { title: "Strawberry City: Baguio", description: "Highland strawberries and pine.", day: "6", image: day6Image },
-    { title: "Free Day: Baguio", description: "Relax and Explore before heading home.", day: "7", image: day7Image },
+    { title: "Day 1: Welcome Manila", description: "Explore the heart of the Philippines.", day: "1", image: day1Image },
+    { title: "Day 2: City of Bays - Subic Bay", description: "Coastal escape with beaches.", day: "2", image: day2Image },
+    { title: "Day 3: Time Vault - National Museum", description: "Philippine history and heritage.", day: "3", image: day3Image },
+    { title: "Day 4: Robotic Solutions - Hytec PH", description: "Tech innovation hub.", day: "4", image: day4Image },
+    { title: "Day 5: Speed of Manila - LRT", description: "Urban transit experience.", day: "5", image: day5Image },
+    { title: "Day 6: Strawberry City - Baguio", description: "Highland strawberries and pine.", day: "6", image: day6Image },
+    { title: "Day 7: Epilogue", description: "Relax and Explore before heading home.", day: "7", image: day7Image },
   ];
 
   const getDateString = (dayOffset) => {
