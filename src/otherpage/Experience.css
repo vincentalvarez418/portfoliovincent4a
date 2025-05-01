@@ -225,6 +225,21 @@
     }
 }
 
+.mobile-only {
+    display: none;
+  }
+  
+  @media (max-width: 768px) {
+    .mobile-only {
+      display: block;
+      margin: 20px 0;
+      border: none;
+      border-top: 1px solid #ccc;
+      width: 100%;
+    }
+  }
+  
+
 @media (max-width: 768px) {
 
     .description-text {
@@ -261,7 +276,6 @@
         margin: 0;
     }
     
-
     .experience-info {
         margin-left: 0;
         margin-top: 0;
