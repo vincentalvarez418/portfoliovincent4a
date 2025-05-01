@@ -11,6 +11,7 @@ import day4Image from "../assets/dayimagespromo/4.jpg";
 import day5Image from "../assets/dayimagespromo/5.jpg";
 import day6Image from "../assets/dayimagespromo/6.jpg";
 import day7Image from "../assets/dayimagespromo/7.jpg";
+import randomshots from "../assets/dayimagespromo/randomshots.jpg";
 import bg from "../assets/dayimagespromo/BG.jpg";
 
 function Tour() {
@@ -32,6 +33,7 @@ function Tour() {
     { title: "Day 5: Speed of Manila - LRT", description: "Urban transit experience.", day: "5", image: day5Image },
     { title: "Day 6: Strawberry City - Baguio", description: "Highland strawberries and pine.", day: "6", image: day6Image },
     { title: "Day 7: Epilogue", description: "Relax and Explore before heading home.", day: "7", image: day7Image },
+    { title: "Day 8: Random Shots", description: "Snapshots and memories from the journey.", day: "8", image: randomshots } 
   ];
 
   const getDateString = (dayOffset) => {
@@ -44,7 +46,7 @@ function Tour() {
     });
   };
 
-  const handleCardClick = (day) => navigate(`/day${day}`);
+  const handleCardClick = (day) => navigate(day === "8" ? "/randomshots" : `/day${day}`);
 
   return (
     <div className={`tour-container ${fadeIn ? "fade-in" : ""}`}>
@@ -85,13 +87,15 @@ function Tour() {
                     />
                   </div>
                   <p className="tour-description">{tour.description}</p>
+
                   <p
                     className="tour-date text-sm text-gray-700 dark:text-gray-300"
                     style={{ display: 'inline-flex', alignItems: 'center', gap: '0.5rem' }}
                   >
                     <CalendarDays size={18} className="text-gray-600 dark:text-gray-300" />
-                    {getDateString(index)}
+                    {tour.day === "8" ? "April 7 - April 14, 2025" : getDateString(index)}
                   </p>
+
                   <button
                     className="visit-button"
                     onClick={() => handleCardClick(tour.day)}

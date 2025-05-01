@@ -24,6 +24,7 @@ import Day4 from "../src/daypages/day4";
 import Day5 from "../src/daypages/day5";
 import Day6 from "../src/daypages/day6";
 import Day7 from "../src/daypages/day7";
+import RandomShots from "../src/daypages/randomshots";
 
 function AnimatedTitle() {
   const [text, setText] = useState("");
@@ -36,20 +37,21 @@ function AnimatedTitle() {
   useEffect(() => {
     const handleResize = () => {
       if (window.innerWidth <= 768) {
-        setViewType("Mobile"); 
+        setViewType("Mobile");
       } else if (window.innerWidth >= 769 && window.innerWidth <= 1024) {
-        setViewType("Tab"); 
+        setViewType("Tab");
+      } else if (window.innerWidth >= 1025 && window.innerWidth <= 1142) {
+        setViewType("Custom Device");
       } else {
-        setViewType("PC"); 
+        setViewType("PC");
       }
     };
-
   
     handleResize();
-
     window.addEventListener("resize", handleResize);
     return () => window.removeEventListener("resize", handleResize);
   }, []);
+  
 
   useEffect(() => {
     let i = 0;
@@ -175,11 +177,12 @@ function Navbar() {
         </Link>
       </div>
 
-      {(viewType === "Mobile") && (
+      {(viewType === "Mobile" || viewType === "Tab" || viewType === "Custom Device") && (
         <button className="menu-toggle" onClick={() => setMenuOpen(true)}>
           {"</>"}
         </button>
       )}
+
 
       {menuOpen && (
         <div className="modal-overlay" onClick={closeModal}>
@@ -254,6 +257,7 @@ function App() {
           <Route path="/day5" element={<Day5 />} />
           <Route path="/day6" element={<Day6 />} />
           <Route path="/day7" element={<Day7 />} />
+          <Route path="/randomshots" element={<RandomShots />} />
         </Routes>
         <Footer />
       </div>
