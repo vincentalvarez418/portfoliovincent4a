@@ -188,7 +188,7 @@ body.hero-active {
 
 .angle-brackets {
   font-size: 1.5rem;
-  color: #e1e1e1;
+  color: #ffbf00;
   margin: 0 15px; 
   font-weight: normal;
 }
@@ -223,7 +223,7 @@ body.hero-active {
 
   .angle-brackets {
     font-size: 1.1rem;
-    color: #888;
+    color: #ffbf00;
     margin: 0 10px;
     font-weight: normal;
   }

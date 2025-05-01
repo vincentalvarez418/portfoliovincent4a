@@ -66,7 +66,7 @@ function FollowUpStuff() {
           <div className="section competitions">
             <h2>COMPETITIONS & CONTESTS</h2><hr />
             <p>
-              I love challenging myself and testing my skills. I have participated in several third-party contests where I demonstrated my machine learning expertise. I am currently looking for contests that focus on mobile AI.
+              I love challenging myself and testing my skills. I have participated in several third-party contests where I demonstrated my machine learning expertise. I am currently looking for contests that focuses on Mobile AI, Mobile Development and Mobile Software Optimizations.
             </p>
           </div>
         </div>
