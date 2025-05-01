@@ -93,3 +93,10 @@ button:focus-visible {
     background-color: #f9f9f9;
   }
 }
+
+@media (max-width: 1024px) {
+  :root {
+    background: url('./assets/alter_mobile.jpg') center center / cover no-repeat;
+    background-size: cover;
+  }
+}

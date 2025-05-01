@@ -27,16 +27,25 @@ import Day7 from "../src/daypages/day7";
 
 function AnimatedTitle() {
   const [text, setText] = useState("");
-  const [isMobile, setIsMobile] = useState(window.innerWidth <= 1330);
+  const [viewType, setViewType] = useState("");
   const [showCursor, setShowCursor] = useState(true);
 
   const baseText = "Vincent Alvarez | ";
-  const suffix = isMobile ? " Lite View" : "Wide View";
 
   useEffect(() => {
     const handleResize = () => {
-      setIsMobile(window.innerWidth <= 1330);
+      if (window.innerWidth <= 768) {
+        setViewType("Mobile"); 
+      } else if (window.innerWidth >= 769 && window.innerWidth <= 1024) {
+        setViewType("Tablet"); 
+      } else {
+        setViewType("PC"); 
+      }
     };
+
+  
+    handleResize();
+
     window.addEventListener("resize", handleResize);
     return () => window.removeEventListener("resize", handleResize);
   }, []);
@@ -49,16 +58,15 @@ function AnimatedTitle() {
         i++;
         setTimeout(typeBase, 60);
       } else {
-        
         setTimeout(() => {
           let j = 0;
           const typeSuffix = () => {
-            if (j <= suffix.length) {
-              setText(baseText + suffix.slice(0, j));
+            if (j <= viewType.length) {
+              setText(baseText + viewType.slice(0, j));
               j++;
               setTimeout(typeSuffix, 60);
             } else {
-              setShowCursor(false); 
+              setShowCursor(false);
             }
           };
           typeSuffix();
@@ -66,7 +74,7 @@ function AnimatedTitle() {
       }
     };
     typeBase();
-  }, [isMobile]);
+  }, [viewType]);
 
   return (
     <span>
@@ -76,29 +84,35 @@ function AnimatedTitle() {
   );
 }
 
-
-
 function Navbar() {
   const location = useLocation();
   const [menuOpen, setMenuOpen] = useState(false);
-  const [isMobile, setIsMobile] = useState(window.innerWidth <= 1330);
+  const [viewType, setViewType] = useState(""); 
 
   useEffect(() => {
     const handleResize = () => {
-      const isCurrentlyMobile = window.innerWidth <= 1330;
-      setIsMobile(isCurrentlyMobile);
-      
-      if (!isCurrentlyMobile) {
-        setMenuOpen(false);
+      if (window.innerWidth <= 768) {
+        setViewType("Mobile");
+      } else if (window.innerWidth >= 769 && window.innerWidth <= 1024) {
+        setViewType("Tablet"); 
+      } else {
+        setViewType("PC"); 
       }
     };
 
+    handleResize(); 
     window.addEventListener("resize", handleResize);
 
     return () => window.removeEventListener("resize", handleResize);
   }, []);
 
-  if (location.pathname === "/") return null;  
+  useEffect(() => {
+    if (viewType === "Mobile") {
+      setMenuOpen(false);
+    }
+  }, [viewType]);
+
+  if (location.pathname === "/") return null;
 
   const closeModal = () => setMenuOpen(false);
 
@@ -107,7 +121,6 @@ function Navbar() {
       <span className="nav-title">
         <AnimatedTitle />
       </span>
-
 
       <div className="nav-buttons">
         <Link to="/">
@@ -160,60 +173,59 @@ function Navbar() {
         </Link>
       </div>
 
-      {isMobile && (
+      {(viewType === "Mobile") && (
         <button className="menu-toggle" onClick={() => setMenuOpen(true)}>
           {"</>"}
         </button>
       )}
 
       {menuOpen && (
-  <div className="modal-overlay" onClick={closeModal}>
-    <div className="modal-content" onClick={(e) => e.stopPropagation()}>
-      <Link to="/" onClick={closeModal}>
-        <div className="nav-box">
-          <span className="modal-text">HOME</span>
+        <div className="modal-overlay" onClick={closeModal}>
+          <div className="modal-content" onClick={(e) => e.stopPropagation()}>
+            <Link to="/" onClick={closeModal}>
+              <div className="nav-box">
+                <span className="modal-text">HOME</span>
+              </div>
+            </Link>
+            <hr className="nav-divider" />
+            <Link to="/about" onClick={closeModal}>
+              <div className="nav-box">
+                <span className="modal-text">ABOUT ME</span>
+              </div>
+            </Link>
+            <hr className="nav-divider" />
+            <Link to="/showcase" onClick={closeModal}>
+              <div className="nav-box">
+                <span className="modal-text">PROJECTS</span>
+              </div>
+            </Link>
+            <hr className="nav-divider" />
+            <Link to="/tour" onClick={closeModal}>
+              <div className="nav-box">
+                <span className="modal-text">TOUR</span>
+              </div>
+            </Link>
+            <hr className="nav-divider" />
+            <Link to="/certificates" onClick={closeModal}>
+              <div className="nav-box">
+                <span className="modal-text">CERTIFICATIONS</span>
+              </div>
+            </Link>
+            <hr className="nav-divider" />
+            <Link to="/experience" onClick={closeModal}>
+              <div className="nav-box">
+                <span className="modal-text">EXPERIENCE</span>
+              </div>
+            </Link>
+            <hr className="nav-divider" />
+            <Link to="/contact" onClick={closeModal}>
+              <div className="nav-box">
+                <span className="modal-text">CONTACT</span>
+              </div>
+            </Link>
+          </div>
         </div>
-      </Link>
-      <hr className="nav-divider" />
-      <Link to="/about" onClick={closeModal}>
-        <div className="nav-box">
-          <span className="modal-text">ABOUT ME</span>
-        </div>
-      </Link>
-      <hr className="nav-divider" />
-      <Link to="/showcase" onClick={closeModal}>
-        <div className="nav-box">
-          <span className="modal-text">PROJECTS</span>
-        </div>
-      </Link>
-      <hr className="nav-divider" />
-      <Link to="/tour" onClick={closeModal}>
-        <div className="nav-box">
-          <span className="modal-text">TOUR</span>
-        </div>
-      </Link>
-      <hr className="nav-divider" />
-      <Link to="/certificates" onClick={closeModal}>
-        <div className="nav-box">
-          <span className="modal-text">CERTIFICATIONS</span>
-        </div>
-      </Link>
-      <hr className="nav-divider" />
-      <Link to="/experience" onClick={closeModal}>
-        <div className="nav-box">
-          <span className="modal-text">EXPERIENCE</span>
-        </div>
-      </Link>
-      <hr className="nav-divider" />
-      <Link to="/contact" onClick={closeModal}>
-        <div className="nav-box">
-          <span className="modal-text">CONTACT</span>
-        </div>
-      </Link>
-    </div>
-  </div>
-)}
-
+      )}
     </nav>
   );
 }
@@ -246,6 +258,5 @@ function App() {
     </Router>
   );
 }
-
 
 export default App;
