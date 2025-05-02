@@ -14,6 +14,7 @@ import workingon from '../assets/aboutme/workingon1.jpg';
 import qualcommLogo from '../assets/aboutme/qualcom.png';
 import githubAboutMe from '../assets/aboutme/githubaboutme.jpg';
 import machineLearningImg from '../assets/aboutme/machinelearning.png';
+import vincentPic from '../assets/aboutme/vincent.png';
 
 const skills = [
   { logo: yoloLogo, name: "YOLO", services: ["Object Detection", "Model Training"] },
@@ -45,6 +46,16 @@ function FollowUpStuff() {
       </div>
 
       <h1 className="vincent-name">ABOUT ME</h1>
+
+      <div className="vincent-pic-container">
+      <img 
+        src={vincentPic} 
+        alt="Vincent Profile" 
+        className="vincent-profile-img" 
+        loading="lazy" 
+        preload="true"
+      />
+    </div>
 
       <div className="separator">
         <hr className="line" />

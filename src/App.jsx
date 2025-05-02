@@ -97,9 +97,11 @@ function Navbar() {
       if (window.innerWidth <= 768) {
         setViewType("Mobile");
       } else if (window.innerWidth >= 769 && window.innerWidth <= 1024) {
-        setViewType("Tab"); 
+        setViewType("Tab");
+      } else if (window.innerWidth >= 1000 && window.innerWidth <= 1138) {
+        setViewType("Custom Device");  
       } else {
-        setViewType("PC"); 
+        setViewType("PC");
       }
     };
 
