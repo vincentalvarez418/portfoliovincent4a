@@ -41,7 +41,7 @@
 .certificates-grid {
   display: flex;
   flex-wrap: wrap;
-  gap: 50px;
+  gap: 60px;
   justify-content: center;
   padding: 20px;
   max-width: 1200px;
@@ -295,3 +295,17 @@
   }
 }
 
+@media (min-width: 1000px) and (max-width: 1143px) {
+  .certificates-grid {
+      display: grid; 
+      grid-template-columns: repeat(3, 1fr); 
+      gap: 40px; 
+      justify-content: center;
+      padding: 20px;
+  }
+
+  .certificates-card-wrapper {
+      width: 100%;
+      max-width: 350px; 
+  }
+}

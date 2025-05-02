@@ -346,3 +346,44 @@
         margin: 0 auto; 
     }
 }
+
+@media (min-width: 1000px) and (max-width: 1143px) {
+    .experience-description-text p {
+        max-width: 600px !important;
+        padding: 10px 20px; 
+        font-size: 1.2em !important; 
+    }
+}
+
+
+@media (min-width: 769px) and (max-width: 1024px) {
+    .experience-description-text {
+        max-width: 650px !important;
+        padding: 12px 22px;
+        font-size: 1.1em !important;
+        text-align: center;
+        margin: 20px auto 0 -40px !important; 
+    }
+
+    .experience-image {
+        max-width: 70%;
+        margin: 0 auto 0 55px !important;
+        display: block;
+    }
+
+    .experience-content-horizontal {
+        flex-direction: column;
+        align-items: center;
+        gap: 25px;
+        justify-content: center;
+    }
+
+    .experience-details {
+        margin-top: 280px !important; 
+        margin-left: -195px !important; 
+    }
+
+    .experience-list {
+        display: none !important; 
+    }
+}
