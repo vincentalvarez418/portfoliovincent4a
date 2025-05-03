@@ -129,12 +129,12 @@ function Navbar() {
       </span>
 
       <div className="nav-buttons">
-        <Link to="/">
-          <div className="nav-box">
-            <img src={home} alt="Home" className="nav-icon" />
-            <span className="nav-text">HOME</span>
-          </div>
-        </Link>
+      <a href="https://tourblogalvarez.netlify.app/" target="_blank" rel="noopener noreferrer">
+        <div className="nav-box">
+          <img src={tour} alt="Travels" className="nav-icon" />
+          <span className="nav-text">TOUR</span>
+        </div>
+      </a>
         <span className="horiline">|</span>
         <Link to="/about">
           <div className="nav-box">
@@ -150,12 +150,12 @@ function Navbar() {
           </div>
         </Link>
         <span className="horiline">|</span>
-        <Link to="/tour">
+        <a href="https://tourblogalvarez.netlify.app/" target="_blank" rel="noopener noreferrer">
           <div className="nav-box">
             <img src={tour} alt="Travels" className="nav-icon" />
             <span className="nav-text">TOUR</span>
           </div>
-        </Link>
+        </a>
         <span className="horiline">|</span>
         <Link to="/certificates">
           <div className="nav-box">
@@ -207,11 +207,11 @@ function Navbar() {
               </div>
             </Link>
             <hr className="nav-divider" />
-            <Link to="/tour" onClick={closeModal}>
+            <a href="https://tourblogalvarez.netlify.app/" target="_blank" rel="noopener noreferrer" onClick={closeModal}>
               <div className="nav-box">
                 <span className="modal-text">TOUR</span>
               </div>
-            </Link>
+            </a>
             <hr className="nav-divider" />
             <Link to="/certificates" onClick={closeModal}>
               <div className="nav-box">
@@ -247,7 +247,6 @@ function App() {
           <Route path="/" element={<Hero />} />
           <Route path="/about" element={<FollowUpStuff />} />
           <Route path="/showcase" element={<Showcase />} />
-          <Route path="/tour" element={<Tour />} />
           <Route path="/certificates" element={<Certificates />} />
           <Route path="/experience" element={<Experience />} />
           <Route path="/contact" element={<Contact />} />
