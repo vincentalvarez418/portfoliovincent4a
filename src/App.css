@@ -383,7 +383,7 @@
 
 
 
-@media (min-width: 769px) and (max-width: 1142px) {
+@media (min-width: 769px) and (max-width: 1143px) {
   
   .navbar {
     padding: 15px 20px;
@@ -440,5 +440,11 @@
       cursor: pointer;
       z-index: 9999 !important; 
       position: relative; 
+  }
+}
+
+@media screen and (min-width: 1142px) {
+  .modal-overlay {
+    display: none !important;
   }
 }

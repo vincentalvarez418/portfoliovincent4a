@@ -98,16 +98,16 @@ function Navbar() {
         setViewType("Mobile");
       } else if (window.innerWidth >= 769 && window.innerWidth <= 1024) {
         setViewType("Tab");
-      } else if (window.innerWidth >= 1000 && window.innerWidth <= 1138) {
+      } else if (window.innerWidth >= 1000 && window.innerWidth <= 1141) {
         setViewType("Custom Device");  
       } else {
         setViewType("PC");
+        setMenuOpen(false); 
       }
     };
-
-    handleResize(); 
+  
+    handleResize();
     window.addEventListener("resize", handleResize);
-
     return () => window.removeEventListener("resize", handleResize);
   }, []);
   
