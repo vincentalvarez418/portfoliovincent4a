@@ -28,6 +28,12 @@
   justify-content: flex-end;
 }
 
+.mobile-bg { background-color: gold; }
+.pc-bg { background-color: #7fccb6; }
+.tablet-bg { background-color: grey; }
+.custom-bg { background-color: black; }
+
+
 .nav-button {
   background: #f8f9fa;
   border: none;
