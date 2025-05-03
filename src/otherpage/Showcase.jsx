@@ -83,7 +83,7 @@ function Showcase() {
         <hr className="line" />
         <hr className="line" />
       </div>
-      <h1 className="my-works-name">My Works</h1>
+      <h1 className="my-works-name">PROJECTS</h1>
       <div className="separator">
         <hr className="line" />
         <hr className="line" />
