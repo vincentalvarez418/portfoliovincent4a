@@ -5,7 +5,7 @@
   background: #e2e2e2;
   padding: 10px 20px;
   box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
-  border-bottom: 4px solid #3e3e3e;
+  border-bottom: 4px solid #2b643e;
   margin: 0;
   position: sticky;
   top: 0;
@@ -83,6 +83,13 @@
   justify-content: center !important;
 }
 
+  .nav-divider {
+    width: 100%;
+    border: none;
+    border-top: 2px solid #2b643e;
+    margin: 10px 0;
+  }
+
 
 
 @media (max-width: 1330px) {
@@ -111,7 +118,7 @@
   .nav-divider {
     width: 100%;
     border: none;
-    border-top: 1px solid rgba(255, 255, 255, 0.3);
+    border-top: 2px solid #2b643e;
     margin: 10px 0;
   }
 
@@ -198,7 +205,7 @@
   .modal-overlay .nav-divider {
     width: 100%;
     border: none;
-    border-top: 1px solid #ccc;
+    border-top: 2px solid #2b643e;
     margin: 10px 0;
   }
 }
@@ -231,9 +238,10 @@
   .nav-divider {
     width: 100%;
     border: none;
-    border-top: 1px solid rgba(255, 255, 255, 0.3);
+    border-top: 1zpx solid #2b643e;
     margin: 10px 0;
-  }
+}
+
 
   .nav-buttons {
     display: flex;  
@@ -315,7 +323,6 @@
   .modal-overlay .nav-divider {
     width: 100%;
     border: none;
-    border-top: 1px solid #ccc;
     margin: 10px 0;
   }
 
@@ -333,7 +340,7 @@
   .modal-overlay .nav-divider {
     width: 100%;
     border: none;
-    border-top: 1px solid #ccc;
+    border-top: 1px solid #2b643e;
     margin: 10px 0;
   }
 }

@@ -1,73 +1,78 @@
 import React from "react";
+import {
+  FaPhp,
+  FaHtml5,
+  FaCss3Alt,
+  FaJsSquare,
+  FaDatabase
+} from "react-icons/fa";
+import { SiKotlin } from "react-icons/si"; 
 import "./Experience.css";
-import technovistaImage from "../assets/experience/technovista2.png";
 import FadeInWrapper from "./FadeInWrapper";
+import technovistaImage from "../assets/experience/technovista2.png";
 
 function Experience() {
   return (
-    <div className="experience-containercustom">
+    <div className="customex-container">
       <FadeInWrapper>
-        <div className="experience-content-horizontal">
-          <div className="experience-image-section">
-            <img
-              src={technovistaImage}
-              alt="Technovista Ventures"
-              className="experience-image"
-            />
-          </div>
+        <div className="customex-content">
+          <div className="customex-grid">
+            <div className="customex-wrapper">
+              <div className="customex-title-container">
+                <h2 className="customex-section-title">TechnoVista Ventures</h2>
+              </div>
+              <div className="customex-card">
+                <img
+                  src={technovistaImage}
+                  alt="TechnoVista Ventures"
+                  className="customex-image"
+                />
+                <div className="customex-content-section">
+                  <div className="customex-description">
+                    <p>
+                      TechnoVista Ventures is a dynamic IT company founded to provide technological innovation and deliver cutting-edge solutions. 
+                      Passionate about exploring new vistas in tech, TechnoVista has become a trusted name in excellence and forward-thinking strategies.
+                    </p>
+                    <p>
+                      Established by four visionary students from Western Mindanao State University (WMSU), TechnoVista Ventures was born out of a shared 
+                      ambition to innovate and make a meaningful impact in the tech world. Their journey started with developing projects for the local 
+                      Google Developer Student Club (GDSC), where they honed their skills and contributed to the growth of the community.
+                    </p>
+                    <p>
+                      As the company continues to navigate the ever-evolving tech landscape, it remains dedicated to pioneering technologies that empower 
+                      businesses to thrive in the digital era. Through sustainable and intelligent solutions, TechnoVista Ventures stays ahead in trends, 
+                      builds accessible tools, and fosters a culture of continuous learning.
+                    </p>
 
-          <div className="experience-text-section">
-            <div className="experience-description-text">
-              <p className="experience-text description-text">
-                TechnoVista Ventures is a dynamic IT company and was founded
-                with the goal to provide technological innovation and deliver
-                cutting-edge solutions. Passionate to explore new vistas in
-                the tech industry, TechnoVista Ventures has become a trusted
-                name synonymous with excellence and forward-thinking strategies.
-                As the company continues to navigate the ever-evolving tech
-                landscape, it will remain dedicated to being a pioneer in
-                delivering technological solutions that empower businesses and
-                organizations to thrive in the digital era.
-              </p>
-            </div>
-            
-            <hr className="experience-divider mobile-only" />
+                    <ul className="customex-list">
+                      <li>Stay ahead in trends and emerging tech fields.</li>
+                      <li>Provide sustainable tech and smart solutions.</li>
+                      <li>Build accessible tools for every user’s needs.</li>
+                      <li>Encourage a culture of constant learning always.</li>
+                    </ul>
 
-            <div className="experience-list">
-  <div className="experience-item">
-    <input type="checkbox" id="item1" defaultChecked disabled />
-    <label htmlFor="item1">
-      Stay ahead in trends and emerging tech fields.
-    </label>
-  </div>
-  <div className="experience-item">
-    <input type="checkbox" id="item2" defaultChecked disabled />
-    <label htmlFor="item2">
-      Provide sustainable tech and smart solutions.
-    </label>
-  </div>
-  <div className="experience-item">
-    <input type="checkbox" id="item3" defaultChecked disabled />
-    <label htmlFor="item3">
-      Build accessible tools for every user’s needs.
-    </label>
-  </div>
-  <div className="experience-item">
-    <input type="checkbox" id="item4" defaultChecked disabled />
-    <label htmlFor="item4">
-      Encourage a culture of constant learning always.
-    </label>
-  </div>
-</div>
+                    <div className="customex-role-duration-container">
+                      <div className="customex-role-box">
+                        Web Backend Developer
+                      </div>
+                      <div className="customex-role-box">
+                        Jan 2024 - April 2025
+                      </div>
+                    </div>
 
+                    <div className="customex-skills-container">
+                      <h3>Skills Obtained</h3>
+                      <div className="customex-skills-grid">
+                        <div className="customex-skill-item"><FaPhp size={24} color="#777" /> PHP</div>
+                        <div className="customex-skill-item"><FaHtml5 size={24} color="#E44D26" /> HTML</div>
+                        <div className="customex-skill-item"><FaCss3Alt size={24} color="#2965F1" /> CSS</div>
+                        <div className="customex-skill-item"><FaJsSquare size={24} color="#F7DF1E" /> JavaScript</div>
+                        <div className="customex-skill-item"><FaDatabase size={24} color="#0F6B28" /> SQL</div>
+                        <div className="customex-skill-item"><SiKotlin size={24} color="#7F52FF" /> Kotlin</div>
+                      </div>
+                    </div>
 
-            <div className="experience-details">
-              <div className="experience-info">
-                <div className="experience-role">
-                  <span className="experience-text-black">ROLE: BACKEND DEVELOPER</span>
-                </div>
-                <div className="experience-duration">
-                  <span className="experience-text">DURING: 1/2024 - 4/2025</span>
+                  </div>
                 </div>
               </div>
             </div>
