@@ -30,6 +30,8 @@ const skills = [
 
 function FollowUpStuff() {
   const [fadeIn, setFadeIn] = useState(false);
+  const [isImageLoaded, setIsImageLoaded] = useState(false);
+  const [isFrameLoaded, setIsFrameLoaded] = useState(false);
 
   useEffect(() => {
     const timer = setTimeout(() => {
@@ -50,17 +52,21 @@ function FollowUpStuff() {
 
       <div className="vincent-pic-container">
         <div className="frame-container">
+        <img 
+          src={vincentPic} 
+          alt="Vincent Profile" 
+          className={`vincent-profile-img ${isImageLoaded ? "loaded" : "loading"}`}
+          onLoad={() => setIsImageLoaded(true)}
+          loading="lazy"
+        />
           <img 
-            src={vincentPic} 
-            alt="Vincent Profile" 
-            className="vincent-profile-img" 
-            loading="lazy" 
-          />
-          <img 
-            src={framePic} 
-            alt="Profile Frame" 
-            className="vincent-frame-img" 
-          />
+        src={framePic} 
+        alt="Profile Frame" 
+        className={`vincent-frame-img ${isFrameLoaded ? "fade-in" : "loading"}`}
+        onLoad={() => setIsFrameLoaded(true)}
+        loading="lazy"
+      />
+
         </div>
       </div>
 
