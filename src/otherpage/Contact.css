@@ -292,6 +292,8 @@
       box-sizing: border-box !important;
     }
     
+
+    
     .experience-links {
       display: grid;
       grid-template-columns: repeat(2, 1fr);
