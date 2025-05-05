@@ -78,7 +78,7 @@ function Contact() {
               <div className="experience-card">
                 <div className="experience-content-section">
                   <div className="experience-description">
-                    <p>Click below to visit my social media profiles or to download my CV.</p>
+                    <p>Click the Icons below to visit my social media profiles, Send me an Email or to Download my CV.</p>
                   </div>
                   <div className="experience-links">
                     <button className="experience-link" onClick={() => window.open("https://www.linkedin.com/in/vincent-anthony-alvarez-5a4b28359/", "_blank")}>
