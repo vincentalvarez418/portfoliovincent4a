@@ -275,6 +275,17 @@
       align-items: center;
       gap: 15px;
     }
+
+    .email-modal-close {
+      top: 0px !important;
+      right: -14px !important;
+      font-size: 1.4em !important;
+    }
+
+    .email-modal-overlay {
+      padding: 0 10px !important;
+      box-sizing: border-box !important;
+    }
     
     .experience-links {
       display: grid;
