@@ -266,6 +266,11 @@
   .email-modal-close::before {
     font-size: 1.5em !important;
   }
+
+  .email-modal-form textarea {
+    resize: none !important;
+  }
+  
   
   
   
