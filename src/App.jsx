@@ -129,55 +129,55 @@ function Navbar() {
       </span>
 
       <div className="nav-buttons">
-      <a href="https://tourblogalvarez.netlify.app/" target="_blank" rel="noopener noreferrer">
-        <div className="nav-box">
-          <img src={tour} alt="Travels" className="nav-icon" />
-          <span className="nav-text">TOUR</span>
+          <Link to="/">
+            <div className="nav-box">
+              <img src={home} alt="Home" className="nav-icon" />
+              <span className="nav-text">HOME</span>
+            </div>
+          </Link>
+          <span className="horiline">|</span>
+          <Link to="/about">
+            <div className="nav-box">
+              <img src={aboutme} alt="About Me" className="nav-icon" />
+              <span className="nav-text">ABOUT ME</span>
+            </div>
+          </Link>
+          <span className="horiline">|</span>
+          <Link to="/showcase">
+            <div className="nav-box">
+              <img src={showcase} alt="Showcase" className="nav-icon" />
+              <span className="nav-text">PROJECTS</span>
+            </div>
+          </Link>
+          <span className="horiline">|</span>
+          <a href="https://tourblogalvarez.netlify.app/" target="_blank" rel="noopener noreferrer">
+            <div className="nav-box">
+              <img src={tour} alt="Travels" className="nav-icon" />
+              <span className="nav-text">TOUR</span>
+            </div>
+          </a>
+          <span className="horiline">|</span>
+          <Link to="/certificates">
+            <div className="nav-box">
+              <img src={certicon} alt="Certificates" className="nav-icon" />
+              <span className="nav-text">CERTIFICATES</span>
+            </div>
+          </Link>
+          <span className="horiline">|</span>
+          <Link to="/experience">
+            <div className="nav-box">
+              <img src={experienceIcon} alt="Experience" className="nav-icon" />
+              <span className="nav-text">EXPERIENCE</span>
+            </div>
+          </Link>
+          <span className="horiline">|</span>
+          <Link to="/contact">
+            <div className="nav-box">
+              <img src={contactIcon} alt="Contact" className="nav-icon" />
+              <span className="nav-text">CONTACT</span>
+            </div>
+          </Link>
         </div>
-      </a>
-        <span className="horiline">|</span>
-        <Link to="/about">
-          <div className="nav-box">
-            <img src={aboutme} alt="About Me" className="nav-icon" />
-            <span className="nav-text">ABOUT ME</span>
-          </div>
-        </Link>
-        <span className="horiline">|</span>
-        <Link to="/showcase">
-          <div className="nav-box">
-            <img src={showcase} alt="Showcase" className="nav-icon" />
-            <span className="nav-text">PROJECTS</span>
-          </div>
-        </Link>
-        <span className="horiline">|</span>
-        <a href="https://tourblogalvarez.netlify.app/" target="_blank" rel="noopener noreferrer">
-          <div className="nav-box">
-            <img src={tour} alt="Travels" className="nav-icon" />
-            <span className="nav-text">TOUR</span>
-          </div>
-        </a>
-        <span className="horiline">|</span>
-        <Link to="/certificates">
-          <div className="nav-box">
-            <img src={certicon} alt="Certificates" className="nav-icon" />
-            <span className="nav-text">CERTIFICATES</span>
-          </div>
-        </Link>
-        <span className="horiline">|</span>
-        <Link to="/experience">
-          <div className="nav-box">
-            <img src={experienceIcon} alt="Experience" className="nav-icon" />
-            <span className="nav-text">EXPERIENCE</span>
-          </div>
-        </Link>
-        <span className="horiline">|</span>
-        <Link to="/contact">
-          <div className="nav-box">
-            <img src={contactIcon} alt="Contact" className="nav-icon" />
-            <span className="nav-text">CONTACT</span>
-          </div>
-        </Link>
-      </div>
 
       {(viewType === "Mobile" || viewType === "Tab" || viewType === "Custom Device") && (
         <button className="menu-toggle" onClick={() => setMenuOpen(true)}>
