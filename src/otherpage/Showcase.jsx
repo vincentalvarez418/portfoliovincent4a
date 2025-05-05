@@ -3,10 +3,12 @@ import "./Showcase.css";
 import App1 from "../assets/showcases/app1.jpg";
 import App2 from "../assets/showcases/app2.jpg";
 import gdsc1 from "../assets/showcases/Gdsc.jpg";
+import kenmart from "../assets/showcases/kenmart.jpg";
 import pokemonSpinel from "../assets/showcases/PokemonSpinel.jpg";
 import calculatorImg from "../assets/showcases/calculator.jpg";
 import githubIcon from "../assets/showcases/github.png";
 import hostlinkIcon from "../assets/showcases/hostlink.png";
+import awardIcon from "../assets/showcases/award.png";
 import FadeInWrapper from './FadeInWrapper';
 
 function Showcase() {
@@ -54,6 +56,11 @@ function Showcase() {
         host: "https://tulabingalvarezcalculator.netlify.app/",
         docs: "https://docs.ultralytics.com/",
       }
+    },
+    {
+      title: "KenMart",
+      images: [kenmart],
+      description: "An ecommerce platform for DIY tools with dynamic product filtering, shopping cart, and order handling.",
     }
   ];
 
@@ -69,7 +76,6 @@ function Showcase() {
     const handleResize = () => {
       setIsMobile(window.innerWidth <= 768);
     };
-
     window.addEventListener("resize", handleResize);
     return () => {
       window.removeEventListener("resize", handleResize);
@@ -90,122 +96,135 @@ function Showcase() {
       </div>
       <div className="showcase-grid">
         <div className="project-row">
-          {projects.map((project, index) => {
-            if (["Aquasnap: Fish Identification", "Aquasnap: Fish Identification"].includes(project.title)) {
-              return (
-                <FadeInWrapper key={index}>
-                  <div className="project-wrapper half-width calculator-container">
-                    <div className="project-title-container">
-                      <h3 className="project-title">{project.title}</h3>
+          {projects.slice(0, 2).map((project, index) => (
+            <FadeInWrapper key={index}>
+              <div className="project-wrapper half-width calculator-container">
+                <div className="project-title-container">
+                  <h3 className="project-title">{project.title}</h3>
+                </div>
+                <div className="project-card">
+                  <div className="project-content">
+                    <div className="calculator-container">
+                      <img src={project.image} alt={project.title} className="calculator-image" onLoad={handleImageLoad} />
                     </div>
-                    <div className="project-card">
-                      <div className="project-content">
-                        <div className="calculator-container">
-                          <img src={project.image} alt={project.title} className="calculator-image" onLoad={handleImageLoad} />
-                        </div>
-                        <p className="project-description">{project.description}</p>
-                        {project.links && (
-                          <div className="project-links">
-                            {project.links.host && (
-                              <a href={project.links.host} target="_blank" rel="noopener noreferrer" className="project-link">
-                                <img src={hostlinkIcon} alt="Host Link" className="link-icon" />
-                                View Project
-                              </a>
-                            )}
-                            {project.links.repo && (
-                              <a href={project.links.repo} target="_blank" rel="noopener noreferrer" className="project-link">
-                                <img
-                                  src={
-                                    project.links.repo.includes("ultralytics.com") ? hostlinkIcon : githubIcon
-                                  }
-                                  alt={project.links.repo.includes("ultralytics.com") ? "Documentation" : "GitHub Repository"}
-                                  className="link-icon"
-                                />
-                                {project.links.repo.includes("ultralytics.com") ? "View YOLO Docs" : "View Repository"}
-                              </a>
-                            )}
-                            {project.links.docs && (
-                              <a href={project.links.docs} target="_blank" rel="noopener noreferrer" className="project-link">
-                                <img src={hostlinkIcon} alt="Documentation" className="link-icon" />
-                                View YOLO Docs
-                              </a>
-                            )}
-                          </div>
+                    <p className="project-description">{project.description}</p>
+                    {project.links && (
+                      <div className="project-links">
+                        {project.links.host && (
+                          <a href={project.links.host} target="_blank" rel="noopener noreferrer" className="project-link">
+                            <img src={hostlinkIcon} alt="Host Link" className="link-icon" />
+                            View Project
+                          </a>
                         )}
-
+                        {project.links.repo && (
+                          <a href={project.links.repo} target="_blank" rel="noopener noreferrer" className="project-link">
+                            <img
+                              src={project.links.repo.includes("ultralytics.com") ? hostlinkIcon : githubIcon}
+                              alt={project.links.repo.includes("ultralytics.com") ? "Documentation" : "GitHub Repository"}
+                              className="link-icon"
+                            />
+                            {project.links.repo.includes("ultralytics.com") ? "View YOLO Docs" : "View Repository"}
+                          </a>
+                        )}
+                        {project.links.docs && (
+                          <a href={project.links.docs} target="_blank" rel="noopener noreferrer" className="project-link">
+                            <img src={hostlinkIcon} alt="Documentation" className="link-icon" />
+                            View YOLO Docs
+                          </a>
+                        )}
                       </div>
-                    </div>
-                  </div>
-                </FadeInWrapper>
-              );
-            }
-          })}
-        </div>
-
-        {!isMobile && projects.map((project, index) => {
-          if (project.title === "Gdsc Event Portal") {
-            return (
-              <FadeInWrapper key={index}>
-                <div className="project-wrapper full-width">
-                  <div className="project-title-container">
-                    <h3 className="project-title">{project.title}</h3>
-                  </div>
-                  <div className="project-card">
-                    <div className="project-content">
-                      <div className="gdsc-container">
-                        <img
-                          src={project.images[0]}
-                          alt={project.title}
-                          className={`gdsc-image ${loading ? "blurred" : ""} ${zoomed ? "zoomed" : ""}`}
-                          onLoad={handleImageLoad}
-                          onClick={toggleZoom}
-                        />
-                      </div>
-                      <p className="project-description">{project.description}</p>
-                    </div>
+                    )}
                   </div>
                 </div>
-              </FadeInWrapper>
-            );
-          }
-        })}
-
-        <div className="project-row">
-          {projects.map((project, index) => {
-            if (["Pokemon Spinel", "Calculator"].includes(project.title)) {
-              return (
-                <FadeInWrapper key={index}>
-                  <div className="project-wrapper half-width">
-                    <div className="project-title-container">
-                      <h3 className="project-title">{project.title}</h3>
-                    </div>
-                    <div className="project-card">
-                      <div className="project-content">
-                        <div className={`${project.title === "Pokemon Spinel" ? "pokemon-container" : "calculator-container"}`}>
-                          <img src={project.image} alt={project.title} className={`${project.title === "Pokemon Spinel" ? "pokemon-image" : "calculator-image"} ${loading ? "blurred" : ""}`} onLoad={handleImageLoad} />
-                        </div>
-                        <p className="project-description">{project.description}</p>
-                        {project.links && (
-                          <div className="project-links">
-                            <a href={project.links.host} target="_blank" rel="noopener noreferrer" className="project-link">
-                              <img src={hostlinkIcon} alt="Host Link" className="link-icon" />
-                              View Project
-                            </a>
-                            <a href={project.links.repo} target="_blank" rel="noopener noreferrer" className="project-link">
-                              <img src={githubIcon} alt="GitHub Repository" className="link-icon" />
-                              View Repository
-                            </a>
-                          </div>
-                        )}
-                      </div>
-                    </div>
-                  </div>
-                </FadeInWrapper>
-              );
-            }
-          })}
+              </div>
+            </FadeInWrapper>
+          ))}
         </div>
 
+        {!isMobile && (
+          <FadeInWrapper>
+            <div className="project-wrapper full-width">
+              <div className="project-title-container">
+                <h3 className="project-title">{projects[2].title}</h3>
+              </div>
+              <div className="project-card">
+                <div className="project-content">
+                  <div className="gdsc-container">
+                    <img
+                      src={projects[2].images[0]}
+                      alt={projects[2].title}
+                      className={`gdsc-image ${loading ? "blurred" : ""} ${zoomed ? "zoomed" : ""}`}
+                      onLoad={handleImageLoad}
+                      onClick={toggleZoom}
+                    />
+                  </div>
+                  <p className="project-description">{projects[2].description}</p>
+                </div>
+              </div>
+            </div>
+          </FadeInWrapper>
+        )}
+
+        <div className="project-row">
+          {projects.slice(3, 5).map((project, index) => (
+            <FadeInWrapper key={index}>
+              <div className="project-wrapper half-width">
+                <div className="project-title-container">
+                  <h3 className="project-title">{project.title}</h3>
+                </div>
+                <div className="project-card">
+                  <div className="project-content">
+                    <div className={`${project.title === "Pokemon Spinel" ? "pokemon-container" : "calculator-container"}`}>
+                      <img
+                        src={project.image}
+                        alt={project.title}
+                        className={`${project.title === "Pokemon Spinel" ? "pokemon-image" : "calculator-image"} ${loading ? "blurred" : ""}`}
+                        onLoad={handleImageLoad}
+                      />
+                    </div>
+                    <p className="project-description">{project.description}</p>
+                    {project.links && (
+                      <div className="project-links">
+                        <a href={project.links.host} target="_blank" rel="noopener noreferrer" className="project-link">
+                          <img src={hostlinkIcon} alt="Host Link" className="link-icon" />
+                          View Project
+                        </a>
+                        <a href={project.links.repo} target="_blank" rel="noopener noreferrer" className="project-link">
+                          <img src={githubIcon} alt="GitHub Repository" className="link-icon" />
+                          View Repository
+                        </a>
+                      </div>
+                    )}
+                  </div>
+                </div>
+              </div>
+            </FadeInWrapper>
+          ))}
+        </div>
+
+        {!isMobile && (
+          <FadeInWrapper>
+            <div className="project-wrapper full-width">
+              <div className="project-title-container">
+                <h3 className="project-title">{projects[5].title}</h3>
+              </div>
+              <div className="project-card">
+                <div className="project-content">
+                  <div className="gdsc-container">
+                    <img
+                      src={projects[5].images[0]}
+                      alt={projects[5].title}
+                      className={`gdsc-image ${loading ? "blurred" : ""} ${zoomed ? "zoomed" : ""}`}
+                      onLoad={handleImageLoad}
+                      onClick={toggleZoom}
+                    />
+                  </div>
+                  <p className="project-description">{projects[5].description}</p>
+                </div>
+              </div>
+            </div>
+          </FadeInWrapper>
+        )}
       </div>
     </div>
   );
