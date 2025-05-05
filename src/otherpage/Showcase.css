@@ -342,5 +342,17 @@ img {
     text-align: center;
     padding: 12px;
   }
+
+  .showcase-container {
+    width: 100vw; 
+    max-width: 95%; 
+    background: transparent;
+    padding: 40px 0;
+    display: flex;
+    margin-top: -55px; 
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
 }
 
