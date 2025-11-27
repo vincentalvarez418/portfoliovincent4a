@@ -150,13 +150,6 @@ function Navbar() {
             </div>
           </Link>
           <span className="horiline">|</span>
-          <a href="https://tourblogalvarez.netlify.app/" target="_blank" rel="noopener noreferrer">
-            <div className="nav-box">
-              <img src={tour} alt="Travels" className="nav-icon" />
-              <span className="nav-text">TOUR</span>
-            </div>
-          </a>
-          <span className="horiline">|</span>
           <Link to="/certificates">
             <div className="nav-box">
               <img src={certicon} alt="Certificates" className="nav-icon" />
