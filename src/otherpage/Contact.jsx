@@ -22,8 +22,7 @@ function Contact() {
                 <div className="experience-content-section">
                   <div className="experience-description">
                     <p>
-                      Click below to visit my social media profiles or to
-                      download my CV.
+                      Click below to visit my social media profiles.
                     </p>
                   </div>
                   <div className="experience-links">
@@ -48,25 +47,6 @@ function Contact() {
                         className="experience-link-icon"
                       />
                       GitHub
-                    </a>
-                    <a
-                      href="mailto:vincentalvarez418@gmail.com"
-                      className="experience-link"
-                    >
-                      <img
-                        src={gmailIcon}
-                        alt="Gmail"
-                        className="experience-link-icon"
-                      />
-                      Gmail
-                    </a>
-                    <a href={cvDownload} download className="experience-link">
-                      <img
-                        src={cvPreview}
-                        alt="Download CV"
-                        className="experience-link-icon"
-                      />
-                      CV
                     </a>
                   </div>
                 </div>
