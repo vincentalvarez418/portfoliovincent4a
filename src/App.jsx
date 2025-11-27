@@ -200,12 +200,6 @@ function Navbar() {
               </div>
             </Link>
             <hr className="nav-divider" />
-            <a href="https://tourblogalvarez.netlify.app/" target="_blank" rel="noopener noreferrer" onClick={closeModal}>
-              <div className="nav-box">
-                <span className="modal-text">TOUR</span>
-              </div>
-            </a>
-            <hr className="nav-divider" />
             <Link to="/certificates" onClick={closeModal}>
               <div className="nav-box">
                 <span className="modal-text">CERTIFICATIONS</span>
